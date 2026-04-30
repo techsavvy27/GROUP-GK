@@ -10,7 +10,7 @@ body{
     text-align: center;
 }
 section{
-    border-bottom: 2px solid #b3b3bf;
+    padding-bottom:2rem;
     margin-bottom: 2rem;
 }
 
@@ -70,6 +70,6 @@ section{
     grid-template-columns: repeat(3,1fr);
 }
 .card{
-background-color: #cacaca;
+background-color: #f1efef;
     border-radius: 10px;
 }
