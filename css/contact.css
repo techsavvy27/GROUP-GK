@@ -18,6 +18,7 @@ body{
     border: 2px solid #b3b3bf;
     padding: 2rem;
     border-radius: 10px;
+    background-color: #dfdfe6;
 }
 
 .form input[type="text"],.form input[type="email"],.form textarea{
@@ -33,4 +34,18 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.button{
+    border:none;
+    padding:15px;
+    background-color: #6b6bef;
+    border-radius: 5rem;
+    color: white;
+    font-weight: bold;
+}
+.button:hover{
+    background-color: blueviolet;
+    cursor: pointer;
+    transform: translateY(-2px);
 }
