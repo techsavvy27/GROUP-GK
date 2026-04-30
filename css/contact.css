@@ -1,0 +1,21 @@
+body{
+    padding: 2rem;
+}
+.form-div{
+    border: 1px solid blue;
+}
+.form label{
+    display: block;
+    font-weight: 500;
+    margin: 1rem 0;
+}
+
+.form input{
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    outline: none;
+}
