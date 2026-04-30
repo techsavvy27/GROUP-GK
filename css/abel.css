@@ -11,12 +11,14 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: sticky;
   background-color: #8888fa;
   padding: 0.5rem;
-border-radius: 10px;
+border-radius: 10px 10px 0 0;
 }
 
+.navbar{
+  position: sticky;
+}
 header a p {
   color: rgb(33, 33, 33);
   font-family: Helvetica;

@@ -13,6 +13,9 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: darkslateblue;
+  padding: 10rem;
+border-radius:  0 0 10px 10px;
 }
 
 .hero .intoduction{
