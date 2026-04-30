@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student Portfolio Website: GROUP GK</title>
+    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="/css/abel.css">
   </head>
   <body>
     <!--This is the navigation menu that links all pages-->
     <header>
       <a href="/index.html"><p>GROUP GK</p></a>
-      <ul>
+      <ul class="navlist">
         <li><a href="/index.html">Home</a></li>
         <li><a href="abel.html">Abel</a></li>
         <li><a href="alika.html">Alikka</a></li>
@@ -27,29 +29,34 @@
         <h1>Contact Us!</h1>
 
      <!--contact form-->
-        <div class="form-div">
-          <form action="" method="post" class="form">
-            <label for="name">Name</label><input type="text" /><br />
-            <label for="email">E-mail</label><input type="email" /><br />
-            <label for="message">Message</label>
-            <textarea
-              name="message"
-              id="message"
-              cols="30"
-              rows="10">
+        <div>
+          <div>
+            <div class="form-div">
+              <form action="" method="post" class="form">
+                <label for="name">Name</label><input type="text" /><br />
+                <label for="email">E-mail</label><input type="email" /><br />
+                <label for="message">Message</label>
+                <textarea
+                        name="message"
+                        id="message"
+                        cols="30"
+                        rows="10">
             </textarea><br>
-            <label for="gender">Gender</label>
-            <input type="radio" name="gender" value="male" /> Male
-            <input type="radio" name="gender" value="female" /> Female <br />
-            <label for="interests">Interests</label>
-            <input type="checkbox" name="Programming" id="programming" /><label
-              for="programming">Programming</label>
-            <input type="checkbox" name="Design" id="design" /><label
-              for="design">Design</label>
-            <input type="checkbox" name="Other" id="other" /><label for="other">Other</label><br />
-            <input type="submit" value="Submit" /><br />
-            <input type="reset" value="Reset" />
-          </form>
+                <label for="gender">Gender</label>
+                <input type="radio" name="gender" value="male" /> Male
+                <input type="radio" name="gender" value="female" /> Female <br />
+                <label for="interests">Interests</label>
+                <input type="checkbox" name="Programming" id="programming" /><label
+                      for="programming">Programming</label>
+                <input type="checkbox" name="Design" id="design" /><label
+                      for="design">Design</label>
+                <input type="checkbox" name="Other" id="other" />
+                <label for="other">Other</label><br />
+                <input type="submit" value="Submit" /><br />
+                <input type="reset" value="Reset" />
+              </form>
+            </div>
+          </div>
         </div>
 
 
