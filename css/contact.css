@@ -1,18 +1,21 @@
 body{
     padding: 2rem;
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 .form label{
     display: block;
-    font-weight: 500;
     margin: 1rem 0;
 }
-
-.form{
+.form-div{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 0.25px solid #b0b0ff;
+    flex-direction: column;
+}
+
+.form{
+    border: 2px solid #b3b3bf;
     padding: 2rem;
     border-radius: 10px;
 }
@@ -25,4 +28,9 @@ body{
     background-color: white;
     color: black;
     transition: border-color 0.3s, box-shadow 0.3s;
+}
+.checkbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

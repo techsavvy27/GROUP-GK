@@ -32,7 +32,7 @@
         <div>
           <div>
             <div class="form-div">
-              <form action="" method="post" class="form">
+              <form class="form">
                 <label for="name">Name</label><input type="text" /><br />
                 <label for="email">E-mail</label><input type="email" /><br />
                 <label for="message">Message</label>
@@ -42,16 +42,28 @@
                         cols="30"
                         rows="10">
             </textarea><br>
-                <label for="gender">Gender</label>
-                <input type="radio" name="gender" value="male" /> Male
-                <input type="radio" name="gender" value="female" /> Female <br />
-                <label for="interests">Interests</label>
-                <input type="checkbox" name="Programming" id="programming" /><label
-                      for="programming">Programming</label>
-                <input type="checkbox" name="Design" id="design" /><label
-                      for="design">Design</label>
-                <input type="checkbox" name="Other" id="other" />
-                <label for="other">Other</label><br />
+                <label for="gender">GENDER:</label>
+<div class="checkbox">
+  <label for="male"><input type="radio" name="gender" value="male" /> Male</label>
+</div>
+               <div class="checkbox"> <label for="female"><input type="radio" name="gender" value="female" /> Female</label>
+            </div>
+                <label class="">INTERESTS:</label>
+                <div class="checkbox">
+                  <label for="programming"><input type="checkbox" name="Programming" id="programming" />
+                Programming</label>
+
+            </div>
+                <div class="checkbox">
+                  <label for="design"> <input type="checkbox" name="Design" id="design" />
+                  Design</label>
+
+                </div>
+<div class="checkbox">
+  <label for="other"><input type="checkbox" name="Other" id="other" />
+  Other</label>
+  <br>
+</div>
                 <input type="submit" value="Submit" /><br />
                 <input type="reset" value="Reset" />
               </form>
