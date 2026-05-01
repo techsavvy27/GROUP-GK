@@ -42,9 +42,6 @@ header a p {
 }
 */
 
-body{
- 
-}
 
 main {
   width: 100%;
@@ -61,19 +58,18 @@ main {
 
 .bio {
   display:flex;
-  text-align: center;
+  text-align: justify;
   gap: 50px;
   align-items:center;     /* aligns vertically */
   justify-content: center;   /* centers everything horizontally */       
-  margin: 40px auto;
-  max-width: 1000px;  
-  max-width: 600px;
+  margin: 40px auto; 
+  max-width: 865px;
   font-size: 18px;
   line-height: 1.6;
 }
 
 .bio img{
-  width: 370px; 
+  width: 300px; 
   border-radius: 10px;
 }
 
@@ -133,7 +129,7 @@ table {
   display:grid;
   grid-template-columns: repeat(1, 1fr); /* 2 columns */
   text-align: center;
-  max-width: 700px;
+  max-width: 800px;
   background-color: #1a1919;
   color: white;
   border-radius: 10px;
@@ -142,9 +138,11 @@ table {
 
   .hob ul{
   list-style: none;
-  min-height: 100px;
-  padding: 0;         /* removes left spacing */
-  margin: 0;
+  min-height: 10px;
+  padding: 30px;         /* removes left spacing */
+ 
 }
 
- 
+footer{
+  text-align: center;
+}
