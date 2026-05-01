@@ -42,32 +42,7 @@ main {
 }
 
 .hero .hero-text{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: wrap;
+ line-height: 1.5;
+ text-align: start;
 }
 
-
-table {
-  border-collapse: collapse;
-  box-shadow: 0 0 8px rgb(0, 0, 0, 1);
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-th,
-td {
-  padding: 12px;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-}
-
-th {
-  background-color: #1f73f9;
-}
-
-td {
-  color: #333;
-}
