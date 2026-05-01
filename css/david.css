@@ -1,50 +1,23 @@
-* {
-  font-family: Arial;
-  text-decoration: none;
+/*
+copyright &copy; GROUP GK 2026
+*/
+*{
+  list-style-type: none;
 }
-
-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: sticky;
-}
-
-header a p {
-  color: rgb(33, 33, 33);
-  font-family: Helvetica;
-}
-
-.navlist {
-  display: flex;
-}
-
-.navlist li {
-  list-style: none;
-  font-weight: bold;
-}
-
-.navlist li a {
-  font-size: 20px;
-  text-decoration: none;
-  padding: 10px;
-  color: #151515;
-}
-
-.navlist li a:hover {
-  color: #86b4ff;
-  font-size: 22px;
-  transition: ease-in-out 0.3s;
-}
-
-.navlist p a {
-  font-weight: bolder;
-}
-
-main {
-  width: 100%;
-}
-
-.introduction h1 {
+body{
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
+}
+
+.hero{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .intoduction{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
