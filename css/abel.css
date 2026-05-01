@@ -1,18 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* 
+/
+/ GLOBAL STYLES FOR ALL PAGES
+/ These reflect on all pages linked with abel.css respectively
+/
+*/
+
 * {
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --heading-font: "DM Serif Text", serif;
+  --body-font: "DM Sans", sans-serif;
+  --logo-font: "Montserrat", sans-serif;
+}
+
+body {
+  font-family: var(--body-font);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  font-family: var(--logo-font);
 }
 
 header {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: sticky;
-}
-
-header a p {
-  color: rgb(33, 33, 33);
-  font-family: Helvetica;
+  background-color: #fff;
+  padding: 0.5rem;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 2px solid #1f1f1f;
 }
 
 .navlist {
@@ -21,30 +46,74 @@ header a p {
 
 .navlist li {
   list-style: none;
-  font-weight: bold;
 }
 
-.navlist li a {
-  font-size: 20px;
+.navlist li a,.navlist a {
+  font-size: 18px;
   text-decoration: none;
   padding: 10px;
-  color: #151515;
+  color: #1f1f1f;
 }
 
 .navlist li a:hover {
-  color: #86b4ff;
-  font-size: 22px;
+  color: #166495;
+  font-size: 20px;
   transition: ease-in-out 0.3s;
 }
 
-.navlist p a {
-  font-weight: bolder;
-}
+/*
+/
+/ END OF GLOBAL STYLES
+/
+/
+*/
 
 main {
-  width: 100%;
+  align-items: center;
 }
 
 .introduction h1 {
   text-align: center;
+  font-family: var(--heading-font);
+  font-size: 3rem;
+  letter-spacing: 0.7rem;
+}
+
+.introbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.introbox img {
+  width: 300px;
+  border-radius: 8px;
+}
+.introtext p {
+  line-height: 1.5;
+}
+
+table {
+  border-collapse: collapse;
+  box-shadow: 0 0 8px rgb(0, 0, 0, 1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #1f73f9;
+}
+
+td {
+  color: #333;
 }

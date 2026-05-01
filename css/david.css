@@ -1,18 +1,40 @@
+/*
+copyright &copy; GROUP GK 2026
+*/
 * {
-  font-family: Arial;
+  font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
+  list-style-type: none;
 }
 
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.container{
+  margin: 2rem 0;
+}
+
+main {
+  align-items: center;
+}
 header {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: sticky;
+  background-color: #8888fa;
+  padding: 0.5rem;
+  border-radius: 10px 10px 0 0;
 }
 
+.navbar{
+  position: sticky;
+}
 header a p {
   color: rgb(33, 33, 33);
   font-family: Helvetica;
+  font-weight: bolder;
 }
 
 .navlist {
@@ -21,30 +43,70 @@ header a p {
 
 .navlist li {
   list-style: none;
-  font-weight: bold;
 }
 
 .navlist li a {
-  font-size: 20px;
+  font-size: 18px;
   text-decoration: none;
   padding: 10px;
-  color: #151515;
+  color: #001035;
 }
 
 .navlist li a:hover {
   color: #86b4ff;
-  font-size: 22px;
+  font-size: 20px;
   transition: ease-in-out 0.3s;
 }
 
-.navlist p a {
-  font-weight: bolder;
+.hero img {
+  width: 300px;
+  border-radius: 8px;
+}
+.introtext p {
+  line-height: 1.5;
 }
 
-main {
-  width: 100%;
+.hero-container{
+  background-color: #6a84ae;
+  padding: 50px;
+  border-radius:  0 0 10px 10px;
+}
+.hero{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 40px auto;
 }
 
-.introduction h1 {
+.hero .hero-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+
+table {
+  border-collapse: collapse;
+  box-shadow: 0 0 8px rgb(0, 0, 0, 1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 12px;
   text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #1f73f9;
+}
+
+td {
+  color: #333;
 }
