@@ -1,24 +1,29 @@
+/* 
+/
+/ GLOBAL STYLES FOR ALL PAGES
+/ These reflect on all pages linked with abel.css respectively
+/
+*/
 * {
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
+  scroll-behavior: smooth;
 }
 
-.container{
-margin: 2rem 0;
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
 }
 
 header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #8888fa;
+  background-color: #fff;
   padding: 0.5rem;
-border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 2px solid #1f1f1f;
 }
 
-.navbar{
-  position: sticky;
-}
 header a p {
   color: rgb(33, 33, 33);
   font-family: Helvetica;
@@ -37,15 +42,21 @@ header a p {
   font-size: 18px;
   text-decoration: none;
   padding: 10px;
-  color: #1f73f9;
+  color: #1f1f1f;
 }
 
 .navlist li a:hover {
-  color: #86b4ff;
+  color: #166495;
   font-size: 20px;
   transition: ease-in-out 0.3s;
 }
 
+/*
+/
+/ END OF GLOBAL STYLES
+/
+/
+*/
 
 main {
   align-items: center;
