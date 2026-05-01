@@ -4,112 +4,116 @@ Copyright @2026 GROUP GK
 
 */
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 }
-section{
-    padding-bottom:2rem;
-    margin-bottom: 2rem;
+section {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 /* form styles */
-.form label{
-    display: block;
-    margin: 1rem 0;
+.form label {
+  display: block;
+  margin: 1rem 0;
 }
-.form-div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.form-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.form{
-    border: 2px solid #b3b3bf;
-    padding: 2rem;
-    border-radius: 10px;
-    background-color: #dfdfe6;
+.form {
+  border: 2px solid #b3b3bf;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: #dfdfe6;
 }
 /* form input styles*/
-.form input[type="text"],.form input[type="email"],.form textarea{
-    width: 400px;
-    padding: 0.5rem;
-    border: 1px solid;
-    border-radius: 4px;
-    background-color: white;
-    color: black;
-    transition: border-color 0.3s, box-shadow 0.3s;
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+  width: 400px;
+  padding: 0.5rem;
+  border: 1px solid;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
 }
-.checkbox{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-input[type="checkbox"]{
-    appearance: none;
-    width: 18px;
-    height: 18px;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    position: relative;
-    cursor: pointer;
+input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
 }
-input[type="checkbox"]:checked,input[type="radio"]:checked{
-background-color: #1e39f3;
-    border-color: #1e39f3;
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  background-color: #1e39f3;
+  border-color: #1e39f3;
 }
-input[type="checkbox"]:focus{
-    outline: 2px solid #5aef03;
-    outline-offset: 2px;
+input[type="checkbox"]:focus {
+  outline: 2px solid #5aef03;
+  outline-offset: 2px;
 }
-input[type="radio"]{
-    appearance: none;
-    width: 18px;
-    height: 18px;
-    border: 2px solid #ccc;
-    border-radius: 50%;
-    position: relative;
-    cursor: pointer;
+input[type="radio"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
 }
-input[type="checkbox"]:checked::after{
-    content: "";
-    position: absolute;
-    left: 4px;
-    top: 0px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
+input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
-
 
 /* form buttons*/
 
-.button{
-    border:none;
-    padding:15px;
-    background-color: #6b6bef;
-    border-radius: 5rem;
-    color: white;
-    font-weight: bold;
+.button {
+  border: none;
+  padding: 15px;
+  background-color: #6b6bef;
+  border-radius: 5rem;
+  color: white;
+  font-weight: bold;
 }
-.button:hover{
-    background-color: blueviolet;
-    cursor: pointer;
-    transform: translateY(-2px);
+.button:hover {
+  background-color: blueviolet;
+  cursor: pointer;
+  transform: translateY(-2px);
 }
 /* contact cards */
 
-.card-parent{
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
-    padding: 2rem;
+.card-parent {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  padding: 2rem;
 }
-.card{
-background-color: #f1efef;
-    border-radius: 10px;
-padding: 1rem;
+.card {
+  background-color: #f1efef;
+  border-radius: 10px;
+  padding: 1rem;
 }
