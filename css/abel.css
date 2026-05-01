@@ -11,7 +11,7 @@
 
 * {
   scroll-behavior: smooth;
-   text-decoration: none;
+  text-decoration: none;
 }
 
 :root {
@@ -20,7 +20,7 @@
   --logo-font: "Montserrat", sans-serif;
   --logo-color: #333;
   --main-color: #fff;
-  --links-color:  
+  --links-color:               
 ;
 }
 
@@ -54,6 +54,7 @@ header {
 }
 
 .navlist li a {
+  font-family: var(--logo-font);
   font-size: 18px;
   text-decoration: none;
   padding: 10px;
@@ -97,7 +98,14 @@ main {
   width: 300px;
   border-radius: 8px;
 }
+
+.introtext h2 {
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+}
+
 .introtext p {
+  font-size: 1.3rem;
   line-height: 1.5;
 }
 
