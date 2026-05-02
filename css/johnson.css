@@ -1,0 +1,121 @@
+
+
+
+
+main {
+  width: 100%;
+}
+
+.introduction h2 {
+  text-align: center;
+  font-family:Georgia, 'Times New Roman'
+}
+.introduction h4{
+  text-align: center;
+  font-family:Georgia, 'Times New Roman'
+}
+
+.bio {
+  display:flex;
+  text-align: justify;
+  gap: 50px;
+  align-items:center;     /* aligns vertically */
+  justify-content: center;   /* centers everything horizontally */       
+  margin: 40px auto; 
+  max-width: 865px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.bio img{
+  width: 300px; 
+  border-radius: 10px;
+}
+
+.profile-pic {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    
+}
+
+
+.skills{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  column-gap: 35px;
+  row-gap: 0;
+  justify-content: center;
+  max-width: 100px;
+  margin: 30px auto;
+}
+
+.skillbox{
+  background: #1a1919;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 375px;
+  min-height: 180px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(205, 188, 188, 0.5);
+  
+}
+
+.skillbox ul{
+  list-style: none;
+  padding:0;         /* removes left spacing */
+  margin: 0;
+}
+
+.skillbox ul li {
+  text-align: left;
+}
+
+.skillsimage {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skillsimage img{
+    border-radius:10px;
+}
+
+
+table {
+  table-layout:auto;
+  width: 70%;
+  margin: 40px auto;   /* THIS centers it horizontally */
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;     
+}
+table thead{
+  background-color:#1a1919;
+  color: white;
+  border-radius: 10px; 
+}
+
+.hob{
+  display:grid;
+  grid-template-columns: repeat(1, 1fr); /* 2 columns */
+  text-align: center;
+  max-width: 800px;
+  background-color: #1a1919;
+  color: white;
+  border-radius: 10px;
+  margin: 30px auto;
+}
+
+.hob ul{
+  list-style: none;
+  min-height: 10px;
+  padding: 30px;         /* removes left spacing */
+ 
+}
+
+footer{
+  text-align: center;
+}

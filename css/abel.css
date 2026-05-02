@@ -1,18 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* 
+/
+/ GLOBAL STYLES FOR ALL PAGES
+/ These reflect on all pages linked with abel.css respectively
+/
+*/
+
 * {
-  font-family: Arial;
+  scroll-behavior: smooth;
+  scroll-margin-top: 5rem;
   text-decoration: none;
+}
+
+:root {
+  --heading-font: "DM Serif Text", serif;
+  --body-font: "DM Sans", sans-serif;
+  --logo-font: "Montserrat", sans-serif;
+  --logo-color: #333;
+  --main-color: #fff;
+  --normal-color: #1f1f1f;
+  --hover-color: #166495;
+  --h1-font: 3rem;
+  --h2-font: 2rem;
+  --text-font: 1.3rem;
+}
+
+body {
+  font-family: var(--body-font);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--logo-color);
+  font-family: var(--logo-font);
 }
 
 header {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--main-color);
+  border-bottom: 2px solid var(--normal-color);
+  padding: 0.5rem;
   position: sticky;
-}
-
-header a p {
-  color: rgb(33, 33, 33);
-  font-family: Helvetica;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  transition: all 0.35s ease;
 }
 
 .navlist {
@@ -21,30 +65,185 @@ header a p {
 
 .navlist li {
   list-style: none;
-  font-weight: bold;
 }
 
 .navlist li a {
-  font-size: 20px;
+  font-family: var(--logo-font);
+  font-size: 18px;
   text-decoration: none;
   padding: 10px;
-  color: #151515;
+  color: var(--links-color);
 }
 
 .navlist li a:hover {
-  color: #86b4ff;
-  font-size: 22px;
+  color: var(--hover-color);
+  font-size: 20px;
   transition: ease-in-out 0.3s;
 }
 
-.navlist p a {
-  font-weight: bolder;
-}
+/*
+/
+/ END OF GLOBAL STYLES
+/
+/
+*/
 
 main {
-  width: 100%;
+  align-items: center;
+}
+
+/*
+/
+/ INTRODUCTION SECTION
+/
+*/
+
+.introduction {
+  min-height: 90vh;
+  background:
+    linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
+    url(/images/abel-back.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 .introduction h1 {
   text-align: center;
+  font-family: var(--heading-font);
+  font-size: var(--h1-font);
+  letter-spacing: 0.7rem;
+  color: var(--normal-color);
+}
+
+.introbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.introbox img {
+  width: 300px;
+  border-radius: 8px;
+}
+
+.introtext h2 {
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  color: var(--normal-color);
+}
+
+.introtext p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: var(--normal-color);
+}
+
+.intromenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: transparent;
+}
+
+.intromenu ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.intromenu ul li {
+  list-style: none;
+}
+
+.intromenu ul li a {
+  text-decoration: none;
+  font-size: var(--text-font);
+  color: var(--normal-color);
+  padding: 2rem;
+  font-weight: bold;
+}
+
+.intromenu ul li a:hover {
+  color: var(--hover-color);
+  font-size: 1.2rem;
+  transition: ease-in-out 0.3s;
+}
+
+.intromenu i {
+  padding: 10px;
+}
+
+/*
+/
+/
+/ MY SKILLS SECTION
+/
+/
+*/
+
+.myskills {
+  min-height: 90vh;
+}
+
+.myskills h2 {
+  text-align: center;
+  font-family: var(--heading-font);
+  font-size: var(--h2-font);
+  letter-spacing: 0.7rem;
+  color: var(--normal-color);
+}
+
+.skillbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 40px auto;
+  font-size: var(--text-font);
+}
+
+.skillbox ol {
+  list-style: none;
+}
+
+.skillbox ul {
+  list-style: none;
+}
+
+/*
+/
+/
+/ ACADEMIC HISTORY SECTION
+/
+/
+*/
+
+.academic-table {
+  border-collapse: collapse;
+  box-shadow: 0 0 8px rgb(0, 0, 0, 1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.academic-table th,
+td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.academic-table th {
+  background-color: #1f73f9;
+}
+
+.academic-table td {
+  color: #333;
 }

@@ -4,29 +4,82 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>David's page</title>
+    <link rel="stylesheet" href="../css/david.css">
+    <link rel="stylesheet" href="../css/abel.css">
   </head>
   <body>
-    <!--header snd navigation-->
+   
+
+
+     <!-- header and navigation THIS IS GLOBALY APPLIED -->
+
     <header>
-      <a href="../index.html"><p>GROUP GK</p></a>
-      <ul>
-        <li><a href="abel.html">abel</a></li>
-        <li><a href="alika.html">alika</a></li>
-        <li><a href="baraka.html">baraka</a></li>
-        <li><a href="david.html">david</a></li>
-        <li><a href="johnson.html">johnson</a></li>
-        <li><a href="kennedy.html">kennedy</a></li>
-        <li><a href="monica.html">monica</a></li>
-        <li><a href="nyla.html">nyla</a></li>
+      <a href="/index.html"><span class="logo">GROUP GK</span></a>
+      <ul class="navlist">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="abel.html">Abel</a></li>
+        <li><a href="alika.html">Alikka</a></li>
+        <li><a href="baraka.html">Baraka</a></li>
+        <li><a href="david.html">David</a></li>
+        <li><a href="johnson.html">Johnson</a></li>
+        <li><a href="kennedy.html">Kenny</a></li>
+        <li><a href="monica.html">Monica</a></li>
+        <li><a href="nyla.html">Nyla</a></li>
+        <li><a href="contact.html">Contacts</a></li>
       </ul>
-      <a href="../contact.html"><p>CONTACT</p></a>
     </header>
+    
     <!--main body contents-->
     <main>
-      <div>
-        <h4>DAVID</h4>
-        <h1>Biography</h1>
-        <p>a tanzanian student of UDSM from 2025-2028</p>
+      <div class="hero-container">
+      <div class="hero">
+        <img src="../images/david.png" alt="my picture">
+          <div class="hero-text">
+            <h1>Hi! i am DAVID👋🏼</h1>
+            <h2>A Short Biography</h2>
+            <p>
+              My name is David. I'm a first year student at the
+              University of Dar-es-Salaam currently taking a Bachelor's degree in
+              Computer Science starting 2025/26.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--table-->
+      <table>
+        <thead>
+          <h3>here is my Academic path</h3>
+        </thead>
+        <tr>
+          <th>Level</th>
+          <th>school</th>
+          <th>year</th>
+        </tr>
+        <tr>
+          <td>University</td>
+          <td>UDSM</td>
+          <td>2025-2028</td>
+        </tr>
+        <tr>
+          <td>advanced level</td>
+          <td>tambaza high school</td>
+          <td>2023-2025</td>
+        </tr>
+        <tr>
+          <td>secondary level</td>
+          <td>msimbazi secondary school</td>
+          <td>2019-2022</td>
+        </tr>
+        <tr>
+          <td>primary level</td>
+          <td>olympyo</td>
+          <td>2011-2018</td>
+        </tr>
+      </table>
+
+<div class="card-parent">
+              <div class="card">
         <h1>skills</h1>
         <ol>
           <li>
@@ -42,38 +95,8 @@
           <li>graphics design</li>
         </ol>
       </div>
-      <!--table-->
-      <table border="1">
-        <thead>
-          <h3>academic history</h3>
-        </thead>
-        <tr>
-          <th>Level</th>
-          <th>school</th>
-          <th>year</th>
-        </tr>
-        <tr>
-          <td>University</td>
-          <td>UDSM</td>
-          <td>2025-2028</td>
-        </tr>
-        <tr>
-          <td>advanced level</td>
-          <td>tambaza</td>
-          <td>2023-2025</td>
-        </tr>
-        <tr>
-          <td>secondary level</td>
-          <td>feza</td>
-          <td>2019-2022</td>
-        </tr>
-        <tr>
-          <td>primary level</td>
-          <td>olympyo</td>
-          <td>2011-2018</td>
-        </tr>
-      </table>
-      <div>
+
+      <div class="card">
         <h1>Hobbies</h1>
         <ul>
           <li>movies</li>
@@ -82,12 +105,13 @@
           <li>football</li>
         </ul>
       </div>
+</div>
       <!--activity images-->
       <p>coding image</p>
-      <img src="/images/photodavid.png" alt="activity photo" width="400px" />
+      <img src="../images/photodavid.png" alt="activity photo" width="400px" />
       <p>designing image</p>
       <img
-        src="/images/graphic-design.webp"
+        src="../images/graphic-design.webp"
         alt="activity photo 2"
         width="400px"
       />
@@ -96,22 +120,22 @@
     <footer>
       <h3>social links</h3>
       <a href="https://larason.space/larabal"
-        ><img src="/images/forgejo.png" alt="forgejo" width="30px"
+        ><img src="../images/forgejo.png" alt="forgejo" width="30px"
       /></a>
       <a href="https://github.com/davidkivuyo"
-        ><img src="/images/github.png" alt="github" width="30px"
+        ><img src="../images/github.png" alt="github" width="30px"
       /></a>
       <a href="https://facebook.com"
-        ><img src="/images/facebok.png" alt="facebook" width="30px"
+        ><img src="../images/facebok.png" alt="facebook" width="30px"
       /></a>
       <a href="https://instagram.com/"
-        ><img src="/images/instagram-logo (2).png" alt="instagram" width="30px"
+        ><img src="../images/instagram-logo (2).png" alt="instagram" width="30px"
       /></a>
       <a href="https://www.linkedin.com/in/david-kivuyo-742a3326a/"
-        ><img src="/images/linkedin.png" alt="linkedin" width="30px"
+        ><img src="../images/linkedin.png" alt="linkedin" width="30px"
       /></a>
       <a href="https://gitlab.com/davidkivuyo123"
-        ><img src="/images/gitlab.png" alt="gitlab" width="30px"
+        ><img src="../images/gitlab.png" alt="gitlab" width="30px"
       /></a>
       <p>&copy; 2026 group gk inc, no AI used</p>
     </footer>
