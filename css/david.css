@@ -1,5 +1,7 @@
 /*
-copyright &copy; GROUP GK 2026
+
+Copyright, GROUP GK 2026
+
 */
 
 *{
@@ -52,6 +54,16 @@ main {
  font-size: larger;
 }
 
+.arrow{
+padding: 20% 0 0 0;
+}
+
+.scroll-arrow{
+font-weight: bolder;
+cursor: pointer;
+color: #33383e;
+}
+
 table {
   width: 80%;
   margin: 40px auto;
@@ -67,7 +79,6 @@ td {
   color: #333;
 }
 
-
 .card-parent {
   display: grid;
   gap: 2rem;
@@ -78,4 +89,10 @@ td {
   background-color: #f1efef;
   border-radius: 10px;
   padding: 1rem;
+}
+.card img{
+object-fit: cover;
+width: 100%;
+border-radius: 10px;
+border: none;
 }

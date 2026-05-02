@@ -6,6 +6,7 @@
     <title>David's page</title>
     <link rel="stylesheet" href="../css/david.css">
     <link rel="stylesheet" href="../css/abel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
    
@@ -44,12 +45,16 @@
             </p>
           </div>
         </div>
+        <div class="arrow">
+          <a href="#table-start"><p class="scroll-arrow">scroll down
+       <i class="fa-solid fa-arrow-down"></i></p></a>
+        </div>
       </div>
 
       <!--table-->
       <table>
         <thead>
-          <h3>here is my Academic path</h3>
+          <h3 id="table-start">here is my Academic path</h3>
         </thead>
         <tr>
           <th>Level</th>
@@ -105,16 +110,26 @@
         </ul>
       </div>
 </div>
+
       <!--activity images-->
+      
+<div class="card-parent">
+  <div class="card">
+          <img src="../images/photodavid.png" alt="activity photo" width="400px" />
       <p>coding image</p>
-      <img src="../images/photodavid.png" alt="activity photo" width="400px" />
-      <p>designing image</p>
-      <img
+    
+  </div>
+  <div class="card">
+     <img
         src="../images/graphic-design.webp"
         alt="activity photo 2"
         width="400px"
       />
+      <p>designing image</p>
+  </div>
+</div>
     </main>
+
     <!--footer-->
     <footer>
       <h3>social links</h3>
