@@ -31,14 +31,18 @@ main {
 }
 
 .hero-container{
-  background-color: #ffffff;
-  padding: 50px;
-  border-radius:  0 0 10px 10px;
   min-height: 90vh;
-  background: linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%), url(/images/abel-back.jpg);
+  background:
+    linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
+    url(/images/david\ back.avif);
   background-size: cover;
   background-position: center;
+  display: flow-root;
+  padding: 50px;
+  border-radius:  0 0 10px 10px;
+  
 }
+
 .hero{
   display: flex;
   align-items: center;

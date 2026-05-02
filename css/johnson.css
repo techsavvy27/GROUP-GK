@@ -46,6 +46,7 @@ main {
 .bio img{
   width: 300px; 
   border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
 }
 
 .profile-pic {
@@ -62,7 +63,7 @@ main {
   column-gap: 35px;
   row-gap: 0;
   justify-content: center;
-  max-width: 100px;
+  max-width: 1000px;
   margin: 30px auto;
 }
 
@@ -71,17 +72,16 @@ main {
   padding: 20px;
   border-radius: 10px;
   width: 375px;
-  min-height: 180px;
+  min-height: 10px;
   text-align: center;
-  box-shadow: 0 0 15px rgba(205, 188, 188, 0.5);
   
 }
 
-.skill-box:hover {
+/*.skill-box:hover {
   transform: translateY(-10px);
-  box-shadow: 0 0 20px rgba(56,189,248,0.6);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
   transition: 0.3s;
-}
+}*/
 
 
 #skillbox1{
@@ -103,7 +103,7 @@ main {
 #skillbox3{
   background:
     linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
-    url(/images/horizonbeach.jpg);
+    url(/images/tools.webp);
   background-size: cover;
   background-position: center;
   
@@ -111,7 +111,7 @@ main {
 #skillbox4{
   background:
     linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
-    url(/images/soft-skills.jpg);
+    url(/images/Johnson\ 6.jpeg);
   background-size: cover;
   background-position: center;
   
@@ -136,6 +136,7 @@ main {
 
 .skillsimage img{
     border-radius:10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 }
 
 
@@ -146,36 +147,63 @@ table {
   border-collapse: collapse;
   border-radius: 10px;
   overflow: hidden; 
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);   
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); 
+  min-height: 300px;
+  background:
+    linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
+    url(/images/academichistphoto.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 table thead{
-  background-color:#1a1919;
-  color: white;
+  color:black;
+}
+
+table, th, td {
+  border: none;
+  padding: 15px;
+  text-align: center;
+}
+
+
+.hob{
+  max-width: 900px;
+  margin: 30px auto;
   
 }
 
-.hob{
-  display:grid;
-  grid-template-columns: repeat(1, 1fr); /* 2 columns */
-  text-align: center;
-  max-width: 800px;
-  color: black;
+.hobby-box{
+  padding: 70px 25px;
   border-radius: 10px;
-  margin: 30px auto;
+  margin:20px auto; 
+}
+
+#box1{
+  background:
+    linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
+    url(/images/mufc.jpg);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 15px rgb(255, 0, 0);
+}
+#box2{
+  background:
+    linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
+    url(/images/Avengers-Age-of-Ultron.webp);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 15px rgb(192, 2, 239);
+
+}
+#box3{
   background:
     linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
     url(/images/gamingpad.jpg);
   background-size: cover;
   background-position: center;
-  box-shadow: 0 8px 25px rgba(6, 157, 251, 0.4);  
-}
+  box-shadow: 0 0 15px rgb(0, 255, 174);
 
-.hob ul{
-  list-style: none;
-  min-height: 10px;
-  padding: 30px;         /* removes left spacing */
- 
 }
 
 footer{
