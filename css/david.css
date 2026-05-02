@@ -40,7 +40,7 @@ main {
   display: flow-root;
   padding: 50px;
   border-radius:  0 0 10px 10px;
-  
+  font-family: "DM Serif Text", serif;;
 }
 
 .hero{
