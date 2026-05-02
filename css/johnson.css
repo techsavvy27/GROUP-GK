@@ -1,0 +1,236 @@
+main {
+  width: 100%;
+}
+
+.welcome {
+  min-height: 90vh;
+  background:
+    linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
+    url(/images/horizonbeach.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flow-root;
+  
+}
+
+.welcome h1 {
+  text-align: center;
+  font-family: var(--heading-font);
+  font-size: var(--h1-font);
+  letter-spacing: 0.7rem;
+  color: var(--normal-color);
+}
+
+.welcome h2 {
+  text-align: center;
+  font-family:Georgia, 'Times New Roman';
+  letter-spacing: 0.5rem;
+}
+.welcome h4{
+  text-align: center;
+  font-family:Georgia, 'Times New Roman'
+}
+
+.bio {
+  display:flex;
+  text-align: justify;
+  gap: 50px;
+  align-items:center;     /* aligns vertically */
+  justify-content: center;   /* centers everything horizontally */       
+  margin: 40px auto; 
+  max-width: 865px;
+  font-size: 18px;
+  line-height: 1.6;
+  transition: ease 250ms;
+}
+
+.bio img{
+  width: 300px; 
+  border-radius: 10px;
+  transition: ease-in-out 250ms;
+}
+
+.bio img:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.8)
+}
+
+.profile-pic {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    
+}
+
+
+.skills{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  column-gap: 35px;
+  row-gap: 0;
+  justify-content: center;
+  max-width: 100px;
+  margin: 30px auto;
+}
+
+.skillbox{
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  width: 375px;
+  min-height: 10px;
+  text-align: center;
+  transition: ease 250ms;
+}
+
+.skillbox:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+  
+}
+
+
+#skillbox1{
+  background:
+    linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
+    url(/images/web-development.jpg);
+  background-size: cover;
+  background-position: center;
+  
+}
+#skillbox2{
+  background:
+    linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
+    url(/images/programming.png);
+  background-size: cover;
+  background-position: center;
+  
+}
+#skillbox3{
+  background:
+    linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
+    url(/images/tools.webp);
+  background-size: cover;
+  background-position: center;
+  
+}
+#skillbox4{
+  background:
+    linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
+    url(/images/Johnson\ 6.jpeg);
+  background-size: cover;
+  background-position: center;
+  
+}
+
+.skillbox ul{
+  list-style: none;
+  padding:0;         /* removes left spacing */
+  margin: 0;
+}
+
+.skillbox ul li {
+  text-align: left;
+}
+
+.skillsimage {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skillsimage img{
+    border-radius:10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    transition: ease 250ms;
+}
+
+.skillsimage img:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+
+
+table {
+  table-layout:auto;
+  width: 70%;
+  margin: 40px auto;   /* THIS centers it horizontally */
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden; 
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); 
+  min-height: 300px;
+  background:
+    linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
+    url(/images/academichistphoto.jpg);
+  background-size: cover;
+  background-position: center;
+  transition: ease 250ms;
+}
+
+table:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+table thead{
+  color:black;
+}
+
+table, th, td {
+  border: none;
+  padding: 15px;
+  text-align: center;
+}
+
+
+.hob{
+  max-width: 900px;
+  margin: 30px auto;
+  
+}
+
+.hobby-box{
+  padding: 70px 25px;
+  border-radius: 10px;
+  margin:20px auto;
+  transition: all ease 300ms; 
+}
+
+.hobby-box:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+#box1{
+  background:
+    linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
+    url(/images/mufc.jpg);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 15px rgb(255, 0, 0);
+}
+#box2{
+  background:
+    linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
+    url(/images/Avengers-Age-of-Ultron.webp);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 15px rgb(192, 2, 239);
+
+}
+#box3{
+  background:
+    linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
+    url(/images/gamingpad.jpg);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 15px rgb(0, 255, 174);
+
+}
+
+footer{
+  text-align: center;
+}

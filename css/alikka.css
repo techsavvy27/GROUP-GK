@@ -1,0 +1,38 @@
+* {
+  font-family: Arial;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header a p {
+  color: rgb(33, 33, 33);
+  font-family: Helvetica;
+}
+
+.navlist {
+  display: flex;
+}
+
+.navlist li {
+  list-style: none;
+  font-weight: bold;
+}
+
+.navlist li a {
+  text-decoration: none;
+  padding: 10px;
+  color: #36517c;
+}
+
+.navlist li a:hover {
+  color: #86b4ff;
+}
+
+.navlist p a {
+  font-weight: bolder;
+}

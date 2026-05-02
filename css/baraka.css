@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+/* Background & Intro --- */
+.intro {
+  display: flow-root; /* Fixes margin collapse at top of page */
+  min-height: 90vh;
+  background:
+    linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
+    url(/images/baraka-bck-grnd.jpg);
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 60px;
+}
+
+.intro h1 {
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-size: var(--h1-font);
+  letter-spacing: 0.7rem;
+  color: var(--normal-color);
+}
+
+.introboxing {
+  display: flex; /* Aligns profile photo and text horizontally */
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.introboxing img {
+  border-radius: 150px 150px 0 0; /* The signature dome shape */
+  box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.5);
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+.introtexted h2 {
+  font-size: 2rem;
+  color: var(--normal-color);
+}
+
+.introtexted p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: var(--normal-color);
+}
+
+/* --- STATS BAR: Key Metrics --- */
+.stats-bridge {
+  display: flex;
+  justify-content: space-between; /* Spreads stats across the bar */
+  align-items: center;
+  max-width: 900px;
+  margin: 40px auto 100px auto; /* Large bottom margin to separate from content */
+  background-color: transparent;
+}
+
+.stats-bridge h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 3rem;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.stats-bridge p {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #666;
+  margin: 0;
+}
+
+/* --- SECTION WRAPPERS: Handles Spacing Between Boxes --- */
+.skills,
+.section-academic,
+.personal-interests,
+.gallery-section {
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px; /* This creates the gap between the white boxes */
+}
+
+/* --- SHARED CARD STYLING: The White Boxes --- */
+.skillsbox,
+.section-academic .table-container,
+.interests-container,
+.gallery-container {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  width: 100%;
+  max-width: 1000px; /* Synchronizes width for a uniform scroll */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* --- SECTION HEADINGS --- */
+.skillsbox h2,
+.section-academic h2,
+.interests-heading,
+.gallery-heading {
+  font-family: "Quicksand", sans-serif;
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 35px;
+  color: #1a1a1a;
+  display: block;
+}
+
+/* --- LIST STYLING: Skills & Hobbies --- */
+.skillsbox ol,
+.interests-main-list {
+  font-weight: bold;
+  font-size: 1.4rem;
+  padding-left: 50px;
+  color: #1a1a1a;
+}
+
+.skillsbox ul,
+.interests-sub-list {
+  font-weight: normal;
+  font-size: 1.2rem;
+  list-style-type: square;
+  padding-left: 25px;
+  margin-top: 12px;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* --- ACADEMIC TABLE --- */
+.history-table {
+  width: 100%;
+  border-collapse: collapse; /* Merges borders for a cleaner look */
+  font-family: "Inter", sans-serif;
+}
+
+.history-table th {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #333;
+  border-bottom: 2px solid #ececec;
+}
+
+.history-table td {
+  padding: 22px 15px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #333;
+}
+
+.history-table tbody tr:hover {
+  background-color: #f1f5ff; /* Interactive row highlight */
+  transition: 0.2s ease-in-out;
+}
+
+/* --- GALLERY SLIDER --- */
+.slider {
+  height: 450px;
+  overflow: hidden; /* Clips images that slide out of the card */
+  position: relative;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(450px * 10); /* Total width of 5 repeated images */
+  animation: scroll 25s linear infinite; /* Smooth continuous loop */
+}
+
+.slide-track:hover {
+  animation-play-state: paused; /* Pause on hover to view details */
+}
+
+.slide {
+  height: 400px;
+  width: 450px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Prevents image stretching */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* --- SLIDER ANIMATION LOGIC --- */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-450px * 5));
+  } /* Moves 5 images then resets */
+}
+
+/* --- RESPONSIVENESS: Mobile Support --- */
+@media (max-width: 768px) {
+  .slider {
+    height: 300px;
+  }
+  .slide {
+    width: 300px;
+    height: 250px;
+  }
+  .introboxing {
+    flex-direction: column;
+    text-align: center;
+  } /* Stacks intro items */
+  @keyframes scroll {
+    100% {
+      transform: translateX(calc(-300px * 5));
+    }
+  }
+}

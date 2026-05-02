@@ -4,64 +4,101 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GK-Johnson</title>
+    <link rel="stylesheet" href="/css/johnson.css">
+    <link rel="stylesheet" href="../css/abel.css"> 
+    <!-- LINKS TO ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />                                       
   </head>
   <body>
-    <h2>JOHNSON'S PORTFOLIO</h2>
+    
+
+     <!-- header and navigation THIS IS GLOBALY APPLIED -->
 
     <!--header snd navigation-->
+  
     <header>
-      <a href="../index.html"><p>GROUP GK</p></a>
-      <ul>
+      <a href="/index.html"><span class="logo">GROUP GK</span></a>
+      <ul class="navlist">
+        <li><a href="/index.html">Home</a></li>
         <li><a href="abel.html">Abel</a></li>
         <li><a href="alika.html">Alikka</a></li>
         <li><a href="baraka.html">Baraka</a></li>
         <li><a href="david.html">David</a></li>
         <li><a href="johnson.html">Johnson</a></li>
-        <li><a href="kennedy.html">Kennedy</a></li>
+        <li><a href="kennedy.html">Kenny</a></li>
         <li><a href="monica.html">Monica</a></li>
         <li><a href="nyla.html">Nyla</a></li>
+        <li><a href="contact.html">Contacts</a></li>
       </ul>
     </header>
 
-    <h4>ABOUT ME</h4>
-    <p>
-      My name is Johnson Mushi, a student at the University of Dar Es Salaam,
-      College of Information and Communication Technology(COICT).I am pursuing a
-      degree in Computer Science. My goal is to become a skilled Cybersecurity
-      Specialist and make a positive impact in the tech industry.
-    </p>
 
-    <h4>MY SKILLS</h4>
-    <ul>
-      <li>
-        Website Development
+
+    <section class="welcome">
+
+      <h2>JOHNSON'S  PORTFOLIO</h2>
+            
+      <div class="bio">
+        
+        <img src = "/images/Johnson 1.jpeg" alt ="my photo"  />
+
+        <div class="biotext">
+        <h4><em>ABOUT ME</em></h4>
+        <p>
+        My name is Johnson Mushi, a student at the University of Dar Es Salaam,
+        College of Information and Communication Technology (COICT). I am pursuing a
+        degree in Computer Science. My goal is to become a skilled Cybersecurity
+        Specialist and make a positive impact in the tech industry.
+        </p>
+        </div>
+
+
+      </div>
+
+    </section>  
+      
+
+    <h4 style="text-align: center;"><em>MY SKILLS.</em></h4>
+
+    <div class="skills">
+    
+      <div class="skillbox" id="skillbox1">
+      <h4>Website Development</h4>
         <ul>
           <li>HTML</li>
           <li>CSS</li>
           <li>JavaScript</li>
         </ul>
-      </li>
-      <li>
-        Programming
+      </div>
+
+      <div class="skillbox" id="skillbox2">
+      <h4>Programming</h4>
         <ul>
           <li>C</li>
           <li>HTML</li>
           <li>Java</li>
         </ul>
-      </li>
-      <li>Networking</li>
-      <li>
-        Tools
+      </div>  
+
+      <div class="skillbox" id="skillbox3">
+      <h4>Tools</h4>
         <ul>
           <li>Git</li>
           <li>Github</li>
           <li>XAMPP</li>
           <li>VSCode</li>
         </ul>
-      </li>
+      </div>
 
-      <li>
-        Soft skills
+
+      <div class="skillbox" id="skillbox4">
+      <h4>Soft skills</h4>
         <ul>
           <li>Communication</li>
           <li>Teamwork</li>
@@ -70,41 +107,14 @@
           <li>Critical thinking</li>
           <li>Attention to detail</li>
         </ul>
-      </li>
-    </ul>
+      </div>
 
-    <!--Here Are Supportive Images</strong></p>--->
 
-    <p>
-      <em
-        ><strong
-          >These images represent my skills and interests in technology and
-          programming.</strong
-        ></em
-      >
-    </p>
-    <p>Coding Image :</p>
-    <img
-      src="/images/matrix-falling-code-3840x2160-15697.jpg"
-      alt="coding image"
-      width="400px"
-    />
-    <p>Networking Image :</p>
-    <img
-      src="/images/network-connections-earth-lights-blue-horizon-3840x2160-2463.jpg"
-      alt="networking image"
-      width="400px"
-    />
-    <p>Java Image :</p>
-    <img
-      src="/images/java-logo-3840x2160-15990.png"
-      alt="java image"
-      width="400px"
-    />
+    </div>
 
     <table border="1">
       <caption>
-        <strong>My Academic History</strong>
+       <h4 style="text-align: center;"><em><strong>MY ACADEMIC HISTORY.</strong></em></h4>
       </caption>
       <thead>
         <tr>
@@ -141,42 +151,60 @@
       </tfoot>
     </table>
 
-    <div>
-      <h4>My HOBBIES/INTERESTS :</h4>
-      <ul>
-        <li>Playing football</li>
-        <li>Watching movies</li>
-        <li>Playing Games</li>
-      </ul>
+    <h4 style="text-align: center;"><em><strong>MY HOBBIES/INTEREST.</strong></em></h4>
+        <div class="hob">
+          <div class="hobby-box" id="box1"></div>
+          <div class="hobby-box" id="box2"></div>
+          <div class="hobby-box" id="box3"></div>
+          </ul>
+        </div>
+
+    <!--Here Are Supportive Images</strong></p>--->
+
+    <p style="text-align:center; padding: 20px;">
+      <em
+        ><strong
+          >MY GALLERY.</strong
+        ></em
+      >
+    </p>
+    
+    <div class="skillsimage">
+    <img
+      src="/images/Johnson4.jpeg"
+      alt="my image"
+      width="300px"
+    />
+    <p>  </p>
+    <img
+      src="../images/Johnson 2.jpeg"
+      alt="sunsets image"
+      width="340px"
+    />
+    <img
+      src="../images/Johnson 5.jpeg"
+      alt="sunsets image"
+      width="230px"
+    />
     </div>
 
-    <footer>
-      <h4>For More Information :</h4>
-      You can find me via my
-      <a href="mailto:johnsonmushi73@gmail.com"> E-mail</a> or My social media
-      accounts shown below :
+
+
+     <!--footer-->
+    <footer class="footer_text">
+      <div class="footer_icons">
+        <a href="https://www.instagram.com/itc._j.o.h.n.s.o.n?igsh=aXBxczd4bWk2dzMx&utm_source=qr" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://x.com/johnson_mu92642?s=11"target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-whatsapp"target="_blank"></i></a>
+        <a href=""><i class="fa-brands fa-threads"target="_blank"></i></a>
+        <a href="https://github.com/settings/admin"target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>
       <p>
-        <a href="https://x.com/johnson_mu92642?s=11"
-          ><img src="/images/twitter.png" alt="Facebook" width="30px" />
-        </a>
-        <a
-          href="https://www.instagram.com/itc._j.o.h.n.s.o.n?igsh=aXBxczd4bWk2dzMx&utm_source=qr"
-          ><img
-            src="/images/instagram-logo (2).png"
-            alt="instagram"
-            width="30px"
-        /></a>
-        <a href="https://github.com/settings/admin"
-          ><img src="/images/github.png" alt="github" width="30px"
-        /></a>
-        <a
-          href="https://www.linkedin.com/in/johnson-mushi-118090390?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
-        >
-          <img src="/images/linkedin.png" alt="LinkedIn" width="30px" />
-        </a>
+        GROUP-GK &copy; 2026 | All rights reserved | Official website of Group
+        GK &trade;
       </p>
     </footer>
 
-    <p>&copy; 2026 group gk inc, no AI used | All Rights Reserved</p>
+
   </body>
 </html>
