@@ -1,16 +1,29 @@
-
-
-
-
 main {
   width: 100%;
 }
 
-.introduction h2 {
+.welcome {
+  min-height: 90vh;
+  background:
+    linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
+    url(/images/horizonbeach.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.welcome h1 {
+  text-align: center;
+  font-family: var(--heading-font);
+  font-size: var(--h1-font);
+  letter-spacing: 0.7rem;
+  color: var(--normal-color);
+}
+
+.welcome h2 {
   text-align: center;
   font-family:Georgia, 'Times New Roman'
 }
-.introduction h4{
+.welcome h4{
   text-align: center;
   font-family:Georgia, 'Times New Roman'
 }
