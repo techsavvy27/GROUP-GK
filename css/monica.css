@@ -44,7 +44,7 @@ header a p {
   min-height: 90vh;
   background:
     linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
-    url(/images/abel-back2.png);
+    url(/images/);
   background-size: cover;
   background-position: center;
   display: flow-root;
