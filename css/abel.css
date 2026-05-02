@@ -11,6 +11,7 @@
 
 * {
   scroll-behavior: smooth;
+  scroll-margin-top: 5rem;
   text-decoration: none;
 }
 
@@ -29,6 +30,10 @@
 
 body {
   font-family: var(--body-font);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .logo {
@@ -43,12 +48,14 @@ header {
   align-items: center;
   justify-content: center;
   background-color: var(--main-color);
-  padding: 0.5rem;
-  border-radius: 10px 10px 0 0;
   border-bottom: 2px solid var(--normal-color);
+  padding: 0.5rem;
   position: sticky;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
+  width: 100%;
   transition: all 0.35s ease;
 }
 
@@ -93,6 +100,11 @@ main {
 
 .introduction {
   min-height: 90vh;
+  background:
+    linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
+    url(/images/abel-back.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 .introduction h1 {
@@ -136,13 +148,13 @@ main {
   gap: 40px;
   max-width: 900px;
   margin: 40px auto;
+  background-color: transparent;
 }
 
 .intromenu ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--main-color);
   padding: 0.5rem;
 }
 
