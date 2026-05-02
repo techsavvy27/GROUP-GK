@@ -9,6 +9,7 @@ main {
     url(/images/horizonbeach.jpg);
   background-size: cover;
   background-position: center;
+  
 }
 
 .welcome h1 {
@@ -103,12 +104,14 @@ table {
   margin: 40px auto;   /* THIS centers it horizontally */
   border-collapse: collapse;
   border-radius: 10px;
-  overflow: hidden;     
+  overflow: hidden; 
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);   
 }
+
 table thead{
   background-color:#1a1919;
   color: white;
-  border-radius: 10px; 
+  
 }
 
 .hob{
