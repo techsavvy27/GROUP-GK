@@ -1,10 +1,13 @@
 /*
-copyright &copy; GROUP GK 2026
+
+Copyright, GROUP GK 2026
+
 */
 
 *{
   list-style: none;
 }
+  
 
 body{
   font-family: Arial, Helvetica, sans-serif;
@@ -12,7 +15,7 @@ body{
 }
 
 .container{
-  margin: 2rem 0;
+  margin: 2rem;
 }
 
 main {
@@ -31,6 +34,10 @@ main {
   background-color: #ffffff;
   padding: 50px;
   border-radius:  0 0 10px 10px;
+  min-height: 90vh;
+  background: linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%), url(/images/abel-back.jpg);
+  background-size: cover;
+  background-position: center;
 }
 .hero{
   display: flex;
@@ -39,10 +46,85 @@ main {
   gap: 40px;
   max-width: 900px;
   margin: 40px auto;
+    font-size: 1rem;
 }
 
 .hero .hero-text{
  line-height: 1.5;
  text-align: start;
+ font-size: larger;
 }
 
+.arrow{
+padding: 20% 0 0 0;
+}
+
+.scroll-arrow{
+font-weight: bolder;
+cursor: pointer;
+color: #33383e;
+}
+
+#table-start{
+  padding-top: 1.5rem;
+}
+table {
+  width: 80%;
+  margin: 40px auto;
+  border-radius: 5px;
+  box-shadow: 0 0 2px 2px gray;
+}
+
+th {
+  background-color: #1f73f9;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+}
+
+td{
+  color: #333;
+}
+
+/* apply styles to even numbered rows in the table*/
+tr:nth-child(even) {
+  color: #333;
+  background-color: #d6d7d7;
+}
+
+.card-parent {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  padding: 2rem;
+}
+.card {
+  background-color: #f1efef;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.card-img{
+  background-color: #f1efef;
+  border-radius: 10px;
+  max-width: 4--px;
+}
+.card-img img{
+object-fit: cover;
+width: 100%;
+height: 25vh;
+}
+
+.button {
+  border: none;
+  padding: 15px;
+  background-color: #6b6bef;
+  border-radius: 5rem;
+  color: white;
+  font-weight: bold;
+  margin: 0 0 1rem 0;
+}
+.button:hover {
+  background-color: blueviolet;
+  cursor: pointer;
+  transform: translateY(-2px);
+}
