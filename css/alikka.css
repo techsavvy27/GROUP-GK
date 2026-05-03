@@ -139,36 +139,6 @@ header {
   pointer-events: auto;
 }
 
-
-/*.logo {
-  color: black;
-  font-size: 22px;
-  font-weight: bold;
-}
-
-.navlist {
-  display: flex;
-}
-
-.navlist li a {
-  color: white;
-  padding: 10px;
-  text-decoration: none;
-}
-
-.navlist li a:hover {
-  color: pink;
-}
-
-
-* {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  font-family: Arial, sans-serif;
-}*/
-
-
 .intro {
   background-color: white;
   margin: 20px auto;
