@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* 
@@ -16,7 +15,7 @@
 }
 
 :root {
-  --heading-font: "DM Serif Text", serif;
+  --heading-font: "DM Serif Display", serif;
   --body-font: "DM Sans", sans-serif;
   --logo-font: "Montserrat", sans-serif;
   --logo-color: #333;
@@ -42,26 +41,34 @@ body {
   font-weight: bold;
   color: var(--logo-color);
   font-family: var(--logo-font);
+  margin-right: auto; /* pushes everything else away */
+  flex: 1;
+  z-index: 2;
 }
 
 header {
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-color: var(--main-color);
-  border-bottom: 2px solid var(--normal-color);
-  padding: 0.5rem;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-bottom: 1px solid var(--normal-color);
+  padding: 0.5rem 2rem;
   position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
   z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+.nav-wrapper {
+  position: absolute;
+  left: 0;
   width: 100%;
-  transition: all 0.35s ease;
+  display: flex;
+  justify-content: center;
 }
 
 .navlist {
   display: flex;
+  gap: 40px;
 }
 
 .navlist li {
@@ -69,6 +76,7 @@ header {
 }
 
 .navlist li a {
+  position: relative;
   font-family: var(--logo-font);
   font-size: 18px;
   text-decoration: none;
@@ -77,9 +85,62 @@ header {
 }
 
 .navlist li a:hover {
-  color: var(--hover-color);
-  font-size: 20px;
-  transition: ease-in-out 0.3s;
+  color: var(--accent-color);
+}
+
+.navlist li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.navlist li a:hover::after {
+  width: 100%;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: block;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  min-width: 150px;
+  top: 120%;
+  left: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 10px 15px;
+  transition: background 0.2s ease;
+}
+
+.dropdown-content li a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.dropdown-content li a:hover::after {
+  width: 70%;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 /* FOOTER SECTION */
@@ -112,6 +173,28 @@ header {
   color: var(--hover-color);
   font-size: 2.2rem;
   padding: 0.6rem;
+}
+
+/* SCROLL TO TOP */
+.top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.top i {
+  font-size: var(--text-font);
+  color: var(--main-color);
+  padding: 14px;
+  background: var(--logo-color);
+  border-radius: 1rem;
+  transition: all 0.35s ease-in-out;
+}
+
+.top i:hover {
+  transform: scale(1.13);
+  color: var(--main-color);
+  background: var(--accent-color);
 }
 
 /*
@@ -202,7 +285,7 @@ header {
 }
 
 .intromenu ul li a:hover {
-  color: var(--hover-color);
+  color: var(--accent-color);
   font-size: 1.2rem;
   transition: ease-in-out 0.3s;
 }
@@ -520,33 +603,4 @@ td {
     url(/images/abel-gal1.jpeg);
   background-size: cover;
   background-position: center;
-}
-
-/* 
-/
-/
-SCROLL TO TOP 
-/
-/
-*/
-
-.top {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-}
-
-.top i {
-  font-size: var(--text-font);
-  color: var(--main-color);
-  padding: 14px;
-  background: var(--logo-color);
-  border-radius: 1rem;
-  transition: all 0.35s ease-in-out;
-}
-
-.top i:hover {
-  transform: scale(1.13);
-  color: var(--main-color);
-  background: var(--accent-color);
 }

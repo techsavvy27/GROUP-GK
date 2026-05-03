@@ -1,3 +1,4 @@
+/*
 * {
   font-family: Arial;
   text-decoration: none;
@@ -35,4 +36,50 @@ header a p {
 
 .navlist p a {
   font-weight: bolder;
+}
+*/
+
+.welcome {
+  padding: 50px;
+  min-height: 90vh;
+  background:
+    linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
+    url(/images/);
+  background-size: cover;
+  background-position: center;
+  display: flow-root;
+}
+
+.welcome h1 {
+  text-align: center;
+  font-family: var(--heading-font);
+  font-size: var(--h1-font);
+  letter-spacing: 0.7rem;
+  color: var(--normal-color);
+}
+
+.welcomebox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.welcomebox img {
+  width: 300px;
+  border-radius: 8px;
+}
+
+.welcometext h2 {
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  color: var(--normal-color);
+}
+
+.welcometext p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: var(--normal-color);
 }

@@ -40,7 +40,7 @@ main {
   display: flow-root;
   padding: 50px;
   border-radius:  0 0 10px 10px;
-  
+  font-family: "DM Serif Text", "serif";
 }
 
 .hero{
@@ -70,7 +70,7 @@ color: #33383e;
 }
 
 #table-start{
-  padding-top: 1.5rem;
+  padding-top: 2rem;
 }
 table {
   width: 80%;
@@ -101,16 +101,25 @@ tr:nth-child(even) {
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   padding: 2rem;
 }
-.card {
+.card{
   background-color: #f1efef;
   border-radius: 10px;
   padding: 1rem;
 }
 
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.6);
+}
 .card-img{
   background-color: #f1efef;
   border-radius: 10px;
   max-width: 4--px;
+}
+.card-img:hover {
+  transform: translateY(-10px);
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.6);
+  transition: ease 250ms;
 }
 .card-img img{
 object-fit: cover;
@@ -130,5 +139,7 @@ height: 25vh;
 .button:hover {
   background-color: blueviolet;
   cursor: pointer;
-  transform: translateY(-2px);
+  transform:translateY(-5px);
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.6);
+    transition: ease 250ms;
 }
