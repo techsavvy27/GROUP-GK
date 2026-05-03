@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   scroll-behavior: smooth;
   scroll-margin-top: 3rem;
@@ -5,8 +8,8 @@
 }
 
 :root {
-  --heading-font: "DM Serif Display", serif;
-  --body-font: "DM Sans", sans-serif;
+  --heading-font: "Playfair Display", serif;
+  --body-font: "Inter", sans-serif;
   --logo-font: "Montserrat", sans-serif;
   --logo-color: #333;
   --main-color: #fff;
@@ -25,6 +28,7 @@ body {
   overflow-x: hidden;
 }
 
+/* HEADER AND NAVIGATION */
 .logo {
   font-size: 2rem;
   font-weight: bold;
@@ -186,9 +190,7 @@ header {
   background: var(--accent-color);
 }
 
-main {
-  width: 100%;
-}
+/* WELCOME TO MY PAGE SECTION */
 
 .welcome {
   min-height: 90vh;
@@ -204,30 +206,17 @@ main {
   text-align: center;
   font-family: var(--heading-font);
   font-size: var(--h1-font);
-  letter-spacing: 0.7rem;
+  letter-spacing: 0.1rem;
   color: var(--normal-color);
-}
-
-.welcome h2 {
-  text-align: center;
-  font-family: Georgia, "Times New Roman";
-  letter-spacing: 0.5rem;
-}
-.welcome h4 {
-  text-align: center;
-  font-family: Georgia, "Times New Roman";
 }
 
 .bio {
   display: flex;
-  text-align: justify;
-  gap: 50px;
-  align-items: center; /* aligns vertically */
-  justify-content: center; /* centers everything horizontally */
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 900px;
   margin: 40px auto;
-  max-width: 865px;
-  font-size: 18px;
-  line-height: 1.6;
   transition: ease 250ms;
 }
 
@@ -239,13 +228,35 @@ main {
 
 .bio img:hover {
   transform: translateY(-10px);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 15px rgb(22, 100, 149);
 }
 
-.profile-pic {
-  width: 300px;
-  height: auto;
-  border-radius: 10px;
+.biotext h2 {
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  color: var(--normal-color);
+}
+
+.biotext p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: var(--normal-color);
+}
+
+/* SKILLS SECTION */
+
+.skillblock {
+  min-height: 90vh;
+  display: flow-root;
+}
+
+.skillblock h1 {
+  text-align: center;
+  font-family: var(--heading-font);
+  font-size: var(--h1-font);
+  letter-spacing: 0.1rem;
+  color: var(--normal-color);
+  margin-bottom: 0;
 }
 
 .skills {
@@ -262,6 +273,9 @@ main {
   padding: 20px;
   border-radius: 10px;
   width: 375px;
+  margin: 40px auto;
+  font-size: var(--text-font);
+  position: relative;
   transition: ease 250ms;
 }
 
@@ -277,6 +291,7 @@ main {
   background-size: cover;
   background-position: center;
 }
+
 #skillbox2 {
   background:
     linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
@@ -284,6 +299,7 @@ main {
   background-size: cover;
   background-position: center;
 }
+
 #skillbox3 {
   background:
     linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
@@ -291,6 +307,7 @@ main {
   background-size: cover;
   background-position: center;
 }
+
 #skillbox4 {
   background:
     linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
@@ -309,33 +326,29 @@ main {
   text-align: left;
 }
 
-.skillsimage {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
+/* ACADEMIC SECTION */
+.tableblock {
+  min-height: 90vh;
+  display: flow-root;
 }
 
-.skillsimage img {
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-  transition: ease 250ms;
-}
-
-.skillsimage img:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+.tableblock h1 {
+  text-align: center;
+  font-family: var(--heading-font);
+  font-size: var(--h2-font);
+  letter-spacing: 0.1rem;
+  color: var(--normal-color);
 }
 
 table {
   table-layout: auto;
-  width: 70%;
+  width: 60%;
+  min-height: 60vh;
   margin: 40px auto; /* THIS centers it horizontally */
   border-collapse: collapse;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 8px 25px rgba(255, 255, 255, 0.4);
-  min-height: 300px;
   background:
     linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
     url(/images/academichistphoto.jpg);
@@ -350,7 +363,7 @@ table:hover {
 }
 
 table thead {
-  color: black;
+  color: var(--normal-color);
 }
 
 table,
@@ -358,7 +371,22 @@ th,
 td {
   border: none;
   padding: 15px;
+  text-align: left;
+  font-size: var(--text-font);
+}
+
+/* HOBBIES SECTION */
+.hobbyblock {
+  min-height: 90vh;
+  display: flow-root;
+}
+
+.hobbyblock h1 {
   text-align: center;
+  font-family: var(--heading-font);
+  font-size: var(--h2-font);
+  letter-spacing: 0.1rem;
+  color: var(--normal-color);
 }
 
 .hob {
@@ -423,6 +451,34 @@ td {
   box-shadow: 0 0 20px rgb(0, 255, 174);
 }
 
-footer {
+/* GALLERY AREA */
+.galleryblock {
+  min-height: 90vh;
+  display: flow-root;
+}
+
+.galleryblock h1 {
   text-align: center;
+  font-family: var(--heading-font);
+  font-size: var(--h2-font);
+  letter-spacing: 0.1rem;
+  color: var(--normal-color);
+}
+
+.gallerypics {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.gallerypics img {
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  transition: ease 250ms;
+}
+
+.gallerypics img:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
 }
