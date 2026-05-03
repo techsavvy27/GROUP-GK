@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nyla</title>
     <link rel="stylesheet" href="../css/nyla.css" />
+
     <!-- LINKS TO ICONS -->
     <link
       rel="stylesheet"
@@ -16,149 +17,154 @@
   </head>
   <!-- header and navigation THIS IS GLOBALY APPLIED -->
 
-  <header>
-    <a href="/index.html"><span class="logo">GROUP GK</span></a>
-    <ul class="navlist">
-      <li><a href="/index.html">Home</a></li>
-      <li><a href="abel.html">Abel</a></li>
-      <li><a href="alika.html">Alikka</a></li>
-      <li><a href="baraka.html">Baraka</a></li>
-      <li><a href="david.html">David</a></li>
-      <li><a href="johnson.html">Johnson</a></li>
-      <li><a href="kennedy.html">Kenny</a></li>
-      <li><a href="monica.html">Monica</a></li>
-      <li><a href="nyla.html">Nyla</a></li>
-      <li><a href="contact.html">Contacts</a></li>
-    </ul>
-  </header>
-  <!--This is the start of the main body of the page-->
   <body>
+    <header>
+      <a href="/index.html"><span class="logo">GROUP GK</span></a>
+      <div class="nav-wrapper">
+        <ul class="navlist">
+          <li><a href="/index.html">Home</a></li>
+
+          <li class="dropdown">
+            <a href="#">Members</a>
+            <ul class="dropdown-content">
+              <li><a href="/pages/abel.html">Abel</a></li>
+              <li><a href="/pages/alika.html">Alikka</a></li>
+              <li><a href="/pages/baraka.html">Baraka</a></li>
+              <li><a href="/pages/david.html">David</a></li>
+              <li><a href="/pages/johnson.html">Johnson</a></li>
+              <li><a href="/pages/kennedy.html">Kenny</a></li>
+              <li><a href="/pages/monica.html">Monica</a></li>
+              <li><a href="/pages/nyla.html">Nyla</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/pages/contact.html">Contacts</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!--This is the start of the main body of the page-->
     <main>
-      <div>
+      <section class="introduction">
         <h1>Nyla's Portfolio</h1>
-        <img
-          src="../images/nyla1.jpeg"
-          alt="nyla's photo"
-          height="auto"
-          width="200px"
-        />
-        <div class="biotext">
-          <h4><em>ABOUT ME</em></h4>
-
-          <p>
-            My name is Nyla Kilewela, I am currently at the University of
-            Dar-es-Salaam, taking a Bachelor's degree in Computer Science.I am
-            passionate about technology and programming, and I am always eager
-            to learn new skills and explore new opportunities in the field. I
-            have a strong background in programming languages such as Python,
-            JavaScript, and C++, and I am also proficient in web development
-            technologies like HTML, CSS, and React. In my free time, I enjoy
-            reading, writing, and building websites. I am excited to continue
-            growing my skills and making a positive impact in the tech industry.
-          </p>
-          <h2>Skills</h2>
-          <!--this is my skills section-->
-          <ol>
-            <li>
-              Programming
-              <ul>
-                <li>Python</li>
-                <li>Javascript</li>
-                <li>C++</li>
-              </ul>
-            </li>
-            <li>
-              Web Development
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>React</li>
-              </ul>
-            </li>
-          </ol>
+        <div class="introbox">
+          <img src="../images/nyla1.jpeg" alt="nyla's photo" />
+          <div class="introtext">
+            <h2>About Me</h2>
+            <p>
+              My name is Nyla Kilewela, I am currently at the University of Dar
+              es Salaam, taking a Bachelor's degree in Computer Science. I am
+              passionate about technology and programming, and always eager to
+              learn new skills and explore new opportunities. I have a strong
+              background in languages such as Python, JavaScript, and C++, and
+              also in web development technologies like HTML, CSS, and React. In
+              my free time, I enjoy reading, writing, and building websites. I
+              am excited to continue growing my skills and making a positive
+              impact in the tech industry.
+            </p>
+          </div>
         </div>
-        <!--table-->
-        <table border="1">
-          <!--This is a table with my academic history-->
-          <thead>
-            <h2>My Academic History</h2>
-          </thead>
-          <tr>
-            <th>Level of Education</th>
-            <th>Institution</th>
-            <th>Year of Study</th>
-          </tr>
-          <tr>
-            <td>University</td>
-            <td>University of Dar-es-Salaam</td>
-            <td>2025-Present</td>
-          </tr>
-          <tr>
-            <td>High school</td>
-            <td>Ahmes Secondary School</td>
-            <td>2023-2025</td>
-          </tr>
-          <tr>
-            <td>Ordinary Level</td>
-            <td>Marian Secondary School</td>
-            <td>2019-2022</td>
-          </tr>
-        </table>
-        <div>
-          <h2>Hobbies</h2>
+      </section>
+      <h2>Skills</h2>
+      <!--this is my skills section-->
+      <ol>
+        <li>
+          Programming
           <ul>
-            <li>Reading</li>
-            <li>Writing and building websites</li>
-            <li>Coding</li>
+            <li>Python</li>
+            <li>Javascript</li>
+            <li>C++</li>
           </ul>
-        </div>
+        </li>
+        <li>
+          Web Development
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>React</li>
+          </ul>
+        </li>
+      </ol>
+      <!--table-->
+      <table border="1">
+        <!--This is a table with my academic history-->
+        <thead>
+          <h2>My Academic History</h2>
+        </thead>
+        <tr>
+          <th>Level of Education</th>
+          <th>Institution</th>
+          <th>Year of Study</th>
+        </tr>
+        <tr>
+          <td>University</td>
+          <td>University of Dar-es-Salaam</td>
+          <td>2025-Present</td>
+        </tr>
+        <tr>
+          <td>High school</td>
+          <td>Ahmes Secondary School</td>
+          <td>2023-2025</td>
+        </tr>
+        <tr>
+          <td>Ordinary Level</td>
+          <td>Marian Secondary School</td>
+          <td>2019-2022</td>
+        </tr>
+      </table>
+      <div>
+        <h2>Hobbies</h2>
+        <ul>
+          <li>Reading</li>
+          <li>Writing and building websites</li>
+          <li>Coding</li>
+        </ul>
+      </div>
 
-        <div class="gallery-container">
-          <h2 class="gallery-heading">My Gallery</h2>
-          <div class="slider">
-            <div class="slide-track">
-              <div class="slide">
-                <img src="/images/nyla1.jpeg" alt="Gallery 1" />
-              </div>
-              <div class="slide">
-                <img src="/images/nyla2.jpeg" alt="Gallery 2" />
-              </div>
-              <div class="slide">
-                <img src="/images/nyla3.jpeg" alt="Gallery 3" />
-              </div>
-              <div class="slide">
-                <img src="/images/nyla.jpeg" alt="Gallery 4" />
-              </div>
-              <div class="slide">
-                <img src="/images/nyla1.jpeg" alt="Gallery 5" />
-              </div>
-              <div class="slide">
-                <img src="/images/nyla2.jpeg" alt="Gallery 5" />
-              </div>
-              <div class="slide">
-                <img src="/images/nyla3.jpeg" alt="Gallery 6" />
-              </div>
-              <div class="slide">
-                <img src="/images/nyla.jpeg" alt="Gallery 7" />
-              </div>
-              <div class="slide">
-                <img src="/images/nyla1.jpeg" alt="Gallery 8" />
-              </div>
-              <div class="slide">
-                <img src="/images/nyla2.jpeg" alt="Gallery 9" />
-              </div>
-              <div class="slide">
-                <img src="/images/nyla3.jpeg" alt="Gallery 10" />
-              </div>
-              <div class="slide">
-                <img src="/images/nyla.jpeg" alt="Gallery 11" />
-              </div>
+      <div class="gallery-container">
+        <h2 class="gallery-heading">My Gallery</h2>
+        <div class="slider">
+          <div class="slide-track">
+            <div class="slide">
+              <img src="/images/nyla1.jpeg" alt="Gallery 1" />
+            </div>
+            <div class="slide">
+              <img src="/images/nyla2.jpeg" alt="Gallery 2" />
+            </div>
+            <div class="slide">
+              <img src="/images/nyla3.jpeg" alt="Gallery 3" />
+            </div>
+            <div class="slide">
+              <img src="/images/nyla.jpeg" alt="Gallery 4" />
+            </div>
+            <div class="slide">
+              <img src="/images/nyla1.jpeg" alt="Gallery 5" />
+            </div>
+            <div class="slide">
+              <img src="/images/nyla2.jpeg" alt="Gallery 5" />
+            </div>
+            <div class="slide">
+              <img src="/images/nyla3.jpeg" alt="Gallery 6" />
+            </div>
+            <div class="slide">
+              <img src="/images/nyla.jpeg" alt="Gallery 7" />
+            </div>
+            <div class="slide">
+              <img src="/images/nyla1.jpeg" alt="Gallery 8" />
+            </div>
+            <div class="slide">
+              <img src="/images/nyla2.jpeg" alt="Gallery 9" />
+            </div>
+            <div class="slide">
+              <img src="/images/nyla3.jpeg" alt="Gallery 10" />
+            </div>
+            <div class="slide">
+              <img src="/images/nyla.jpeg" alt="Gallery 11" />
             </div>
           </div>
         </div>
       </div>
     </main>
-
     <!--footer-->
     <footer class="footer_text">
       <div class="footer_icons">
@@ -175,5 +181,8 @@
         GK &trade;
       </p>
     </footer>
+
+    <!--scroll top-->
+    <a href="#" class="top"><i class="fa-solid fa-arrow-up"></i></a>
   </body>
 </html>

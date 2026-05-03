@@ -2,13 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* 
-/
-/ GLOBAL STYLES FOR ALL PAGES
-/ These reflect on all pages linked with abel.css respectively
-/
-*/
-
 * {
   scroll-behavior: smooth;
   scroll-margin-top: 3rem;
@@ -16,14 +9,13 @@
 }
 
 :root {
-  --heading-font: "DM Serif Text", serif;
+  --heading-font: "DM Serif Display", serif;
   --body-font: "DM Sans", sans-serif;
   --logo-font: "Montserrat", sans-serif;
   --logo-color: #333;
   --main-color: #fff;
   --normal-color: #1f1f1f;
-  --hover-color: #166495;
-  --accent-color: #587822;
+  --accent-color: #982131;
   --h1-font: 3rem;
   --h2-font: 2rem;
   --text-font: 1.3rem;
@@ -42,26 +34,34 @@ body {
   font-weight: bold;
   color: var(--logo-color);
   font-family: var(--logo-font);
+  margin-right: auto; /* pushes everything else away */
+  flex: 1;
+  z-index: 2;
 }
 
 header {
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-color: var(--main-color);
-  border-bottom: 2px solid var(--normal-color);
-  padding: 0.5rem;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-bottom: 1px solid var(--normal-color);
+  padding: 0.5rem 2rem;
   position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
   z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+.nav-wrapper {
+  position: absolute;
+  left: 0;
   width: 100%;
-  transition: all 0.35s ease;
+  display: flex;
+  justify-content: center;
 }
 
 .navlist {
   display: flex;
+  gap: 40px;
 }
 
 .navlist li {
@@ -69,6 +69,7 @@ header {
 }
 
 .navlist li a {
+  position: relative;
   font-family: var(--logo-font);
   font-size: 18px;
   text-decoration: none;
@@ -77,9 +78,62 @@ header {
 }
 
 .navlist li a:hover {
-  color: var(--hover-color);
-  font-size: 20px;
-  transition: ease-in-out 0.3s;
+  color: var(--accent-color);
+}
+
+.navlist li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.navlist li a:hover::after {
+  width: 100%;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: block;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  min-width: 150px;
+  top: 120%;
+  left: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 10px 15px;
+  transition: background 0.2s ease;
+}
+
+.dropdown-content li a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.dropdown-content li a:hover::after {
+  width: 70%;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 /* FOOTER SECTION */
@@ -109,24 +163,37 @@ header {
 }
 
 .footer_icons a:hover {
-  color: var(--hover-color);
+  color: var(--accent-color);
   font-size: 2.2rem;
   padding: 0.6rem;
 }
 
-/*
-/
-/ END OF GLOBAL STYLES
-/
-/
-*/
+/* SCROLL TO TOP */
+.top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+}
 
+.top i {
+  font-size: var(--text-font);
+  color: var(--main-color);
+  padding: 14px;
+  background: var(--logo-color);
+  border-radius: 1rem;
+  transition: all 0.35s ease-in-out;
+}
+
+.top i:hover {
+  transform: scale(1.13);
+  color: var(--main-color);
+  background: var(--accent-color);
+}
 /*
 /
 / INTRODUCTION SECTION
 /
 */
-
 .introduction {
   padding: 50px;
   min-height: 90vh;
@@ -170,45 +237,7 @@ header {
   font-size: 1.3rem;
   line-height: 1.5;
   color: var(--normal-color);
-}
-
-.intromenu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  max-width: 900px;
-  margin: 40px auto;
-  background-color: transparent;
-}
-
-.intromenu ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem;
-}
-
-.intromenu ul li {
-  list-style: none;
-}
-
-.intromenu ul li a {
-  text-decoration: none;
-  font-size: var(--text-font);
-  color: var(--normal-color);
-  padding: 2rem;
-  font-weight: bold;
-}
-
-.intromenu ul li a:hover {
-  color: var(--hover-color);
-  font-size: 1.2rem;
-  transition: ease-in-out 0.3s;
-}
-
-.intromenu i {
-  padding: 10px;
+  text-align: justify;
 }
 
 /* --- LIST STYLING: Skills & Hobbies --- */
@@ -230,15 +259,16 @@ header {
   margin-bottom: 25px;
   color: #333;
 }
+
 /* --- ACADEMIC HISTORY TABLE --- */
 table {
-  table-layout:auto;
+  table-layout: auto;
   width: 70%;
-  margin: 40px auto;   /* THIS centers it horizontally */
+  margin: 40px auto; /* THIS centers it horizontally */
   border-collapse: collapse;
   border-radius: 10px;
-  overflow: hidden; 
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); 
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
   min-height: 300px;
   background:
     linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
@@ -248,16 +278,18 @@ table {
   transition: ease 250ms;
 }
 
-table:hover{
+table:hover {
   transform: translateY(-10px);
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
 }
 
-table thead{
-  color:black;
+table thead {
+  color: black;
 }
 
-table, th, td {
+table,
+th,
+td {
   border: none;
   padding: 15px;
   text-align: center;
@@ -328,4 +360,3 @@ table, th, td {
     }
   }
 }
-
