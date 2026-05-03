@@ -80,7 +80,7 @@ header a p {
   border-radius: 12px;
    background:
     linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
-    url(/images/background.jpg)
+    url(/images/background.jpg) ;
 
   padding: 40px;
   width: 100%;
@@ -109,7 +109,7 @@ section {
   box-shadow: 2px 2px 8px lightgrey;
 }
 .education {
-  background:
+ background:
     linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
     url(/images/edu-back_.jpg);
 }
@@ -119,12 +119,7 @@ image:hover {
   opacity: 0.9;
   transform: scale(1.05);
 }
-.shadow-img 
-{
-  width: 400px;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}image
+
 
 .footer_text {
   background-color: #555;
