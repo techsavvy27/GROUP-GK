@@ -244,8 +244,17 @@ main {
   font-size: larger;
 }
 
+@keyframes scrolldown{
+0%{transform: translateY(0px);}
+25%{transform: translateY(4px);}
+50%{transform: translateY(5px);}
+75%{transform: translateY(4px);}
+100%{transform: translateY(0px);}
+}
+
 .arrow {
-  padding: 20% 0 0 0;
+  padding: 15% 0 0 0;
+  animation: scrolldown 2s infinite linear;
 }
 
 .scroll-arrow {
@@ -255,14 +264,15 @@ main {
 }
 
 #table-start {
-  padding-top: 2rem;
   text-align: center;
 }
+
 table {
   width: 80%;
   margin: 40px auto;
   border-radius: 5px;
   box-shadow: 0 0 2px 2px gray;
+  text-align: center;
 }
 
 th {
@@ -273,6 +283,7 @@ th {
 
 td {
   color: #333;
+  padding: 10px;
 }
 
 /* apply styles to even numbered rows in the table*/
@@ -297,6 +308,7 @@ tr:nth-child(even) {
 .card:hover {
   transform: translateY(-10px);
   box-shadow: 5px 5px rgba(0, 0, 0, 0.6);
+  cursor: text;
 }
 
 .card-parent .card:nth-child(2) {
@@ -332,6 +344,7 @@ tr:nth-child(even) {
   box-shadow: 5px 5px rgba(0, 0, 0, 0.6);
   transition: ease 250ms;
   background-color: #d2d4d6;
+  cursor: text;
 }
 .card-img img {
   object-fit: cover;
@@ -340,6 +353,10 @@ tr:nth-child(even) {
   border-radius: 10px 10px 0 0;
 }
 
+.card-img .content{
+  padding: 1rem;
+  text-align: center;
+}
 .button {
   border: none;
   padding: 15px;
