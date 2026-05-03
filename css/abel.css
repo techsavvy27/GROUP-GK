@@ -14,7 +14,6 @@
   --logo-color: #333;
   --main-color: #fff;
   --normal-color: #1f1f1f;
-  --hover-color: #166495;
   --accent-color: #587822;
   --h1-font: 3rem;
   --h2-font: 2rem;
@@ -163,7 +162,7 @@ header {
 }
 
 .footer_icons a:hover {
-  color: var(--hover-color);
+  color: var(--accent-color);
   font-size: 2.2rem;
   padding: 0.6rem;
 }
