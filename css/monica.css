@@ -1,4 +1,4 @@
-/*
+
 * {
   font-family: Arial;
   text-decoration: none;
@@ -15,36 +15,15 @@ header a p {
   font-family: Helvetica;
 }
 
-.navlist {
-  display: flex;
-}
 
-.navlist li {
-  list-style: none;
-  font-weight: bold;
-}
 
-.navlist li a {
-  text-decoration: none;
-  padding: 10px;
-  color: #36517c;
-}
-
-.navlist li a:hover {
-  color: #86b4ff;
-}
-
-.navlist p a {
-  font-weight: bolder;
-}
-*/
 
 .welcome {
   padding: 50px;
   min-height: 90vh;
   background:
     linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
-    url(/images/);
+    url(/images/back2.jpg);
   background-size: cover;
   background-position: center;
   display: flow-root;
@@ -82,4 +61,95 @@ header a p {
   font-size: 1.3rem;
   line-height: 1.5;
   color: var(--normal-color);
+}
+
+.skills-section,
+.education,
+.hobbies,
+.myimages {
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px; 
+}
+.skillsbox,
+ .table-container,
+.interests-container,
+.images {
+  background: white;
+  border-radius: 12px;
+   background:
+    linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
+    url(/images/background.jpg)
+
+  padding: 40px;
+  width: 100%;
+  max-width: 1000px; /* Synchronizes width for a uniform scroll */
+  box-shadow: 0 10px 40px rgba(128, 43, 43, 0.1);
+
+
+}
+
+.skillsbox ul,
+.hobbies ul {
+  font-weight: normal;
+  font-size: 1.2rem;
+  list-style-type: square;
+  padding-left: 25px;
+  margin-top: 12px;
+  margin-bottom: 25px;
+  color: #333;
+}
+section {
+  background-color: white;
+  margin: 20px auto;
+  width: 85%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px lightgrey;
+}
+.education {
+  background:
+    linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
+    url(/images/edu-back_.jpg);
+}
+* Button style links */
+a {
+  color: pink;
+  text-decoration: none;
+}
+
+a:hover {
+  color: grey;
+}
+image:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+.shadow-img 
+{
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}image
+
+.footer_text {
+  background-color: #555;
+  color: white;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.footer_icons a {
+  color: pink;
+  margin: 8px;
+  font-size: 20px;
+}
+.top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: pink;
+  padding: 10px;
+  border-radius: 50%;
 }
