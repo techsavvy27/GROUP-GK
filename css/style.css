@@ -35,26 +35,35 @@ body {
   font-weight: bold;
   color: var(--logo-color);
   font-family: var(--logo-font);
+  margin-right: auto;
+  flex: 1;
+  z-index: 2;
 }
 
 header {
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-color: var(--main-color);
-  border-bottom: 2px solid var(--normal-color);
-  padding: 0.5rem;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-bottom: 1px solid var(--normal-color);
+  padding: 0.5rem 2rem;
   position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
   z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.nav-wrapper {
+  position: absolute;
+  left: 0;
   width: 100%;
-  transition: all 0.35s ease;
+  display: flex;
+  justify-content: center;
 }
 
 .navlist {
   display: flex;
+  gap: 40px;
 }
 
 .navlist li {
@@ -62,46 +71,71 @@ header {
 }
 
 .navlist li a {
+  position: relative;
   font-family: var(--logo-font);
   font-size: 18px;
   text-decoration: none;
   padding: 10px;
   color: var(--links-color);
-  transition: all 0.35s ease;
 }
 
 .navlist li a:hover {
   color: var(--accent-color);
 }
 
-/* Make dropdown parent positioned */
+.navlist li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.navlist li a:hover::after {
+  width: 100%;
+}
+
 .dropdown {
   position: relative;
 }
 
-/* Hide dropdown by default */
 .dropdown-content {
-  display: none;
+  display: block;
   position: absolute;
-  background-color: var(--main-color);
-  min-width: 160px;
-  top: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  min-width: 150px;
+  top: 120%;
   left: 0;
-  flex-direction: column;
-  border: 1px solid var(--normal-color);
-  transition: all 0.35s ease;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-/* Style dropdown links */
 .dropdown-content li a {
   display: block;
-  padding: 10px;
-  transition: all 0.35s ease;
+  padding: 10px 15px;
+  transition: background 0.2s ease;
 }
 
-/* Show dropdown on hover */
+.dropdown-content li a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.dropdown-content li a:hover::after {
+  width: 70%;
+}
+
 .dropdown:hover .dropdown-content {
-  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 /* FOOTER SECTION */
@@ -162,7 +196,7 @@ header {
   /*padding: 50px;*/
   min-height: 90vh;
   background:
-    linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 45%),
+    linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 30%),
     url(/images/groupphoto1.jpeg);
   background-size: cover;
   background-position: center;
