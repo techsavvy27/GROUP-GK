@@ -1,32 +1,47 @@
 <!doctype html>
 <html lang="en">
-  <link rel="stylesheet" href=css/kennedy.css">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kennedy</title>
-  <link rel="stylesheet" href="../css/abel.css">                                        
-</head>
+    <link rel="stylesheet" href="/css/kennedy.css" />
+
+    <!-- LINKS TO ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
   <body>
-
-
-
-     <!-- header and navigation THIS IS GLOBALY APPLIED -->
+    <!-- header and navigation THIS IS GLOBALY APPLIED -->
 
     <header>
       <a href="/index.html"><span class="logo">GROUP GK</span></a>
-      <ul class="navlist">
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="abel.html">Abel</a></li>
-        <li><a href="alika.html">Alikka</a></li>
-        <li><a href="baraka.html">Baraka</a></li>
-        <li><a href="david.html">David</a></li>
-        <li><a href="johnson.html">Johnson</a></li>
-        <li><a href="kennedy.html">Kenny</a></li>
-        <li><a href="monica.html">Monica</a></li>
-        <li><a href="nyla.html">Nyla</a></li>
-        <li><a href="contact.html">Contacts</a></li>
-      </ul>
+      <div class="nav-wrapper">
+        <ul class="navlist">
+          <li><a href="/index.html">Home</a></li>
+
+          <li class="dropdown">
+            <a href="#">Members</a>
+            <ul class="dropdown-content">
+              <li><a href="/pages/abel.html">Abel</a></li>
+              <li><a href="/pages/alika.html">Alikka</a></li>
+              <li><a href="/pages/baraka.html">Baraka</a></li>
+              <li><a href="/pages/david.html">David</a></li>
+              <li><a href="/pages/johnson.html">Johnson</a></li>
+              <li><a href="/pages/kennedy.html">Kenny</a></li>
+              <li><a href="/pages/monica.html">Monica</a></li>
+              <li><a href="/pages/nyla.html">Nyla</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/pages/contact.html">Contacts</a></li>
+        </ul>
+      </div>
     </header>
 
     <!--main body contents-->
@@ -39,11 +54,11 @@
           mathematics, science, and coding. I am a fast learner and a committed
           person in pursuing my duties. My academic journey has been marked by
           several achievements that reflect my commitment to excellence and my
-          love for mathematics, science, and software development.  My academic journey has fueled my passion for computer studies as I
-          believe technology is the most powerful tool for transforming and
-          improving lives.
+          love for mathematics, science, and software development. My academic
+          journey has fueled my passion for computer studies as I believe
+          technology is the most powerful tool for transforming and improving
+          lives.
         </p>
-        
 
         <h1>Skills</h1>
         <ol>
@@ -73,7 +88,7 @@
           <th>School</th>
           <th>Year</th>
         </tr>
-        
+
         <tr>
           <td>University</td>
           <td>University of Dar es Salaam</td>
@@ -108,7 +123,11 @@
 
       <!--activity images-->
       <p>coding image</p>
-      <img src="../images/kennedy-hobby.jpg.jpg" alt="Kennedy Hobby" width="400px" />
+      <img
+        src="../images/kennedy-hobby.jpg.jpg"
+        alt="Kennedy Hobby"
+        width="400px"
+      />
       <p>Hobby / Profile Photo</p>
       <img
         src="../images/Thee kenny.jpeg"
@@ -118,20 +137,21 @@
     </main>
 
     <!--footer-->
-    <footer>
-      <h3>social links</h3>
-      <a href="https://github.com/KennyShigela">
-        <img src="../images/github-icon.png.png" alt="github" width="30px" />
-      </a>
-      <span>KennyShigela</span>
-      <br /><br />
-      
-      <a href="https://instagram.com/kenny_shigela">
-        <img src="/images/insta.jpg" alt="instagram" width="40px" />
-      </a>
-      <span>kenny_shigela</span>
-      
-      <p>&copy; 2026 group gk inc, no AI used</p>
+    <footer class="footer_text">
+      <div class="footer_icons">
+        <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="" target="_blank"><i class="fa-brands fa-threads"></i></a>
+        <a href="" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>
+      <p>
+        GROUP-GK &copy; 2026 | All rights reserved | Official website of Group
+        GK &trade;
+      </p>
     </footer>
+
+    <!--scroll top-->
+    <a href="#" class="top"><i class="fa-solid fa-arrow-up"></i></a>
   </body>
 </html>
