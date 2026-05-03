@@ -4,117 +4,190 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nyla</title>
-  <link rel="stylesheet" href="/css/abel.css">                                        
-</head>
+    <link rel="stylesheet" href="../css/nyla.css" />
+
+    <!-- LINKS TO ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <!-- header and navigation THIS IS GLOBALY APPLIED -->
+
   <body>
-    
-
-
-     <!-- header and navigation THIS IS GLOBALY APPLIED -->
-
     <header>
       <a href="/index.html"><span class="logo">GROUP GK</span></a>
-      <ul class="navlist">
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="abel.html">Abel</a></li>
-        <li><a href="alika.html">Alikka</a></li>
-        <li><a href="baraka.html">Baraka</a></li>
-        <li><a href="david.html">David</a></li>
-        <li><a href="johnson.html">Johnson</a></li>
-        <li><a href="kennedy.html">Kenny</a></li>
-        <li><a href="monica.html">Monica</a></li>
-        <li><a href="nyla.html">Nyla</a></li>
-        <li><a href="contact.html">Contacts</a></li>
-      </ul>
+      <div class="nav-wrapper">
+        <ul class="navlist">
+          <li><a href="/index.html">Home</a></li>
+
+          <li class="dropdown">
+            <a href="#">Members</a>
+            <ul class="dropdown-content">
+              <li><a href="/pages/abel.html">Abel</a></li>
+              <li><a href="/pages/alika.html">Alikka</a></li>
+              <li><a href="/pages/baraka.html">Baraka</a></li>
+              <li><a href="/pages/david.html">David</a></li>
+              <li><a href="/pages/johnson.html">Johnson</a></li>
+              <li><a href="/pages/kennedy.html">Kenny</a></li>
+              <li><a href="/pages/monica.html">Monica</a></li>
+              <li><a href="/pages/nyla.html">Nyla</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/pages/contact.html">Contacts</a></li>
+        </ul>
+      </div>
     </header>
+
     <!--This is the start of the main body of the page-->
     <main>
-      <div>
-        <h1>Nyla's Portfolio</h1>
-        <h2>A Short Biography</h2>
-        <img
-          src="../images/nyla.jpeg"
-          alt="nyla's image"
-          height="auto"
-          width="200px"
-        />
-        <p>
-          My name is Nyla Kilewela, I am currently at the University of
-          Dar-es-Salaam, taking a Bachelor's degree in Computer Science.
-        </p>
-        <h2>Skills</h2>
-        <!--this is my skills section-->
-        <ol>
-          <li>
-            Programming
-            <ul>
-              <li>Python</li>
-              <li>Javascript</li>
-              <li>C++</li>
-            </ul>
-          </li>
-          <li>
-            Web Development
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>React</li>
-            </ul>
-          </li>
-        </ol>
+      <section class="introduction">
+        <h1>Nyla | Creative</h1>
+        <div class="introbox">
+          <img src="../images/nyla1.jpeg" alt="nyla's photo" />
+          <div class="introtext">
+            <h2>A Short story...</h2>
+            <p>
+              My name is Nyla Kilewela, I am currently at the University of Dar
+              es Salaam, taking a Bachelor's degree in Computer Science. I am
+              passionate about technology and programming, and always eager to
+              learn new skills and explore new opportunities. In my free time, I
+              enjoy reading, writing, and building websites. I am excited to
+              continue growing my skills and making a positive impact in the
+              tech industry.
+            </p>
+          </div>
+        </div>
+      </section>
+      <div class="container-centring">
+        <section class="ujuzi">
+          <h2>Skills</h2>
+          <ol>
+            <li>
+              Programming
+              <ul>
+                <li>Python</li>
+                <li>Javascript</li>
+                <li>C++</li>
+              </ul>
+            </li>
+            <li>
+              Web Development
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>React</li>
+              </ul>
+            </li>
+          </ol>
+        </section>
       </div>
-      <!--table-->
-      <table border="1">
-        <!--This is a table with my academic history-->
-        <thead>
-          <h2>My Academic History</h2>
-        </thead>
-        <tr>
-          <th>Level of Education</th>
-          <th>Institution</th>
-          <th>Year of Study</th>
-        </tr>
-        <tr>
-          <td>University</td>
-          <td>University of Dar-es-Salaam</td>
-          <td>2025-Present</td>
-        </tr>
-        <tr>
-          <td>High school</td>
-          <td>Kilakala Secondary School</td>
-          <td>2023-2025</td>
-        </tr>
-        <tr>
-          <td>Ordinary Level</td>
-          <td>MarianSecondary School</td>
-          <td>2019-2022</td>
-        </tr>
-      </table>
-      <div>
-        <h2>Hobbies</h2>
-        <ul>
-          <li>Reading</li>
-          <li>Writing and building websites</li>
-          <li>Coding</li>
-        </ul>
+      <div class="academic-container">
+        <h2>My Academic History</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Level of Education</th>
+              <th>Institution</th>
+              <th>Year of Study</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>University</td>
+              <td>University of Dar-es-Salaam</td>
+              <td>2025-Present</td>
+            </tr>
+            <tr>
+              <td>High school</td>
+              <td>Ahmes Secondary School</td>
+              <td>2023-2025</td>
+            </tr>
+            <tr>
+              <td>Ordinary Level</td>
+              <td>Marian Secondary School</td>
+              <td>2019-2022</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="hobbies-container">
+        <section class="hobbies">
+          <h2>Hobbies</h2>
+          <ul>
+            <li>Reading</li>
+            <li>Writing and building websites</li>
+            <li>Coding</li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="gallery-container">
+        <h2 class="gallery-heading">My Gallery</h2>
+        <div class="slider">
+          <div class="slide-track">
+            <div class="slide">
+              <img src="/images/nyla1.jpeg" alt="Gallery 1" />
+            </div>
+            <div class="slide">
+              <img src="/images/nyla2.jpeg" alt="Gallery 2" />
+            </div>
+            <div class="slide">
+              <img src="/images/nyla3.jpeg" alt="Gallery 3" />
+            </div>
+            <div class="slide">
+              <img src="/images/nyla.jpeg" alt="Gallery 4" />
+            </div>
+            <div class="slide">
+              <img src="/images/nyla1.jpeg" alt="Gallery 5" />
+            </div>
+            <div class="slide">
+              <img src="/images/nyla2.jpeg" alt="Gallery 5" />
+            </div>
+            <div class="slide">
+              <img src="/images/nyla3.jpeg" alt="Gallery 6" />
+            </div>
+            <div class="slide">
+              <img src="/images/nyla.jpeg" alt="Gallery 7" />
+            </div>
+            <div class="slide">
+              <img src="/images/nyla1.jpeg" alt="Gallery 8" />
+            </div>
+            <div class="slide">
+              <img src="/images/nyla2.jpeg" alt="Gallery 9" />
+            </div>
+            <div class="slide">
+              <img src="/images/nyla3.jpeg" alt="Gallery 10" />
+            </div>
+            <div class="slide">
+              <img src="/images/nyla.jpeg" alt="Gallery 11" />
+            </div>
+          </div>
+        </div>
       </div>
     </main>
     <!--footer-->
-    <footer>
-      <!--This is the footer section-->
-      <h3>Social links</h3>
-      <a href="https://github.com/narytech27"
-        ><img src="../images/github.png" alt="github" width="30px"
-      /></a>
-
-      <a href="https://www.instagram.com/"
-        ><img src="../images/instagram-logo (2).png" alt="instagram" width="30px"
-      /></a>
-
-      <a href="https://www.linkedin.com"
-        ><img src="../images/linkedin.png" alt="linkedin" width="30px"
-      /></a>
-      <p>&copy; 2026 Group GK Inc, No AI Used</p>
+    <footer class="footer_text">
+      <div class="footer_icons">
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+        <a href=""><i class="fa-brands fa-threads"></i></a>
+        <a href="https://github.com/narytech27"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+      </div>
+      <p>
+        GROUP-GK &copy; 2026 | All rights reserved | Official website of Group
+        GK &trade;
+      </p>
     </footer>
+
+    <!--scroll top-->
+    <a href="#" class="top"><i class="fa-solid fa-arrow-up"></i></a>
   </body>
 </html>

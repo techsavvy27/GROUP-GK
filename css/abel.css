@@ -1,13 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* 
-/
-/ GLOBAL STYLES FOR ALL PAGES
-/ These reflect on all pages linked with abel.css respectively
-/
-*/
-
 * {
   scroll-behavior: smooth;
   scroll-margin-top: 3rem;
@@ -21,7 +14,6 @@
   --logo-color: #333;
   --main-color: #fff;
   --normal-color: #1f1f1f;
-  --hover-color: #166495;
   --accent-color: #587822;
   --h1-font: 3rem;
   --h2-font: 2rem;
@@ -170,7 +162,7 @@ header {
 }
 
 .footer_icons a:hover {
-  color: var(--hover-color);
+  color: var(--accent-color);
   font-size: 2.2rem;
   padding: 0.6rem;
 }
@@ -196,13 +188,6 @@ header {
   color: var(--main-color);
   background: var(--accent-color);
 }
-
-/*
-/
-/ END OF GLOBAL STYLES
-/
-/
-*/
 
 /*
 /
@@ -285,7 +270,7 @@ header {
 }
 
 .intromenu ul li a:hover {
-  color: var(--hover-color);
+  color: var(--accent-color);
   font-size: 1.2rem;
   transition: ease-in-out 0.3s;
 }
