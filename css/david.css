@@ -272,6 +272,7 @@ table {
   margin: 40px auto;
   border-radius: 5px;
   box-shadow: 0 0 2px 2px gray;
+  text-align: center;
 }
 
 th {
@@ -282,6 +283,7 @@ th {
 
 td {
   color: #333;
+  padding: 10px;
 }
 
 /* apply styles to even numbered rows in the table*/
