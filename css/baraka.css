@@ -1,0 +1,413 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --heading-font: "Quicksand", sans-serif;
+  --body-font: "Raleway", sans-serif;
+  --logo-font: "Montserrat", sans-serif;
+  --logo-color: #333;
+  --main-color: #fff;
+  --normal-color: #1f1f1f;
+  --hover-color: #166495;
+  --accent-color: #d7cdb9;
+  --h1-font: 3rem;
+  --h2-font: 2rem;
+  --text-font: 1.3rem;
+}
+
+* {
+  scroll-behavior: smooth;
+  scroll-margin-top: 3rem;
+  text-decoration: none;
+}
+
+body {
+  font-family: var(--body-font);
+  margin: 0;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--logo-color);
+  font-family: var(--logo-font);
+  margin-right: auto;
+  flex: 1;
+  z-index: 2;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-bottom: 1px solid var(--normal-color);
+  padding: 0.5rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.nav-wrapper {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.navlist {
+  display: flex;
+  gap: 40px;
+}
+
+.navlist li {
+  list-style: none;
+}
+
+.navlist li a {
+  position: relative;
+  font-family: var(--logo-font);
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px;
+  color: var(--links-color);
+}
+
+.navlist li a:hover {
+  color: var(--accent-color);
+}
+
+.navlist li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.navlist li a:hover::after {
+  width: 100%;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: block;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  min-width: 150px;
+  top: 120%;
+  left: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 10px 15px;
+  transition: background 0.2s ease;
+}
+
+.dropdown-content li a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.dropdown-content li a:hover::after {
+  width: 70%;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* FOOTER SECTION */
+.footer_text {
+  border-top: 1px solid var(--normal-color);
+  text-align: center;
+  padding: 20px;
+  background: var(--normal-color);
+}
+
+.footer_text p {
+  color: var(--main-color);
+  font-family: var(--logo-font);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.footer_icons {
+  align-items: center;
+}
+
+.footer_icons a {
+  color: var(--main-color);
+  font-size: 2rem;
+  padding: 0.5rem;
+  transition: all ease 250ms;
+}
+
+.footer_icons a:hover {
+  color: var(--hover-color);
+  font-size: 2.2rem;
+  padding: 0.6rem;
+}
+
+.top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.top i {
+  font-size: var(--text-font);
+  color: var(--main-color);
+  padding: 14px;
+  background: var(--logo-color);
+  border-radius: 1rem;
+  transition: all 0.35s ease-in-out;
+}
+
+.top i:hover {
+  transform: scale(1.13);
+  color: var(--main-color);
+  background: var(--accent-color);
+}
+
+/* Background & Intro --- */
+.intro {
+  display: flow-root; /* Fixes margin collapse at top of page */
+  min-height: 90vh;
+  background:
+    linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
+    url(/images/baraka-bck-grnd.jpg);
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 60px;
+}
+
+.intro h1 {
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-size: var(--h1-font);
+  letter-spacing: 0.7rem;
+  color: var(--normal-color);
+}
+
+.introboxing {
+  display: flex; /* Aligns profile photo and text horizontally */
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.introboxing img {
+  border-radius: 150px 150px 0 0; /* The signature dome shape */
+  box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.5);
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+.introtexted h2 {
+  font-size: 2rem;
+  color: var(--normal-color);
+}
+
+.introtexted p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: var(--normal-color);
+}
+
+/* --- STATS BAR: Key Metrics --- */
+.stats-bridge {
+  display: flex;
+  justify-content: space-between; /* Spreads stats across the bar */
+  align-items: center;
+  max-width: 900px;
+  margin: 40px auto 100px auto; /* Large bottom margin to separate from content */
+  background-color: transparent;
+}
+
+.stats-bridge h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 3rem;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.stats-bridge p {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #666;
+  margin: 0;
+}
+
+/* --- SECTION WRAPPERS: Handles Spacing Between Boxes --- */
+.skills,
+.section-academic,
+.personal-interests,
+.gallery-section {
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px; /* This creates the gap between the white boxes */
+}
+
+/* --- SHARED CARD STYLING: The White Boxes --- */
+.skillsbox,
+.section-academic .table-container,
+.interests-container,
+.gallery-container {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  width: 100%;
+  max-width: 1000px; /* Synchronizes width for a uniform scroll */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* --- SECTION HEADINGS --- */
+.skillsbox h2,
+.section-academic h2,
+.interests-heading,
+.gallery-heading {
+  font-family: "Quicksand", sans-serif;
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 35px;
+  color: #1a1a1a;
+  display: block;
+}
+
+/* --- LIST STYLING: Skills & Hobbies --- */
+.skillsbox ol,
+.interests-main-list {
+  font-weight: bold;
+  font-size: 1.4rem;
+  padding-left: 50px;
+  color: #1a1a1a;
+}
+
+.skillsbox ul,
+.interests-sub-list {
+  font-weight: normal;
+  font-size: 1.2rem;
+  list-style-type: square;
+  padding-left: 25px;
+  margin-top: 12px;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* --- ACADEMIC TABLE --- */
+.history-table {
+  width: 100%;
+  border-collapse: collapse; /* Merges borders for a cleaner look */
+  font-family: "Inter", sans-serif;
+}
+
+.history-table th {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #333;
+  border-bottom: 2px solid #ececec;
+}
+
+.history-table td {
+  padding: 22px 15px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #333;
+}
+
+.history-table tbody tr:hover {
+  background-color: #f1f5ff; /* Interactive row highlight */
+  transition: 0.2s ease-in-out;
+}
+
+/* --- GALLERY SLIDER --- */
+.slider {
+  height: 450px;
+  overflow: hidden; /* Clips images that slide out of the card */
+  position: relative;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(450px * 10); /* Total width of 5 repeated images */
+  animation: scroll 25s linear infinite; /* Smooth continuous loop */
+}
+
+.slide-track:hover {
+  animation-play-state: paused; /* Pause on hover to view details */
+}
+
+.slide {
+  height: 400px;
+  width: 450px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Prevents image stretching */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* --- SLIDER ANIMATION LOGIC --- */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-450px * 5));
+  } /* Moves 5 images then resets */
+}
+
+/* --- RESPONSIVENESS: Mobile Support --- */
+@media (max-width: 768px) {
+  .slider {
+    height: 300px;
+  }
+  .slide {
+    width: 300px;
+    height: 250px;
+  }
+  .introboxing {
+    flex-direction: column;
+    text-align: center;
+  } /* Stacks intro items */
+  @keyframes scroll {
+    100% {
+      transform: translateX(calc(-300px * 5));
+    }
+  }
+}

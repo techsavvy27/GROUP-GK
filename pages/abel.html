@@ -4,154 +4,249 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Abel</title>
-    <link rel="stylesheet" href="/css/abel.css" />
+    <link rel="stylesheet" href="../css/abel.css" />
+
+    <!-- LINKS TO ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <!--header and navigation-->
+    <!-- header and navigation THIS IS GLOBALY APPLIED -->
+
     <header>
-      <a href="/index.html"><p>GROUP GK</p></a>
-      <ul class="navlist">
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="abel.html">Abel</a></li>
-        <li><a href="alika.html">Alikka</a></li>
-        <li><a href="baraka.html">Baraka</a></li>
-        <li><a href="david.html">David</a></li>
-        <li><a href="johnson.html">Johnson</a></li>
-        <li><a href="kennedy.html">Kenny</a></li>
-        <li><a href="monica.html">Monica</a></li>
-        <li><a href="nyla.html">Nyla</a></li>
-        <li><a href="contact.html">Contacts</a></li>
-      </ul>
+      <a href="/index.html"><span class="logo">GROUP GK</span></a>
+      <div class="nav-wrapper">
+        <ul class="navlist">
+          <li><a href="/index.html">Home</a></li>
+
+          <li class="dropdown">
+            <a href="#">Members</a>
+            <ul class="dropdown-content">
+              <li><a href="/pages/abel.html">Abel</a></li>
+              <li><a href="/pages/alika.html">Alikka</a></li>
+              <li><a href="/pages/baraka.html">Baraka</a></li>
+              <li><a href="/pages/david.html">David</a></li>
+              <li><a href="/pages/johnson.html">Johnson</a></li>
+              <li><a href="/pages/kennedy.html">Kenny</a></li>
+              <li><a href="/pages/monica.html">Monica</a></li>
+              <li><a href="/pages/nyla.html">Nyla</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/pages/contact.html">Contacts</a></li>
+        </ul>
+      </div>
     </header>
+
     <!--This is the start of the main body of the page-->
+
     <main>
-      <section class="introduction">
-        <h1>Abel's Personal Portfolio</h1>
-        <img src="/images/abel_pic.webp" alt="activity photo" width="400px" />
-        <h2>A Short Biography</h2>
-        <p>
-          My name is Abel Kuringe Julius. I'm a first year student at the
-          University of Dar-es-Salaam currently taking a Bachelor's degree in
-          Computer Science starting 2025/26.
-        </p>
+      <section class="introduction" id="introduction">
+        <h1>Ready. Set. Abel!</h1>
+        <div class="introbox">
+          <img src="/images/abel_pic.webp" alt="my profile photo" />
+          <div class="introtext">
+            <h2>At a Glance</h2>
+            <p>
+              My name is Abel Kuringe Julius. I'm a first year student at the
+              University of Dar es Salaam currently taking a Bachelor's degree
+              in Computer Science starting 2025/26. Currently, I'm building my
+              foundation in HTML and exploring my interests in Web Development.
+              Let's connect and create something impactful that drives digital
+              innovation!
+            </p>
+          </div>
+        </div>
+        <div class="intromenu">
+          <ul>
+            <li>
+              <a href="#myskills"
+                ><i class="fa-solid fa-people-pulling"></i>My Skills</a
+              >
+            </li>
+            <li>
+              <a href="#academic_history"
+                ><i class="fa-solid fa-book"></i>Academic Journey</a
+              >
+            </li>
+            <li>
+              <a href="#hobbies"><i class="fa-solid fa-gamepad"></i>Hobbies</a>
+            </li>
+            <li>
+              <a href="#gallery"
+                ><i class="fa-solid fa-photo-film"></i>Gallery</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="myskills" id="myskills">
         <h2>Skills</h2>
-        <!--this is my skills section-->
-        <ol>
-          <li>
-            Programming and Web development
-            <ul>
-              <li>Html</li>
-              <li>Css</li>
-              <li>Javascript</li>
-            </ul>
-          </li>
-          <li>
-            Computer Maintanance
-            <ul>
-              <li>Installation and Configuration</li>
-              <li>System Troubleshooting</li>
-              <li>IT Support</li>
-            </ul>
-          </li>
-          <li>
-            Soft skills
-            <ul>
-              <li>Teamwork</li>
-              <li>Communication</li>
-            </ul>
-          </li>
-        </ol>
+
+        <!-- this is my skills section -->
+
+        <div class="skillbox">
+          <div class="cardslider">
+            <div class="card" id="card1">
+              <div class="cardtext" id="cardtext1">
+                <p>Programming and Web development</p>
+                <ul>
+                  <li>Html</li>
+                  <li>Css</li>
+                  <li>Javascript</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card" id="card2">
+              <div class="cardtext" id="cardtext2">
+                <p>Computer Maintenance</p>
+                <ul>
+                  <li>Installation and Configuration</li>
+                  <li>System Troubleshooting</li>
+                  <li>IT Support</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card" id="card3">
+              <div class="cardtext" id="cardtext3">
+                <p>Soft skills</p>
+                <ul>
+                  <li>Teamwork</li>
+                  <li>Communication</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="slidernav">
+            <a href="#card1"></a>
+            <a href="#card2"></a>
+            <a href="#card3"></a>
+          </div>
+        </div>
       </section>
+
       <!--table-->
-      <section class="academic">
-        <table border="1">
+      <section class="academic_history" id="academic_history">
+        <h2>My Academic History</h2>
+        <div class="academic_box">
           <!--This is a table with my academic history-->
-          <h2>My Academic History</h2>
-          <tr>
-            <th>Level of Education</th>
-            <th>Institution</th>
-            <th>Year of Study</th>
-          </tr>
-          <tr>
-            <td>University</td>
-            <td>University of Dar-es-Salaam(UDSM)</td>
-            <td>2025-Present</td>
-          </tr>
-          <tr>
-            <td>College</td>
-            <td>Mbeya University of Science and Technology(MUST)</td>
-            <td>2022-2025</td>
-          </tr>
-          <tr>
-            <td>Ordinary Level</td>
-            <td>Marian Boy's Secondary School</td>
-            <td>2018-2021</td>
-          </tr>
-          <tr>
-            <td>Primary Level</td>
-            <td>Martin Luther King Primary School</td>
-            <td>2010-2017</td>
-          </tr>
-        </table>
+          <table class="academic-table">
+            <thead>
+              <tr>
+                <th>Level of Education</th>
+                <th>Institution</th>
+                <th>Year of Study</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>University</td>
+                <td>University of Dar-es-Salaam(UDSM)</td>
+                <td>2025-Present</td>
+              </tr>
+              <tr>
+                <td>College</td>
+                <td>Mbeya University of Science and Technology(MUST)</td>
+                <td>2022-2025</td>
+              </tr>
+              <tr>
+                <td>Ordinary Level</td>
+                <td>Marian Boy's Secondary School</td>
+                <td>2018-2021</td>
+              </tr>
+              <tr>
+                <td>Primary Level</td>
+                <td>Martin Luther King Primary School</td>
+                <td>2010-2017</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
-      <section class="hobbies">
+
+      <section class="hobbies_section" id="hobbies">
         <h2>Hobbies</h2>
-        <ol>
-          <li>
-            Gaming
-            <ul>
-              <li>Mortal Kombat</li>
-              <li>Call of Duty</li>
-              <li>Hitman Absolution</li>
-            </ul>
-          </li>
-          <li>
-            Musical Instruments
-            <ul>
-              <li>Brass</li>
-              <li>Keyboard</li>
-            </ul>
-          </li>
-          <li>
-            Movies and Series
-            <ul>
-              <li>Marvel Entertainment</li>
-              <li>Game of Thrones</li>
-              <li>The Boys</li>
-            </ul>
-          </li>
-        </ol>
+        <div class="hobbies_box">
+          <div class="cardslider">
+            <div class="card" id="hobbycard1">
+              <div class="cardtext" id="cardtext1">
+                <p>Gaming</p>
+                <ul>
+                  <li>Mortal Kombat</li>
+                  <li>Call of Duty</li>
+                  <li>Hitman Absolution</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card" id="hobbycard2">
+              <div class="cardtext" id="cardtext2">
+                <p>Musical Instruments</p>
+                <ul>
+                  <li>Brass</li>
+                  <li>Keyboard</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card" id="hobbycard3">
+              <div class="cardtext" id="cardtext3">
+                <p>Movies and Series</p>
+                <ul>
+                  <li>Marvel Entertainment</li>
+                  <li>Game of Thrones</li>
+                  <li>The Boys</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="slidernav">
+            <a href="#hobbycard1"></a>
+            <a href="#hobbycard2"></a>
+            <a href="#hobbycard3"></a>
+          </div>
+        </div>
       </section>
+
       <!--These are various images-->
-      <section class="imagearea">
-        <img src="/images/abel_main.avif" alt="activity photo" width="500px" />
-        <img
-          src="/images/abel_gcard.webp"
-          alt="activity photo 2"
-          width="600px"
-        />
+
+      <section class="gallery_section" id="gallery">
+        <h2>To the Gallery</h2>
+        <div class="gallery_box">
+          <div class="cardslider">
+            <div class="card" id="gallerycard1"></div>
+            <div class="card" id="gallerycard2"></div>
+            <div class="card" id="gallerycard3"></div>
+          </div>
+          <div class="slidernav">
+            <a href="#gallerycard1"></a>
+            <a href="#gallerycard2"></a>
+            <a href="#gallerycard3"></a>
+          </div>
+        </div>
       </section>
     </main>
+
     <!--footer-->
-    <footer>
-      <!--This is the footer section-->
-      <h2>Social Links</h2>
-      <a href="https://github.com/"
-        ><img src="/images/github.png" alt="github" width="30px"
-      /></a>
-
-      <a href="https://facebook.com"
-        ><img src="/images/facebok.png" alt="facebook" width="30px"
-      /></a>
-
-      <a href="https://instagram.com/"
-        ><img src="/images/instagram-logo (2).png" alt="instagram" width="30px"
-      /></a>
-
-      <a href="https://www.linkedin.com/"
-        ><img src="/images/linkedin.png" alt="linkedin" width="30px"
-      /></a>
-      <p>&copy; 2026 Group GK Inc, No AI Used</p>
+    <footer class="footer_text">
+      <div class="footer_icons">
+        <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="" target="_blank"><i class="fa-brands fa-threads"></i></a>
+        <a href="" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>
+      <p>
+        GROUP-GK &copy; 2026 | All rights reserved | Official website of Group
+        GK &trade;
+      </p>
     </footer>
+
+    <!--scroll top-->
+    <a href="#" class="top"><i class="fa-solid fa-arrow-up"></i></a>
   </body>
 </html>
