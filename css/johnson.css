@@ -82,7 +82,6 @@ header {
 }
 
 .navlist li a::after {
-  content: "";
   position: absolute;
   left: 0;
   bottom: 5px;
@@ -481,4 +480,5 @@ td {
 .gallerypics img:hover {
   transform: translateY(-10px);
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+  width: 300px;
 }
