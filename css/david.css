@@ -1,20 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 /*
 
 Copyright, GROUP GK 2026
 
 */
 
-*{
+* {
+  list-style: none;
+  scroll-behavior: smooth;
+  scroll-margin-top: 3rem;
+  text-decoration: none;
+}
+
+:root {
+  --heading-font: "DM Serif Display", serif;
+  --body-font: "DM Sans", sans-serif;
+  --logo-font: "Montserrat", sans-serif;
+  --logo-color: #333;
+  --main-color: #fff;
+  --normal-color: #1f1f1f;
+  --accent-color: #838381;
+  --h1-font: 3rem;
+  --h2-font: 2rem;
+  --text-font: 1.3rem;
+}
+
+body {
+  font-family: var(--body-font);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--logo-color);
+  font-family: var(--logo-font);
+  margin-right: auto; /* pushes everything else away */
+  flex: 1;
+  z-index: 2;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-bottom: 1px solid var(--normal-color);
+  padding: 0.5rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+.nav-wrapper {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.navlist {
+  display: flex;
+  gap: 40px;
+}
+
+.navlist li {
   list-style: none;
 }
-  
 
-body{
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
+.navlist li a {
+  position: relative;
+  font-family: var(--logo-font);
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px;
+  color: var(--links-color);
 }
 
-.container{
+.navlist li a:hover {
+  color: var(--accent-color);
+}
+
+.navlist li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.navlist li a:hover::after {
+  width: 100%;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: block;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  min-width: 150px;
+  top: 120%;
+  left: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 10px 15px;
+  transition: background 0.2s ease;
+}
+
+.dropdown-content li a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.dropdown-content li a:hover::after {
+  width: 70%;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* FOOTER SECTION */
+.footer_text {
+  border-top: 1px solid var(--normal-color);
+  text-align: center;
+  padding: 20px;
+  background: var(--normal-color);
+}
+
+.footer_text p {
+  color: var(--main-color);
+  font-family: var(--logo-font);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.footer_icons {
+  align-items: center;
+}
+
+.footer_icons a {
+  color: var(--main-color);
+  font-size: 2rem;
+  padding: 0.5rem;
+  transition: all ease 250ms;
+}
+
+.footer_icons a:hover {
+  color: var(--accent-color);
+  font-size: 2.2rem;
+  padding: 0.6rem;
+}
+
+/* SCROLL TO TOP */
+.top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.top i {
+  font-size: var(--text-font);
+  color: var(--main-color);
+  padding: 14px;
+  background: var(--logo-color);
+  border-radius: 1rem;
+  transition: all 0.35s ease-in-out;
+}
+
+.top i:hover {
+  transform: scale(1.13);
+  color: var(--main-color);
+  background: var(--accent-color);
+}
+
+.container {
   margin: 2rem;
 }
 
@@ -30,7 +211,7 @@ main {
   line-height: 1.5;
 }
 
-.hero-container{
+.hero-container {
   min-height: 90vh;
   background:
     linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
@@ -39,38 +220,43 @@ main {
   background-position: center;
   display: flow-root;
   padding: 50px;
-  border-radius:  0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
   font-family: "DM Serif Text", "serif";
 }
 
-.hero{
+#center {
+  text-align: center;
+}
+
+.hero {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 40px;
   max-width: 900px;
   margin: 40px auto;
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
-.hero .hero-text{
- line-height: 1.5;
- text-align: start;
- font-size: larger;
+.hero .hero-text {
+  line-height: 1.5;
+  text-align: start;
+  font-size: larger;
 }
 
-.arrow{
-padding: 20% 0 0 0;
+.arrow {
+  padding: 20% 0 0 0;
 }
 
-.scroll-arrow{
-font-weight: bolder;
-cursor: pointer;
-color: #33383e;
+.scroll-arrow {
+  font-weight: bolder;
+  cursor: pointer;
+  color: #33383e;
 }
 
-#table-start{
+#table-start {
   padding-top: 2rem;
+  text-align: center;
 }
 table {
   width: 80%;
@@ -85,7 +271,7 @@ th {
   border-radius: 5px 5px 0 0;
 }
 
-td{
+td {
   color: #333;
 }
 
@@ -101,10 +287,11 @@ tr:nth-child(even) {
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   padding: 2rem;
 }
-.card{
+.card {
   background-color: #f1efef;
   border-radius: 10px;
   padding: 1rem;
+  text-align: center;
 }
 
 .card:hover {
@@ -113,19 +300,30 @@ tr:nth-child(even) {
 }
 
 .card-parent .card:nth-child(2) {
-  background-image: linear-gradient(rgb(210, 221, 255), rgb(112, 198, 255), rgb(173, 207, 255));
+  background-image: linear-gradient(
+    rgb(210, 221, 255),
+    rgb(112, 198, 255),
+    rgb(173, 207, 255)
+  );
 }
 
 .card-parent .card:nth-child(1) {
-  background-image: linear-gradient(rgb(255, 236, 116), rgb(255, 220, 105), rgb(255, 229, 111));
+  background-image: linear-gradient(
+    rgb(255, 236, 116),
+    rgb(255, 220, 105),
+    rgb(255, 229, 111)
+  );
 }
 
 .card-parent .card:nth-child(3) {
-  background-image: linear-gradient(rgb(156, 255, 163), rgb(143, 255, 146), rgb(187, 255, 177));
+  background-image: linear-gradient(
+    rgb(156, 255, 163),
+    rgb(143, 255, 146),
+    rgb(187, 255, 177)
+  );
 }
 
-
-.card-img{
+.card-img {
   background-color: #f1efef;
   border-radius: 10px;
 }
@@ -135,11 +333,11 @@ tr:nth-child(even) {
   transition: ease 250ms;
   background-color: #d2d4d6;
 }
-.card-img img{
-object-fit: cover;
-width: 100%;
-height: 25vh;
-border-radius: 10px 10px 0 0;
+.card-img img {
+  object-fit: cover;
+  width: 100%;
+  height: 25vh;
+  border-radius: 10px 10px 0 0;
 }
 
 .button {
@@ -154,7 +352,7 @@ border-radius: 10px 10px 0 0;
 .button:hover {
   background-color: blueviolet;
   cursor: pointer;
-  transform:translateY(-5px);
-    box-shadow: 2px 2px rgba(0, 0, 0, 0.6);
-    transition: ease 250ms;
+  transform: translateY(-5px);
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.6);
+  transition: ease 250ms;
 }

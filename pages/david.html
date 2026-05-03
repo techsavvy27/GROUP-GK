@@ -4,59 +4,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>David's page</title>
-    <link rel="stylesheet" href="../css/david.css">
-    <link rel="stylesheet" href="../css/abel.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/david.css" />
+    <link rel="stylesheet" href="../css/abel.cs" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-   
-
-
-     <!-- header and navigation THIS IS GLOBALY APPLIED -->
+    <!-- header and navigation THIS IS GLOBALY APPLIED -->
 
     <header>
       <a href="/index.html"><span class="logo">GROUP GK</span></a>
-      <ul class="navlist">
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="abel.html">Abel</a></li>
-        <li><a href="alika.html">Alikka</a></li>
-        <li><a href="baraka.html">Baraka</a></li>
-        <li><a href="david.html">David</a></li>
-        <li><a href="johnson.html">Johnson</a></li>
-        <li><a href="kennedy.html">Kenny</a></li>
-        <li><a href="monica.html">Monica</a></li>
-        <li><a href="nyla.html">Nyla</a></li>
-        <li><a href="contact.html">Contacts</a></li>
-      </ul>
+      <div class="nav-wrapper">
+        <ul class="navlist">
+          <li><a href="/index.html">Home</a></li>
+
+          <li class="dropdown">
+            <a href="#">Members</a>
+            <ul class="dropdown-content">
+              <li><a href="/pages/abel.html">Abel</a></li>
+              <li><a href="/pages/alika.html">Alikka</a></li>
+              <li><a href="/pages/baraka.html">Baraka</a></li>
+              <li><a href="/pages/david.html">David</a></li>
+              <li><a href="/pages/johnson.html">Johnson</a></li>
+              <li><a href="/pages/kennedy.html">Kenny</a></li>
+              <li><a href="/pages/monica.html">Monica</a></li>
+              <li><a href="/pages/nyla.html">Nyla</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/pages/contact.html">Contacts</a></li>
+        </ul>
+      </div>
     </header>
-    
+
     <!--main body contents-->
     <main>
-      
       <div class="hero-container">
-        <h1>David's portifolio</h1>
-      <div class="hero">
-        <img src="../images/david.png" alt="my picture">
+        <h1 id="center">David's portifolio</h1>
+        <div class="hero">
+          <img src="../images/david.png" alt="my picture" />
           <div class="hero-text">
             <h1>Hello there👋🏼</h1>
             <h2>Welcome to my profile</h2>
             <p>
-              My name is David. I'm a student at the
-              University of Dar-es-Salaam currently taking a Bachelor's degree in
-              Computer Science starting 2025/26.
+              My name is David. I'm a student at the University of Dar-es-Salaam
+              currently taking a Bachelor's degree in Computer Science starting
+              2025/26.
             </p>
           </div>
         </div>
-        <div class="arrow">
-          <a href="#table-start"><p class="scroll-arrow">scroll down
-       <i class="fa-solid fa-arrow-down"></i></p></a>
+        <div class="arrow" id="center">
+          <a href="#table-start"
+            ><p class="scroll-arrow">
+              scroll down <i class="fa-solid fa-arrow-down"></i></p
+          ></a>
         </div>
       </div>
 
       <!--table-->
       <h1 id="table-start">My Academic path</h1>
-      <table >
-          
+      <table>
         <tr>
           <th>Level</th>
           <th>school</th>
@@ -84,93 +96,93 @@
         </tr>
       </table>
 
-
-<div class="container">
-  <h1>Skills</h1>
-<div class="card-parent">
-  <div class="card">
-             
-              <h1>CODING & PROGRAMMING</h1>
-             <ol style="font-size: 50px; font-weight: 1000; color: chocolate;"> 
+      <div class="container">
+        <h1 id="center">Skills</h1>
+        <div class="card-parent">
+          <div class="card">
+            <h1>CODING & PROGRAMMING</h1>
+            <ol style="font-size: 50px; font-weight: 1000; color: chocolate">
               <li>html</li>
               <li>css</li>
               <li>Javascript</li>
-              </ol>
-  </div>
-        <div class="card">
-          <h1>ANIMATION</h1><h2 style="font-size: 90px; font-weight: bold; color: chocolate;">Blender</h2> 
-      </div>
-      <div class="card">
-          <h1>GRAPHICS DESIGN</h1>
-          <ol style="font-size: 40px; font-weight: bold; color: chocolate;">
-            <li>Inkscape</li>
-            <li>GIMP</li>
-            <li>Adobe Photoshop</li>
-            <li>Blender</li>
-         </ol>
-    </div>
-     
+            </ol>
+          </div>
+          <div class="card">
+            <h1>ANIMATION</h1>
+            <h2 style="font-size: 90px; font-weight: bold; color: chocolate">
+              Blender
+            </h2>
+          </div>
+          <div class="card">
+            <h1>GRAPHICS DESIGN</h1>
+            <ol style="font-size: 40px; font-weight: bold; color: chocolate">
+              <li>Inkscape</li>
+              <li>GIMP</li>
+              <li>Adobe Photoshop</li>
+              <li>Blender</li>
+            </ol>
+          </div>
+        </div>
 
-    
-</div>
-
-      <!--activity images-->
-       <h1>Activities images</h1>
-<div class="card-parent">
- 
-  <div class="card-img">
-          <img src="../images/photodavid.png" alt="activity photo"/>
-      <p>Coding programs</p>
-      <button class="button">My websites <i class="fa-solid fa-share"></i> </button>
-  
-    
-  </div>
-  <div class="card-img">
-     <img
-        src="../images/graphic-design.webp"
-        alt="activity photo 2"/>
-      <p>Designing graphics</p>
-      <button class="button">My designs <i class="fa-solid fa-share"></i> </button>
-  </div>
-</div>
-<h1>Hobbies</h1>
-<div class="card-parent">
-  <div class="card"> 
-        <ul>
-         <li>Learning new technologies</li>
-         <li>Football</li>
-          <li>Gaming</li>
-          <li>Designing digital contents</li>
-          <li>Movies watching</li>
-          
-        </ul>
-      </div>
-</div>
+        <!--activity images-->
+        <h1 id="center">Activities images</h1>
+        <div class="card-parent">
+          <div class="card-img">
+            <img src="../images/photodavid.png" alt="activity photo" />
+            <p>Coding programs</p>
+            <button class="button">
+              My websites <i class="fa-solid fa-share"></i>
+            </button>
+          </div>
+          <div class="card-img">
+            <img src="../images/graphic-design.webp" alt="activity photo 2" />
+            <p>Designing graphics</p>
+            <button class="button">
+              My designs <i class="fa-solid fa-share"></i>
+            </button>
+          </div>
+        </div>
+        <h1 id="center">Hobbies</h1>
+        <div class="card-parent">
+          <div class="card">
+            <ul>
+              <li>Learning new technologies</li>
+              <li>Football</li>
+              <li>Gaming</li>
+              <li>Designing digital contents</li>
+              <li>Movies watching</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </main>
 
     <!--footer-->
     <footer class="footer_text">
       <div class="footer_icons">
-      <a href="https://larason.space/larabal"
-        ><i class="fa-brands fa-forgejo"></i></a>
-      <a href="https://github.com/davidkivuyo"
-        ><i class="fa-brands fa-github"></i></a>
-      <a href="https://facebook.com"
-        ><i class="fa-brands fa-facebook"></i></a>
-      <a href="https://instagram.com/"
-        ><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://www.linkedin.com/in/david-kivuyo-742a3326a/"
-        ><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://gitlab.com/davidkivuyo123"
-        ><i class="fa-brands fa-gitlab"></i></a>
-    </div>
+        <a href="https://larason.space/larabal"
+          ><i class="fa-brands fa-forgejo"></i
+        ></a>
+        <a href="https://github.com/davidkivuyo"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://instagram.com/"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/david-kivuyo-742a3326a/"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a href="https://gitlab.com/davidkivuyo123"
+          ><i class="fa-brands fa-gitlab"></i
+        ></a>
+      </div>
       <p>
         GROUP-GK &copy; 2026 | All rights reserved | Official website of Group
         GK &trade;
       </p>
-    <!--scroll top-->
-    <a href="#" class="top"><i class="fa-solid fa-arrow-up"></i></a>
+      <!--scroll top-->
+      <a href="#" class="top"><i class="fa-solid fa-arrow-up"></i></a>
     </footer>
   </body>
 </html>
