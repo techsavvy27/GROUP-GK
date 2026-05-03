@@ -1,38 +1,156 @@
+
+
 * {
-  font-family: Arial;
-  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: Arial, sans-serif;
 }
 
+body {
+  background-color: #f5f5f5;
+  text-align: center;
+  color: #333;
+}
+
+/* Header */
 header {
+  background-color: #555;
+  padding: 15px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.intro {
+  display: flow-root; /* Fixes margin collapse at top of page */c
+  min-height: 90vh;
+  background:
+    linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
+    url(/images/ikaa9.webp);
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 60px;
+}
+.introboxing {
+  display: flex; /* Aligns profile photo and text horizontally */
   align-items: center;
   justify-content: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 40px auto;
 }
 
-header a p {
-  color: rgb(33, 33, 33);
-  font-family: Helvetica;
+.logo {
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 .navlist {
   display: flex;
 }
 
-.navlist li {
-  list-style: none;
-  font-weight: bold;
-}
-
 .navlist li a {
-  text-decoration: none;
+  color: white;
   padding: 10px;
-  color: #36517c;
+  text-decoration: none;
 }
 
 .navlist li a:hover {
-  color: #86b4ff;
+  color: pink;
 }
 
-.navlist p a {
-  font-weight: bolder;
+/* Hero section */
+h1 {
+  margin: 20px;
+  color:black;
+}
+
+h2 {
+  color: pink;
+  margin: 15px;
+}
+
+/* About section box */
+p, ul {
+  margin: 15px auto;
+  width: 80%;
+  line-height: 1.5;
+}
+
+
+img:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+.shadow-img 
+{
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Table */
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  box-shadow: 2px 2px 8px grey;
+}
+
+th {
+  background-color: pink;
+  color: white;
+}
+
+th, td {
+  border: 1px solid grey;
+  padding: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #eee;
+}
+
+section {
+  background-color: white;
+  margin: 20px auto;
+  width: 85%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px lightgrey;
+}
+
+/* Button style links */
+a {
+  color: pink;
+  text-decoration: none;
+}
+
+a:hover {
+  color: grey;
+}
+
+/* Footer */
+.footer_text {
+  background-color: #555;
+  color: white;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.footer_icons a {
+  color: pink;
+  margin: 8px;
+  font-size: 20px;
+}
+
+/* Scroll top */
+.top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: pink;
+  padding: 10px;
+  border-radius: 50%;
 }
