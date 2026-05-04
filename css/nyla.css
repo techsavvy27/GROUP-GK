@@ -496,21 +496,3 @@ th {
   }
 }
 
-@media (max-width: 768px) {
-  .slider {
-    height: 300px;
-  }
-  .slide {
-    width: 300px;
-    height: 250px;
-  }
-  .introbox {
-    flex-direction: column;
-    text-align: center;
-  }
-  @keyframes scroll {
-    100% {
-      transform: translateX(calc(-300px * 5));
-    }
-  }
-}
