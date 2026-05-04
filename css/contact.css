@@ -1,23 +1,280 @@
-/*
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Manrope:wght@200..800&family=Monsieur+La+Doulaise&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Prata&display=swap");
 
-Copyright @2026 GROUP GK
+* {
+  scroll-behavior: smooth;
+  scroll-margin-top: 3rem;
+  text-decoration: none;
+}
 
-*/
+:root {
+  --heading-font: "Prata", serif;
+  --body-font: "Manrope", sans-serif;
+  --logo-font: "Montserrat", sans-serif;
+  --cursive1: "Great Vibes", cursive;
+  --cursive2: "Monsieur La Doulaise", cursive;
+  --logo-color: #333;
+  --main-color: #fff;
+  --normal-color: #1f1f1f;
+  --accent-color: #964516;
+  --h1-font: 3rem;
+  --h2-font: 2rem;
+  --text-font: 1.3rem;
+}
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
+  font-family: var(--body-font);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
-section {
-  padding-bottom: 2rem;
-  margin-bottom: 2rem;
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--logo-color);
+  font-family: var(--logo-font);
+  margin-right: auto;
+  flex: 1;
+  z-index: 2;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-bottom: 1px solid var(--normal-color);
+  padding: 0.5rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.nav-wrapper {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.navlist {
+  display: flex;
+  gap: 40px;
+}
+
+.navlist li {
+  list-style: none;
+}
+
+.navlist li a {
+  position: relative;
+  font-family: var(--logo-font);
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px;
+  color: var(--links-color);
+}
+
+.navlist li a:hover {
+  color: var(--accent-color);
+}
+
+.navlist li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.navlist li a:hover::after {
+  width: 100%;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: block;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  min-width: 150px;
+  top: 120%;
+  left: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 10px 15px;
+  transition: background 0.2s ease;
+}
+
+.dropdown-content li a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.dropdown-content li a:hover::after {
+  width: 70%;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* FOOTER SECTION */
+.footer_text {
+  border-top: 1px solid var(--normal-color);
+  text-align: center;
+  padding: 20px;
+  background: var(--normal-color);
+}
+
+.footer_text p {
+  color: var(--main-color);
+  font-family: var(--logo-font);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.footer_icons {
+  align-items: center;
+}
+
+.footer_icons a {
+  color: var(--main-color);
+  font-size: 2rem;
+  padding: 0.5rem;
+  transition: all ease 250ms;
+}
+
+.footer_icons a:hover {
+  color: var(--accent-color);
+  font-size: 2.2rem;
+  padding: 0.6rem;
+}
+
+.top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.top i {
+  font-size: var(--text-font);
+  color: var(--main-color);
+  padding: 14px;
+  background: var(--logo-color);
+  border-radius: 1rem;
+  transition: all 0.35s ease-in-out;
+}
+
+.top i:hover {
+  transform: scale(1.13);
+  color: var(--main-color);
+  background: var(--accent-color);
+}
+
+/* contact cards */
+
+.contact-cards {
+  min-height: 90vh;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(0, 0, 0, 0) 30%,
+      rgba(0, 0, 0, 0) 90%,
+      rgba(255, 255, 255, 0.9) 100%
+    ),
+    url(/images/contact-back.jpeg);
+  background-size: cover;
+  background-position: center;
+  display: flow-root;
+}
+
+.contact-cards h1 {
+  text-align: center;
+  font-family: var(--heading-font);
+  font-size: var(--h1-font);
+  letter-spacing: 0.3rem;
+  color: var(--normal-color);
+  margin: 0;
+  margin-top: 1rem;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 325px;
+  min-height: 17rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(1px);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.5);
+  margin: 20px;
+}
+
+.card-content {
+  padding: 3rem;
+}
+
+.card-content h3 {
+  font-size: 1.7rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.card-content p {
+  color: var(--normal-color);
+  font-size: 1.1rem;
+  line-height: 1.5;
 }
 
 /* form styles */
+
+.contact-form {
+  padding-bottom: 3rem;
+  min-height: 90vh;
+  display: flow-root;
+  background: transparent;
+}
+
+.contact-form h1 {
+  text-align: center;
+  font-family: var(--heading-font);
+  font-size: var(--h1-font);
+  letter-spacing: 0.3rem;
+  color: var(--normal-color);
+  margin-top: 1rem;
+}
+
 .form label {
   display: block;
   margin: 1rem 0;
+  font-size: var(--text-font);
 }
+
 .form-div {
   display: flex;
   justify-content: center;
@@ -29,27 +286,48 @@ section {
   border: 2px solid #b3b3bf;
   padding: 2rem;
   border-radius: 10px;
-  background-color: #dfdfe6;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-/* form input styles*/
+
 .form input[type="text"],
 .form input[type="email"],
 .form textarea {
   width: 400px;
-  padding: 0.5rem;
+  min-height: 1rem;
+  padding: 1rem;
   border: 1px solid;
   border-radius: 4px;
-  background-color: white;
+  background-color: transparent;
   color: black;
   transition:
     border-color 0.3s,
     box-shadow 0.3s;
+
+  resize: vertical; /* Allows resizing up and down only, not sideways */
 }
+
 .checkbox {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 0.5rem;
 }
+
+input:focus,
+textarea:focus {
+  border: 2px solid var(--accent-color);
+  outline: none;
+  font-size: var(--text-font);
+}
+
+::placeholder {
+  font-size: var(--text-font);
+  font-style: italic;
+}
+
 input[type="checkbox"] {
   appearance: none;
   width: 18px;
@@ -59,15 +337,18 @@ input[type="checkbox"] {
   position: relative;
   cursor: pointer;
 }
+
 input[type="checkbox"]:checked,
 input[type="radio"]:checked {
   background-color: #1e39f3;
   border-color: #1e39f3;
 }
+
 input[type="checkbox"]:focus {
   outline: 2px solid #5aef03;
   outline-offset: 2px;
 }
+
 input[type="radio"] {
   appearance: none;
   width: 18px;
@@ -77,6 +358,7 @@ input[type="radio"] {
   position: relative;
   cursor: pointer;
 }
+
 input[type="checkbox"]:checked::after {
   content: "";
   position: absolute;
@@ -89,31 +371,17 @@ input[type="checkbox"]:checked::after {
   transform: rotate(45deg);
 }
 
-/* form buttons*/
-
 .button {
+  font-size: var(--text-font);
   border: none;
   padding: 15px;
-  background-color: #6b6bef;
+  background-color: var(--logo-color);
   border-radius: 5rem;
   color: white;
   font-weight: bold;
 }
 .button:hover {
-  background-color: blueviolet;
+  background-color: var(--accent-color);
   cursor: pointer;
   transform: translateY(-2px);
-}
-/* contact cards */
-
-.card-parent {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  padding: 2rem;
-}
-.card {
-  background-color: #f1efef;
-  border-radius: 10px;
-  padding: 1rem;
 }
