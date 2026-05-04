@@ -291,10 +291,26 @@ header {
   background-size: cover;
   background-position: center;
 }
+#skillbox1:hover{
+  background:
+    linear-gradient(to top, rgba(255, 255, 255, 0.265) 0%, rgba(0, 0, 0, 0) 90%),
+    url(/images/web-development.jpg);
+  background-size: cover;
+  background-position: center;
+
+}
 
 #skillbox2 {
   background:
     linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
+    url(/images/programming.png);
+  background-size: cover;
+  background-position: center;
+}
+
+#skillbox2:hover {
+  background:
+    linear-gradient(to top, rgba(255, 255, 255, 0.265), rgba(0, 0, 0, 0) 90%),
     url(/images/programming.png);
   background-size: cover;
   background-position: center;
@@ -308,9 +324,25 @@ header {
   background-position: center;
 }
 
+#skillbox3:hover {
+  background:
+    linear-gradient(to top, rgba(255, 255, 255, 0.265), rgba(0, 0, 0, 0) 90%),
+    url(/images/tools.webp);
+  background-size: cover;
+  background-position: center;
+}
+
 #skillbox4 {
   background:
     linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
+    url(/images/Johnson\ 6.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+#skillbox4:hover {
+  background:
+    linear-gradient(to top, rgba(255, 255, 255, 0.265), rgba(0, 0, 0, 0) 90%),
     url(/images/Johnson\ 6.jpeg);
   background-size: cover;
   background-position: center;
@@ -417,6 +449,11 @@ td {
 }
 
 #box1:hover {
+  background:
+    linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 90%),
+    url(/images/mufc.jpg);
+  background-size: cover;
+  background-position: center;
   transform: translateY(-10px);
   box-shadow: 0 0 20px rgb(255, 0, 0);
 }
@@ -432,6 +469,11 @@ td {
 }
 
 #box2:hover {
+  background:
+    linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 90%),
+    url(/images/Avengers-Age-of-Ultron.webp);
+  background-size: cover;
+  background-position: center;
   transform: translateY(-10px);
   box-shadow: 0 0 20px rgb(204, 0, 255);
 }
@@ -447,6 +489,11 @@ td {
 }
 
 #box3:hover {
+  background:
+    linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 90%),
+    url(/images/gamingpad.jpg);
+  background-size: cover;
+  background-position: center;
   transform: translateY(-10px);
   box-shadow: 0 0 20px rgb(0, 255, 174);
 }

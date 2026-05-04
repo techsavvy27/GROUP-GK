@@ -139,36 +139,6 @@ header {
   pointer-events: auto;
 }
 
-
-/*.logo {
-  color: black;
-  font-size: 22px;
-  font-weight: bold;
-}
-
-.navlist {
-  display: flex;
-}
-
-.navlist li a {
-  color: white;
-  padding: 10px;
-  text-decoration: none;
-}
-
-.navlist li a:hover {
-  color: pink;
-}
-
-
-* {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  font-family: Arial, sans-serif;
-}*/
-
-
 .intro {
   background-color: white;
   margin: 20px auto;
@@ -247,6 +217,7 @@ h2{
 .skillsbox ul{
   list-style: none;
   text-align:center;
+  justify-content:center;
   min-height: 60vh;
   
 }
@@ -297,45 +268,41 @@ tr:nth-child(even) {
 }
 
 .hobbybox li{
-  color: white;
+  color: rgba(255, 255, 255, 0.902);
   padding: 5px;
 }
 
 /*gallery section*/
-.gallery-cotainer {
+.gallery-container{
+  display:flex;
   justify-content: center;
-  margin: 40px auto;
-  width: 3000px;
-  
+  column-gap: 30px;
 }
+
 .shadow-img1 {
-  width: 350px;
-  margin: 40px auto;
+  width: 400px;
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.612);
   transition: all ease 300ms;
-}
+} 
 
 .shadow-img1:hover{
-  transform: translateX(-10px);
+  transform: translateX(-5px);
   box-shadow: 0 0 20px pink;
 }
 
 .shadow-img2 {
-  margin: 40px auto;
-  width: 350px;
+ 
+  width: 400px;
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.612);
   transition: all ease 300ms;
 }
 
 .shadow-img2:hover{
-  transform: translateX(10px);
+  transform: translateX(5px);
   box-shadow: 0 0 20px pink;
 }
-
-
-
 
 /* FOOTER SECTION */
 .footer_text {
