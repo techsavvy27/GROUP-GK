@@ -208,7 +208,7 @@ header {
 }
 
 .introboxing {
-  display: flex; /* Aligns profile photo and text horizontally */
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 40px;
@@ -217,7 +217,7 @@ header {
 }
 
 .introboxing img {
-  border-radius: 150px 150px 0 0; /* The signature dome shape */
+  border-radius: 150px 150px 0 0;
   box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.5);
   width: 300px;
   display: block;
@@ -390,24 +390,4 @@ header {
   100% {
     transform: translateX(calc(-450px * 5));
   } /* Moves 5 images then resets */
-}
-
-/* --- RESPONSIVENESS: Mobile Support --- */
-@media (max-width: 768px) {
-  .slider {
-    height: 300px;
-  }
-  .slide {
-    width: 300px;
-    height: 250px;
-  }
-  .introboxing {
-    flex-direction: column;
-    text-align: center;
-  } /* Stacks intro items */
-  @keyframes scroll {
-    100% {
-      transform: translateX(calc(-300px * 5));
-    }
-  }
 }
