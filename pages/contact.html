@@ -6,6 +6,16 @@
     <title>Student Portfolio Website: GROUP GK</title>
     <link rel="stylesheet" href="../css/contact.css" />
     <link rel="stylesheet" href="../css/abel.cs" />
+    <style>
+      .error-message {
+        color: #d93025;
+        font-size: 0.95rem;
+        margin-top: 0.35rem;
+      }
+      .input-error {
+        border-color: #d93025;
+      }
+    </style>
 
     <!-- LINKS TO ICONS -->
     <link
@@ -174,13 +184,36 @@
     <section class="contact-form">
       <h1>Get a Quote!</h1>
       <div class="form-div">
-        <form class="form">
+        <form class="form" id="contact-form" novalidate>
           <label for="name">Name</label
-          ><input type="text" placeholder="Please enter your name" /><br />
+          ><input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Please enter your name"
+          />
+          <p class="error-message" id="name-error"></p>
+          <br />
+
           <label for="email">E-mail</label
-          ><input type="email" placeholder="Example: johndoe@gmail.com" /><br />
+          ><input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Example: johndoe@gmail.com"
+          />
+          <p class="error-message" id="email-error"></p>
+          <br />
+
           <label for="message">Message</label>
-          <textarea name="message" id="message"> </textarea><br />
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Write your message here"
+          ></textarea>
+          <p class="error-message" id="message-error"></p>
+          <br />
+
           <div class="checkbox">
             <label for="gender">Gender</label>
             <label for="male"
@@ -231,5 +264,6 @@
 
     <!--scroll top-->
     <a href="#" class="top"><i class="fa-solid fa-arrow-up"></i></a>
+    <script src="/js/contact.js"></script>
   </body>
 </html>
