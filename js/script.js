@@ -23,7 +23,6 @@ function typeWriter() {
 typeWriter();
 */
 
-/*
 function updateClock() {
     const now = new Date();
     // Formats time as HH:MM:SS (e.g., 12:30:05 PM)
@@ -37,4 +36,3 @@ setInterval(updateClock, 1000);
 
 // Call it once immediately so the clock doesn't start blank
 updateClock();
-*/
