@@ -1,17 +1,29 @@
-/*
-const text = "Welcome to Group GK!";
+//This is the clock in the header
+//
+function updateClock() {
+  const now = new Date();
+  const timeString = now.toLocaleTimeString();
+  const clockEl = document.getElementById("clock");
+  if (clockEl) {
+    clockEl.textContent = timeString;
+  }
+}
+
+//This is the typewriter homepage effect
+//
+const text = "Hello, This is Group GK";
 const speed = 100;
 let i = 0;
 
 function typeWriter() {
   const target = document.getElementById("typewriter-text");
+  if (!target) return;
 
   if (i < text.length) {
     target.innerHTML += text.charAt(i);
     i++;
     setTimeout(typeWriter, speed);
   } else {
-    // Wait 2 seconds, clear the text, and restart
     setTimeout(() => {
       target.innerHTML = "";
       i = 0;
@@ -20,19 +32,111 @@ function typeWriter() {
   }
 }
 
-typeWriter();
-*/
+//This is the scrolling effects in the team section
+//
+function initCardCarousel() {
+  const container = document.getElementById("team-slider");
+  const prevBtn = document.querySelector(".carousel-arrow.prev");
+  const nextBtn = document.querySelector(".carousel-arrow.next");
+  if (!container) return;
 
-function updateClock() {
-    const now = new Date();
-    // Formats time as HH:MM:SS (e.g., 12:30:05 PM)
-    const timeString = now.toLocaleTimeString(); 
-    
-    document.getElementById('clock').textContent = timeString;
+  const originalCards = Array.from(container.querySelectorAll(".card"));
+  if (originalCards.length === 0) return;
+
+  const visibleCount = 4;
+  const cloneCount = Math.min(visibleCount, originalCards.length);
+
+  // Clone the last cards to the front and the first cards to the end
+  originalCards.slice(-cloneCount).forEach((card) => {
+    container.insertBefore(card.cloneNode(true), container.firstChild);
+  });
+  originalCards.slice(0, cloneCount).forEach((card) => {
+    container.appendChild(card.cloneNode(true));
+  });
+
+  const cards = Array.from(container.querySelectorAll(".card"));
+  const offsetIndex = cloneCount;
+  let currentIndex = offsetIndex;
+  let intervalId = null;
+  let resetTimeout = null;
+
+  const updateActiveState = () => {
+    cards.forEach((card, index) => {
+      card.classList.toggle("active-card", index === currentIndex);
+    });
+  };
+
+  const jumpToIndex = (index) => {
+    currentIndex = index;
+    const target = cards[currentIndex];
+    if (target) {
+      container.scrollLeft = target.offsetLeft;
+      updateActiveState();
+    }
+  };
+
+  const scrollToIndex = (index) => {
+    currentIndex = index;
+    const target = cards[currentIndex];
+    if (!target) return;
+
+    container.scrollTo({
+      left: target.offsetLeft,
+      behavior: "smooth",
+    });
+    updateActiveState();
+
+    if (resetTimeout) {
+      clearTimeout(resetTimeout);
+    }
+    resetTimeout = setTimeout(() => {
+      if (currentIndex >= originalCards.length + offsetIndex) {
+        jumpToIndex(offsetIndex);
+      } else if (currentIndex < offsetIndex) {
+        jumpToIndex(originalCards.length + offsetIndex - 1);
+      }
+    }, 500);
+  };
+
+  const nextSlide = () => scrollToIndex(currentIndex + 1);
+  const prevSlide = () => scrollToIndex(currentIndex - 1);
+
+  const startAutoScroll = () => {
+    if (intervalId) clearInterval(intervalId);
+    intervalId = setInterval(nextSlide, 4200);
+  };
+
+  const stopAutoScroll = () => {
+    if (intervalId) clearInterval(intervalId);
+    intervalId = null;
+  };
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => {
+      prevSlide();
+      startAutoScroll();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      nextSlide();
+      startAutoScroll();
+    });
+  }
+
+  container.addEventListener("mouseenter", stopAutoScroll);
+  container.addEventListener("mouseleave", startAutoScroll);
+
+  jumpToIndex(offsetIndex);
+  updateActiveState();
+  startAutoScroll();
 }
 
-// Call updateClock every 1000ms (1 second)
-setInterval(updateClock, 1000);
+window.addEventListener("load", () => {
+  typeWriter();
+  updateClock();
+  initCardCarousel();
 
-// Call it once immediately so the clock doesn't start blank
-updateClock();
+  setInterval(updateClock, 1000);
+});
