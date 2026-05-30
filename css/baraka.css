@@ -166,7 +166,7 @@ header {
   padding: 0.6rem;
 }
 
-.top {
+/*.top {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
@@ -185,7 +185,7 @@ header {
   transform: scale(1.13);
   color: var(--main-color);
   background: var(--accent-color);
-}
+}*/
 
 /* Background & Intro --- */
 .intro {
@@ -390,4 +390,78 @@ header {
   100% {
     transform: translateX(calc(-450px * 5));
   } /* Moves 5 images then resets */
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+  --logo-color: #ffffff;
+}
+
+body.dark-mode header {
+  background-color: rgba(18, 18, 18, 0.75);
+  border-bottom: 1px solid #333333;
+}
+
+body.dark-mode .navlist li a {
+  color: #ffffff;
+}
+
+body.dark-mode .dropdown-content {
+  background-color: rgba(30, 30, 30, 0.95);
+}
+
+body.dark-mode .dropdown-content li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .skillsbox,
+body.dark-mode .section-academic .table-container,
+body.dark-mode .interests-container,
+body.dark-mode .gallery-container {
+  background: #1e1e1e;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .skillsbox h2,
+body.dark-mode .section-academic h2,
+body.dark-mode .interests-heading,
+body.dark-mode .gallery-heading,
+body.dark-mode .skillsbox ol,
+body.dark-mode .interests-main-list,
+body.dark-mode .stats-bridge h3 {
+  color: #ffffff;
+}
+
+body.dark-mode .skillsbox ul,
+body.dark-mode .interests-sub-list {
+  color: #cccccc;
+}
+
+body.dark-mode .history-table th {
+  background-color: #252525;
+  color: #ffffff;
+  border-bottom: 2px solid #333333;
+}
+
+body.dark-mode .history-table td {
+  color: #dddddd;
+  border-bottom: 1px solid #2d2d2d;
+}
+
+body.dark-mode .history-table tbody tr:hover {
+  background-color: #1c2d5a;
+}
+body.dark-mode .intro {
+  background:
+    linear-gradient(to top, rgb(18, 18, 18) 0%, rgba(0, 0, 0, 0.3) 90%),
+    url(/images/baraka-bck-grnd.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+body.dark-mode .intro h1,
+body.dark-mode .introtexted h2,
+body.dark-mode .introtexted p {
+  color: #ffffff;
 }

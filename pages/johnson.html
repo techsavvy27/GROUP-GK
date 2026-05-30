@@ -111,14 +111,16 @@
 
     <!--table-->
     <section class="tableblock">
-      <table border="1">
-        <h1>My Academic Background</h1>
-
+      <h1>My Academic Background</h1>
+      <table  id ="education-table">
+        
         <thead>
           <tr>
             <th>LEVEL</th>
             <th>SCHOOL</th>
-            <th>YEAR</th>
+            <th>YEAR 
+              <button onclick ="sortTable()">Sort by Year ↑↓</button>
+            </th>
           </tr>
         </thead>
 
@@ -202,5 +204,6 @@
     </footer>
     <!--scroll top-->
     <a href="#" class="top"><i class="fa-solid fa-arrow-up"></i></a>
+    <script src="/js/johnson.js"></script>
   </body>
 </html>
