@@ -42,6 +42,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
 
 </ul>
 </div>
+    <button id="modeToggle"> Dark mode/Light mode</button>
 </header>
 
 <!-- HERO SECTION -->
@@ -72,13 +73,14 @@ to excellence and my love for mathematics, science, and software development.
 <div>    
 <h2 class="myeducation">My Education</h2>
 
-<table>
+<table id="education-table" border="1 >
+  <thead>
 <tr>
 <th>Level</th>
 <th>Institution</th>
-<th>Year</th>
+<th id="year-header">Year</th>
 </tr>
-
+  </thead>
 <tr>
 <td>University</td>
 <td>UDSM</td>
@@ -102,16 +104,17 @@ to excellence and my love for mathematics, science, and software development.
 <td>Waja Springs Schools</td>
 <td>2011-2018</td>
 </tr>
-
+           
 </table>
+     <button id="sort-btn">Sort by Year</button>
 </div>
 <div class="skills">
     <h2>PERSONAL SKILLS</h2>
     <ul class="SkillsList">
-        <li> coding<ul> <li> HTML </li> <li> CSS </li> </ul> </li>
-        <li> fast in calculus </li>
-        <li> problem solving </li>
-        <li>cooking</li> 
+        <li> <div class="skill-item"><h3>coding<ul> <li> HTML </li> <li> CSS </li> </ul></h3><p class="skill-details">Experienced with ES6+, DOM manipulation, and APIs.</p></div> </li>
+        <li> <div class="skill-item"><h3>fast in calculus</h3><p class="skill-details">Experienced with ES6+, DOM manipulation, and APIs.</p></div> </li>
+        <li> <div class="skill-item"><h3>problem solving</h3><p class="skill-details">Experienced with ES6+, DOM manipulation, and APIs.</p></div> </li>
+        <li> <div class="skill-item"><h3>cooking</h3><p class="skill-details">Experienced with ES6+, DOM manipulation, and APIs.</p></div> </li>
     </ul>
 </div>
 </section>
@@ -120,10 +123,10 @@ to excellence and my love for mathematics, science, and software development.
 <h2>Hobbies</h2>
   
   <div>  <ul class="hobbieslist">
-          <li>Video Games</li>
-          <li>Football</li>
-          <li>Video Editing</li>
-          <li>Cinematic Capturing</li>
+          <li><div class="hobby-item"> <h3>Video Games</h3> <p class="hobby-details">I enjoy capturing landscapes and portraits.</p> <button class="toggle-btn">Read More</button> </div></li>
+          <li><div class="hobby-item"> <h3>Football & Racing</h3> <p class="hobby-details">I enjoy capturing landscapes and portraits.</p> <button class="toggle-btn">Read More</button> </div></li>
+          <li><div class="hobby-item"> <h3>Video Editing</h3> <p class="hobby-details">I enjoy capturing landscapes and portraits.</p> <button class="toggle-btn">Read More</button> </div></li>
+          <li><div class="hobby-item"> <h3>Motion Art</h3> <p class="hobby-details">I enjoy capturing landscapes and portraits.</p> <button class="toggle-btn">Read More</button> </div></li>
          </ul>   </div> 
    <div class="hobbies-photos">
 <img src="../images/photo-video.jpeg" alt="Photo-video" class="photo-video">
@@ -163,6 +166,13 @@ class="gallery-2">
 alt="Gallery Image 3"
 class="gallery-3">
 </div>
+
+<!-- Lightbox overlay -->
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-content">
+</div>
+
 </section>
 
 <footer class="footer_text">
@@ -185,7 +195,12 @@ class="gallery-3">
         GK &trade;
       </p>
     </footer>
-<a href="#" class="top"><i class="fa-solid fa-arrow-up"></i></a>
+
+<!-- Scroll to Top Button -->
+<button id="scrollTopBtn" title="Go to top">↑</button>
+
+<script src="../kenny js files/skills.js"></script>
+
 </body>
 </html>
 
