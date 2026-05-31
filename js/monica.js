@@ -103,9 +103,3 @@ themeBtn.addEventListener("click", () => {
         themeBtn.textContent = "🌙 Dark Mode";
     }
 });
-const themeBtn = document.getElementById("themeBtn");
-
-themeBtn.addEventListener("click", () => {
-    console.log("Button clicked");
-    document.body.classList.toggle("dark-mode");
-});
