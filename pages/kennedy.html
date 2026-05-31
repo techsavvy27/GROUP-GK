@@ -1,32 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kennedy Portfolio</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kennedy Portfolio</title>
 
-<!-- CHANGE CSS FILE HERE -->
-<link rel="stylesheet" href="../css/kennedy.css">
+    <link rel="stylesheet" href="../css/kennedy.css" />
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
 
-<body>
+  <body>
+    <header>
+      <a><span class="logo">GROUP GK</span></a>
 
-<!-- NAVBAR -->
-<header>
-<a><span class="logo">GROUP GK</span></a>
+      <div class="nav-wrapper">
+        <ul class="navlist">
+          <li><a href="../index.html">Home</a></li>
 
-<div class="nav-wrapper">
-<ul class="navlist">
+          <li class="dropdown">
+            <a href="#">Members</a>
 
-<li><a href="../index.html">Home</a></li>
-
-<li class="dropdown">
-<a href="#">Members</a>
-
-<ul class="dropdown-content">
+            <ul class="dropdown-content">
               <li><a href="/pages/abel.html">Abel</a></li>
               <li><a href="/pages/alika.html">Alikka</a></li>
               <li><a href="/pages/baraka.html">Baraka</a></li>
@@ -35,147 +33,226 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
               <li><a href="/pages/kennedy.html">Kenny</a></li>
               <li><a href="/pages/monica.html">Monica</a></li>
               <li><a href="/pages/nyla.html">Nyla</a></li>
-</ul>
-</li>
+            </ul>
+          </li>
 
-<li><a href="/pages/contact.html">Contacts</a></li>
+          <li><a href="/pages/contact.html">Contacts</a></li>
+        </ul>
+      </div>
+    </header>
 
-</ul>
-</div>
-    <button id="modeToggle"> Dark mode/Light mode</button>
-</header>
+    <section class="hero">
+      <div id="kenny-section">
+        <div class="name-title">
+          <div class="first-name">KENNY</div>
+          <div class="last-name">SHIGELA</div>
+        </div>
 
-<!-- HERO SECTION -->
-<section class="hero">
-    
-  
-  <div id="kenny-section">
-    
-     <div class="name-title">
-     <div class="first-name">KENNY</div>
-  <div class="last-name">SHIGELA</div>
-     </div>
+        <p class="ambition">
+          I am an ambitious and driven scholar with a strong foundation in
+          mathematics, science, and coding. I am a fast learner and a committed
+          person in pursuing my dream. My academic journey has been marked by
+          several achievements that reflect my commitment to excellence and my
+          love for mathematics, science, and software development.
+        </p>
+      </div>
+      <img
+        src="../images/kenny-photo.jpeg"
+        alt="Photo-kenny"
+        class="photo-box"
+      />
+    </section>
 
+    <section class="section-2">
+      <div>
+        <h2 class="myeducation">My Education</h2>
 
-    <p class="ambition">I am an ambitious and driven scholar with a strong foundation in mathematics,
-science, and coding. I am a fast learner and a committed person in pursuing my dream.
-My academic journey has been marked by several achievements that reflect my commitment
-to excellence and my love for mathematics, science, and software development.
-    </p>
-  </div>
-  <img src="../images/kenny-photo.jpeg" alt="Photo-kenny" class="photo-box">
-</div>
+        <table id="education-table" border="1">
+          <thead>
+            <tr>
+              <th>Level</th>
+              <th>Institution</th>
+              <th id="year-header">Year</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>University</td>
+              <td>UDSM</td>
+              <td>2025-Present</td>
+            </tr>
 
-      
-</section>
+            <tr>
+              <td>Advanced Level</td>
+              <td>Feza Boys Secondary School</td>
+              <td>2023-2025</td>
+            </tr>
 
-<section class="section-2">
-<div>    
-<h2 class="myeducation">My Education</h2>
+            <tr>
+              <td>Ordinary Level</td>
+              <td>Waja Boys Secondary School</td>
+              <td>2019-2022</td>
+            </tr>
 
-<table id="education-table" border="1 >
-  <thead>
-<tr>
-<th>Level</th>
-<th>Institution</th>
-<th id="year-header">Year</th>
-</tr>
-  </thead>
-<tr>
-<td>University</td>
-<td>UDSM</td>
-<td>2025-Present</td>
-</tr>
+            <tr>
+              <td>Primary Level</td>
+              <td>Waja Springs Schools</td>
+              <td>2011-2018</td>
+            </tr>
+          </tbody>
+        </table>
+        <button id="sort-btn">Sort by Year</button>
+      </div>
+      <div class="skills">
+        <h2>PERSONAL SKILLS</h2>
+        <ul class="SkillsList">
+          <li>
+            <div class="skill-item">
+              <h3>
+                coding
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                </ul>
+              </h3>
+              <p class="skill-details">Building websites and webpages .</p>
+            </div>
+          </li>
+          <li>
+            <div class="skill-item">
+              <h3>fast in calculus</h3>
+              <p class="skill-details">
+                Skilled in limits, derivatives, and integrals.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="skill-item">
+              <h3>problem-solving</h3>
+              <p class="skill-details">
+                Strong in logic, creativity, and solutions.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="skill-item">
+              <h3>cooking</h3>
+              <p class="skill-details">
+                Experienced with flavors, techniques, and recipes.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-<tr>
-<td>Advanced Level</td>
-<td>Feza Boys Secondary School</td>
-<td>2023-2025</td>
-</tr>
+    <section class="hobbies">
+      <h2>Hobbies</h2>
 
-<tr>
-<td>Ordinary Level</td>
-<td>Waja Boys Secondary School</td>
-<td>2019-2022</td>
-</tr>
+      <div>
+        <ul class="hobbieslist">
+          <li>
+            <div class="hobby-item">
+              <h3>Video-Games</h3>
+              <p class="hobby-details">FC-26, Hitman games, Racing games</p>
+              <button class="toggle-btn">Read More</button>
+            </div>
+          </li>
+          <li>
+            <div class="hobby-item">
+              <h3>Football</h3>
+              <p class="hobby-details">
+                I play versatile roles in the sport and I genuinely like this
+                amazing sport
+              </p>
+              <button class="toggle-btn">Read More</button>
+            </div>
+          </li>
+          <li>
+            <div class="hobby-item">
+              <h3>Video Editing</h3>
+              <p class="hobby-details">
+                Its the basis of all visuals and movies and film
+              </p>
+              <button class="toggle-btn">Read More</button>
+            </div>
+          </li>
+          <li>
+            <div class="hobby-item">
+              <h3>Motion Art</h3>
+              <p class="hobby-details">
+                it's way of recording things or events and it looks blurry but
+                impressive
+              </p>
+              <button class="toggle-btn">Read More</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="hobbies-photos">
+        <img
+          src="../images/photo-video.jpeg"
+          alt="Photo-video"
+          class="photo-video"
+        />
+        <img
+          src="../images/photo-football.jpeg"
+          alt="Photo-football"
+          class="photo-football"
+        />
+        <img
+          src="../images/photo-editing.jpeg"
+          alt="Photo-editing"
+          class="photo-editing"
+        />
+        <img
+          src="../images/photo-cinematic.jpeg"
+          alt="Photo-cinematic"
+          class="photo-cinematic"
+        />
+      </div>
+    </section>
 
-<tr>
-<td>Primary Level</td>
-<td>Waja Springs Schools</td>
-<td>2011-2018</td>
-</tr>
-           
-</table>
-     <button id="sort-btn">Sort by Year</button>
-</div>
-<div class="skills">
-    <h2>PERSONAL SKILLS</h2>
-    <ul class="SkillsList">
-        <li> <div class="skill-item"><h3>coding<ul> <li> HTML </li> <li> CSS </li> </ul></h3><p class="skill-details">Experienced with ES6+, DOM manipulation, and APIs.</p></div> </li>
-        <li> <div class="skill-item"><h3>fast in calculus</h3><p class="skill-details">Experienced with ES6+, DOM manipulation, and APIs.</p></div> </li>
-        <li> <div class="skill-item"><h3>problem solving</h3><p class="skill-details">Experienced with ES6+, DOM manipulation, and APIs.</p></div> </li>
-        <li> <div class="skill-item"><h3>cooking</h3><p class="skill-details">Experienced with ES6+, DOM manipulation, and APIs.</p></div> </li>
-    </ul>
-</div>
-</section>
+    <section class="motivation">
+      <h2>Self Motivation</h2>
 
-<section class="hobbies">
-<h2>Hobbies</h2>
-  
-  <div>  <ul class="hobbieslist">
-          <li><div class="hobby-item"> <h3>Video Games</h3> <p class="hobby-details">I enjoy capturing landscapes and portraits.</p> <button class="toggle-btn">Read More</button> </div></li>
-          <li><div class="hobby-item"> <h3>Football & Racing</h3> <p class="hobby-details">I enjoy capturing landscapes and portraits.</p> <button class="toggle-btn">Read More</button> </div></li>
-          <li><div class="hobby-item"> <h3>Video Editing</h3> <p class="hobby-details">I enjoy capturing landscapes and portraits.</p> <button class="toggle-btn">Read More</button> </div></li>
-          <li><div class="hobby-item"> <h3>Motion Art</h3> <p class="hobby-details">I enjoy capturing landscapes and portraits.</p> <button class="toggle-btn">Read More</button> </div></li>
-         </ul>   </div> 
-   <div class="hobbies-photos">
-<img src="../images/photo-video.jpeg" alt="Photo-video" class="photo-video">
-<img src="../images/photo-football.jpeg" alt="Photo-football" class="photo-football">
-<img src="../images/photo-editing.jpeg" alt="Photo-editing" class="photo-editing">
-<img src="../images/photo-cinematic.jpeg" alt="Photo-cinematic" class="photo-cinematic">
+      <p>
+        The life motivation is that the only limitation is your mind there are
+        endless possibilities beyond faith and ambition no one is behind in his
+        timeline it is just timing because all is in God’s fate. Always driven
+        by ego but never pride and ego gives you the desire to win more and
+        more. Failure does not enter into consciousness. Just don’t quit.
+      </p>
+    </section>
 
-    </div>
+    <section class="gallery">
+      <h2>Gallery</h2>
 
-</section>
+      <div class="gallery-images">
+        <img
+          src="../images/gallery-1.jpeg"
+          alt="Gallery Image 1"
+          class="gallery-1"
+        />
+        <img
+          src="../images/gallery-2.jpeg"
+          alt="Gallery Image 2"
+          class="gallery-2"
+        />
+        <img
+          src="../images/gallery-3.jpeg"
+          alt="Gallery Image 3"
+          class="gallery-3"
+        />
+      </div>
 
-<section class="motivation">
-<h2>Self Motivation</h2>
+      <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-content" />
+      </div>
+    </section>
 
-<p>
-The life motivation is that the only limitation is your mind there are endless possibilities
-beyond faith and ambition no one is behind in his timeline it is just timing because all is
-in God’s fate. Always driven by ego but never pride and ego gives you the desire to win more
-and more. Failure does not enter into consciousness. Just don’t quit.
-</p>
-</section>
-
-<section class="gallery">
-<h2>Gallery</h2>
-
-<!-- Replace these gallery image names -->
-<div class="gallery-images">
-<img src="../images/gallery-1.jpeg"
-alt="Gallery Image 1"
-class="gallery-1">
-
-<img src="../images/gallery-2.jpeg"
-alt="Gallery Image 2"
-class="gallery-2">
-
-<img src="../images/gallery-3.jpeg"
-alt="Gallery Image 3"
-class="gallery-3">
-</div>
-
-<!-- Lightbox overlay -->
-<div id="lightbox" class="lightbox">
-  <span class="close">&times;</span>
-  <img class="lightbox-content" id="lightbox-content">
-</div>
-
-</section>
-
-<footer class="footer_text">
+    <footer class="footer_text">
       <div class="footer_icons">
         <a
           href="https://www.instagram.com/kenny_shigela?igsh=MTh0eXZlM2lidmJneQ%3D%3D&utm_source=qr"
@@ -185,7 +262,6 @@ class="gallery-3">
         <a href=" https://wa.me/255749602038" target="_blank"
           ><i class="fa-brands fa-whatsapp"></i
         ></a>
-
         <a href="https://github.com/KennyShigela" target="_blank"
           ><i class="fa-brands fa-github"></i
         ></a>
@@ -196,14 +272,8 @@ class="gallery-3">
       </p>
     </footer>
 
-<!-- Scroll to Top Button -->
-<button id="scrollTopBtn" title="Go to top">↑</button>
+    <button id="scrollTopBtn" title="Go to top">↑</button>
 
-<script src="../kenny js files/skills.js"></script>
-
-</body>
+    <script src="../js/kennedy.js"></script>
+  </body>
 </html>
-
-
-
-
