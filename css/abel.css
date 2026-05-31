@@ -262,7 +262,6 @@ body.darkmode .introduction {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  display: flow-root;
 }
 
 .introduction h1 {

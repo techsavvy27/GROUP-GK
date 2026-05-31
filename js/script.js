@@ -1,3 +1,27 @@
+//DARK MODE / LIGHT MODE SWITCHER
+//
+const themeSwitch = document.getElementById("theme-switch");
+let darkmode = localStorage.getItem("darkmode");
+
+const enableDarkmode = () => {
+  document.body.classList.add("darkmode");
+  localStorage.setItem("darkmode", "active");
+};
+
+const disableDarkmode = () => {
+  document.body.classList.remove("darkmode");
+  localStorage.removeItem("darkmode"); // Cleaner than string "null"
+};
+
+// Initial check
+if (darkmode === "active") enableDarkmode();
+
+themeSwitch.addEventListener("click", () => {
+  // Re-fetch the latest value
+  darkmode = localStorage.getItem("darkmode");
+  darkmode !== "active" ? enableDarkmode() : disableDarkmode();
+});
+
 //This is the clock in the header
 //
 function updateClock() {
@@ -139,4 +163,31 @@ window.addEventListener("load", () => {
   initCardCarousel();
 
   setInterval(updateClock, 1000);
+});
+
+// SCROLL TO TOP BUTTON
+document.addEventListener("DOMContentLoaded", () => {
+  const topBtn = document.querySelector(".top");
+  const scrollThreshold = 200;
+
+  // Hide button initially
+  topBtn.style.display = "none";
+
+  // Show/hide button based on scroll position
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > scrollThreshold) {
+      topBtn.style.display = "block";
+    } else {
+      topBtn.style.display = "none";
+    }
+  });
+
+  // Smooth scroll to top on click
+  topBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
 });
