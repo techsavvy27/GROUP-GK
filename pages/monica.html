@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Monica</title>
-    <link rel="stylesheet" href="/css/monica.css" />
+    <link rel="stylesheet" href="../css/monica.css" />
 
     <!-- LINKS TO ICONS -->
     <link
@@ -12,8 +12,9 @@
       integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    />
-  </head>
+  />
+    </head>
+
   <body>
     <!-- header and navigation THIS IS GLOBALY APPLIED -->
 
@@ -40,6 +41,8 @@
           <li><a href="/pages/contact.html">Contacts</a></li>
         </ul>
       </div>
+      <button id="themeBtn">🌙 Dark Mode</button>
+     
     </header>
 
     <!-- 1. PERSONAL INFORMATION -->
@@ -62,41 +65,38 @@
     </section>
 
     <!-- 2. SKILLS SECTION -->
-    <section class="skills-section">
-      <div class="skillsbox">
-        <h2>Skills</h2>
-        <ul>
-          <li>
-            Programming
-            <ul>
-              <li>HTML</li>
-              <li>C programing</li>
-              <li>Java</li>
-            </ul>
-          </li>
-          <li>
-            Computer Skills
-            <ul>
-              <li>Microsoft Word</li>
-              <li>Excel</li>
-            </ul>
-          </li>
-          <li>
-            Soft skills
-            <ul>
-              <li>Communication</li>
-              <li>Teamwork</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </section>
+     <section class="skills-section">
+  <div class="skillsbox">
+    <h2>Skills</h2>
+
+    <ul>
+      <li class="skill-title">Programming</li>
+      <p class="skill-details hidden">
+        Experienced in HTML, C Programming, and Java.
+      </p>
+
+      <li class="skill-title">Computer Skills</li>
+      <p class="skill-details hidden">
+        Proficient in Microsoft Word and Excel.
+      </p>
+
+      <li class="skill-title">Soft Skills</li>
+      <p class="skill-details hidden">
+        Strong communication and teamwork abilities.
+      </p>
+    </ul>
+  </div>
+</section>
+ 
+             
 
     <!-- 3. EDUCATION TABLE -->
     <section class="education">
       <div class="table-container">
         <h2>Education</h2>
-        <table border="1">
+<button id="sortBtn">Sort By Year</button>
+
+<table id="educationTable" border="1">
           <tr>
             <th>Level</th>
             <th>School</th>
@@ -129,23 +129,20 @@
     <!-- 4. HOBBIES  -->
     <section class="hobbies">
       <div class="interests-container">
-        <h2>Hobbies & Interests</h2>
-        <ul>
-          <li>
-            <strong>Reading:</strong> I enjoy reading books and articles to
-            expand my knowledge.
-          </li>
-          <li>
-            <strong>Coding:</strong> Practicing programming helps me improve my
-            technical skills.
-          </li>
-          <li>
-            <strong>Music:</strong> Listening to music helps me relax and stay
-            motivated.
-          </li>
-        </ul>
-      </div>
-    </section>
+        <section class="hobbies">
+  <div class="interests-container">
+    <h2>Hobbies & Interests</h2>
+
+    <p id="hobbyText" class="collapsed">
+      Reading books and articles helps me expand my knowledge.
+      I also enjoy coding because it strengthens my programming
+      skills and allows me to create useful projects.
+      Listening to music helps me relax and stay motivated.
+    </p>
+
+    <button id="readMoreBtn">Read More</button>
+  </div>
+</section>
 
     <!-- 5. IMAGE SECTION -->
     <section class="myimages">
@@ -153,16 +150,15 @@
 
       <div class="images">
         <h2>My Photos</h2>
-        <img
-          src="/images/monica-photo.jpeg"
-          alt="My Profile Photo"
-          width="350"
-        />
-
-        <img src="/images/monica-photo.jpg" alt="photo" width="350" />
-        <img src="/images/monica-profile.jpeg" alt="photo" width="250" />
+        <img src="/images/monica-photo.jpeg" class="gallery-img" alt="photo" width="350">
+        <img src="/images/monica-photo.jpg" class="gallery-img" alt="photo" width="350">
+        <img src="/images/monica-profile.jpeg" class="gallery-img" alt="photo" width="250">
       </div>
     </section>
+    <div id="lightbox" class="lightbox">
+  <span id="closeLightbox">&times;</span>
+  <img id="lightboxImg">
+</div>
 
     <!-- COMMENTS IN CODE -->
 
@@ -185,6 +181,9 @@
     </footer>
 
     <!--scroll top-->
-    <a href="#" class="top"><i class="fa-solid fa-arrow-up"></i></a>
+  <button id="topBtn" class="top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+<script src="../js/monica.js"></script>
   </body>
 </html>
