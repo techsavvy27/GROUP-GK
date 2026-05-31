@@ -1,3 +1,47 @@
+//DARK MODE TOGGLE
+
+(function () {
+  // 1. Inject the toggle button into the header
+  const header = document.querySelector("header");
+
+  const btn = document.createElement("button");
+  btn.id = "dark-mode-toggle";
+  btn.setAttribute("aria-label", "Toggle dark mode");
+  btn.innerHTML = `<span class="toggle-icon">🌙</span><span class="toggle-label">Dark Mode</span>`;
+
+  header.appendChild(btn);
+
+  // 2. Apply saved preference on page load (before paint to avoid flash)
+  const saved = localStorage.getItem("theme");
+  if (saved === "dark") {
+    document.body.classList.add("dark");
+    updateButton(true);
+  }
+
+  // 3. Listen for clicks
+  btn.addEventListener("click", function () {
+    const isDark = document.body.classList.toggle("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+    updateButton(isDark);
+  });
+
+  function updateButton(isDark) {
+    const icon = btn.querySelector(".toggle-icon");
+    const label = btn.querySelector(".toggle-label");
+    if (isDark) {
+      icon.textContent = "☀️";
+      label.textContent = "Light Mode";
+    } else {
+      icon.textContent = "🌙";
+      label.textContent = "Dark Mode";
+    }
+  }
+})();
+
+//----DARK MODE END -----
+
+
+//TABLE JAVASCRIPT
 let ascending = true;
 
 function sortTable() {
@@ -22,44 +66,121 @@ function sortTable() {
 
   ascending = !ascending;
 }
+//---TABLE END---
 
-const hobbyData = {
-  box1: "I enjoy football and sports because it improves teamwork, discipline, and strategy.",
-
-  box2: "Movies help me relax and inspire creativity through storytelling and visuals.",
-
-  box3: "Gaming improves problem-solving skills and strategic thinking."
+//SKILLS JAVASCRIPT
+const skillInfo = {             //creates an object like a drawer thts gonna store the description for each skill
+  skillbox1:
+  "I create responsive websites using HTML, CSS and JavaScript. I understand layouts, styling, forms and interactive pages.",
+  
+  skillbox2:
+  "I can program using C, Java and JavaScript. I enjoy problem solving.",
+  
+  skillbox3:
+  "I use Git, GitHub, VS Code and XAMPP for development,and testing.",
+  
+  skillbox4:
+  "Strong communication, teamwork, time management, critical thinking and problem-solving skills."
 };
 
-const hobbyBoxes = document.querySelectorAll(".hobby-box");
-
-hobbyBoxes.forEach(box => {
-
-  // Save original text
-  const frontText = box.innerHTML;
-
-  // Create FRONT
-  const front = document.createElement("div");
-  front.classList.add("hobby-front");
-  front.innerHTML = frontText;
-
-  // Create BACK
-  const back = document.createElement("div");
-  back.classList.add("hobby-back");
-  back.innerHTML = `
-    <p>${hobbyData[box.id]}</p>
-  `;
-
-  // Clear original content
-  box.innerHTML = "";
-
-  // Insert front + back
-  box.appendChild(front);
-  box.appendChild(back);
-
-  // Flip on click
+document.querySelectorAll(".skillbox").forEach(box => {
+  
+  const details = document.createElement("div");    //creates a container div
+  details.classList.add("skill-details");            //introduces anew class
+  details.textContent = skillInfo[box.id];           //we introduce the extra information to the skill-details depending on the id for the iteration 
+  
+  box.appendChild(details);                         //the details are appended in the skillbox
+  
   box.addEventListener("click", () => {
-    box.classList.toggle("flipped");
+    box.classList.toggle("active");                  //creates an active class thts gonna be activated once the user clicks the skillbox
+  });
+  
+});
+
+//removal of the listed items in HTML
+document.querySelectorAll(".skillbox ul").forEach(list => {
+  list.remove();
+});
+
+//---END OF SKILLS---
+
+
+//HOBBY JAVASCRIPT
+const hobbyInfo = {
+  box1:
+    "I enjoy football and sports because they improve teamwork, discipline, leadership and strategic thinking.",
+
+  box2:
+    "They help me relax and expose me to new ideas, stories and perspectives from around the world.",
+
+  box3:
+    "It improves creativity, problem-solving skills and strategic decision making."
+};
+
+document.querySelectorAll(".hobby-box").forEach(box => {
+
+  const details = document.createElement("div");
+
+  details.classList.add("hobby-details"); 
+
+  details.textContent = hobbyInfo[box.id];
+
+  box.appendChild(details);
+
+  box.addEventListener("click", () => {
+
+    box.classList.toggle("active");
+
   });
 
 });
+
+//---HOBBY END---
+
+//GALLERY JAVASCRIPT
+
+// Find all images on the page
+const images = document.querySelectorAll("img");
+
+images.forEach(img => {
+
+  img.addEventListener("click", () => {
+
+    // Create dark background
+    const lightbox = document.createElement("div");
+    lightbox.classList.add("lightbox");
+
+    // Create enlarged image
+    const bigImage = document.createElement("img");
+    bigImage.src = img.src;
+
+    // Create close X button
+    const closeBtn = document.createElement("span");
+    closeBtn.classList.add("close-lightbox");
+    closeBtn.innerHTML = "&times;";
+
+    // Add image and button
+    lightbox.appendChild(bigImage);
+    lightbox.appendChild(closeBtn);
+
+    // Add to page
+    document.body.appendChild(lightbox);
+
+    // Close when X clicked
+    closeBtn.addEventListener("click", () => {
+      lightbox.remove();
+    });
+
+    // Close when background clicked
+    lightbox.addEventListener("click", (e) => {
+
+      if(e.target === lightbox){
+        lightbox.remove();
+      }
+
+    });
+
+  });
+
+});
+//---GALLERY END---
