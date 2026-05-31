@@ -1,5 +1,5 @@
 // skills.js
-/*document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const skillItems = document.querySelectorAll(".skill-item");
 
   skillItems.forEach(item => {
@@ -11,7 +11,6 @@
     });
   });
 });
- 
 
 // hobbies.js
 document.addEventListener("DOMContentLoaded", () => {
@@ -21,52 +20,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const btn = item.querySelector(".toggle-btn");
     const details = item.querySelector(".hobby-details");
 
-    btn.addEventListener("click", () => {
-      details.classList.toggle("expanded");
-      btn.textContent = details.classList.contains("expanded")
-        ? "Read Less"
-        : "Read More";
-    });
-  });
-});    */
-
-// portfolio.js
-document.addEventListener("DOMContentLoaded", () => {
-  // Toggle for Skills and Hobbies details
-  function toggleDetails(items, detailsClass) {
-    items.forEach(item => {
-      item.addEventListener("click", () => {
-        const details = item.querySelector(detailsClass);
-        if (details) {
-          details.classList.toggle("show");
-        }
-      });
-    });
-  }
-
-  const skillItems = document.querySelectorAll(".skill-item");
-  const hobbyItems = document.querySelectorAll(".hobby-item");
-
-  toggleDetails(skillItems, ".skill-details");
-  toggleDetails(hobbyItems, ".hobby-details");
-
-  // Read More / Read Less for Hobbies
-  hobbyItems.forEach(item => {
-    const btn = item.querySelector(".toggle-btn");
-    const details = item.querySelector(".hobby-details");
-
-    if (btn && details) {
-      btn.addEventListener("click", (e) => {
-        e.stopPropagation(); // prevent triggering the main toggle
-        details.classList.toggle("expanded");
-        btn.textContent = details.classList.contains("expanded")
-          ? "Read Less"
-          : "Read More";
-      });
-    }
-  });
+btn.addEventListener("click", () => {
+  details.classList.toggle("show");
+  btn.textContent = details.classList.contains("show")
+    ? "Read Less"
+    : "Read More";
 });
- 
+
+  });
+});    
+
 /* TABLE AND ORDERING AND REORDERING ACCORDING TO YEARS */
 // portfolio.js
 document.addEventListener("DOMContentLoaded", () => {
@@ -148,22 +111,28 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// portfolio.js
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
-  const toggleBtn = document.getElementById("modeToggle");
-  const body = document.body;
+  const header = document.querySelector("header");
+
+  // Create toggle button dynamically
+  const toggleBtn = document.createElement("button");
+  toggleBtn.id = "modeToggle";
+  toggleBtn.textContent = "Dark / Light Mode";
+  toggleBtn.classList.add("toggle-btn");
+
+  // Append to header
+  header.appendChild(toggleBtn);
 
   // Default mode
-  body.classList.add("light-mode");
+  document.body.classList.add("dark-mode");
 
+  // Toggle logic
   toggleBtn.addEventListener("click", () => {
-    if (body.classList.contains("light-mode")) {
-      body.classList.remove("light-mode");
-      body.classList.add("dark-mode");
-    } else {
-      body.classList.remove("dark-mode");
-      body.classList.add("light-mode");
-    }
+    document.body.classList.toggle("light-mode");
+    document.body.classList.toggle("dark-mode");
   });
 });
 

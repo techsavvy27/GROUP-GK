@@ -1,4 +1,4 @@
-// Defining the explanations for each sub-skill
+// Data for the skill descriptions
 const explanations = {
   Html: "HTML (HyperText Markup Language) is the standard structure for creating web pages, organizing content into headings, paragraphs, and links.",
   Css: "CSS (Cascading Style Sheets) handles the presentation, formatting, and layout of the website, including animations and responsive designs.",
@@ -8,17 +8,17 @@ const explanations = {
     "Diagnosing hardware and software issues, fixing errors, and restoring systems back to stable operations.",
 };
 
-// Selecting all the main category list items
+// Grab all the main skill list items
 const skillItems = document.querySelectorAll(".skillsbox > ol > li");
 
 skillItems.forEach((item) => {
   const subList = item.querySelector("ul");
 
   if (subList) {
-    // Hide the main sub-list initially
+    // Keep them closed at the start
     subList.style.display = "none";
 
-    // Toggle main list on click
+    // Open/close main list when clicked
     item.addEventListener("click", function (event) {
       if (event.target === item) {
         subList.style.display =
@@ -26,30 +26,30 @@ skillItems.forEach((item) => {
       }
     });
 
-    // Process the sub-skills (Html, Css, etc.) inside this sub-list
+    // Loop through the nested skills
     const subSkills = subList.querySelectorAll("li");
 
     subSkills.forEach((subSkill) => {
-      subSkill.style.cursor = "pointer"; // Make it look clickable
+      subSkill.style.cursor = "pointer"; // show pointer cursor on hover
 
-      // Getting the text content of the sub-skill to find its explanation
+      // Use text to find matching explanation match
       const skillName = subSkill.childNodes[0].textContent.trim();
 
       if (explanations[skillName]) {
-        // Creating the hidden paragraph element dynamically
+        // Build the text block dynamically
         const p = document.createElement("p");
         p.textContent = explanations[skillName];
-        p.style.display = "none"; // Hide it by default
-        p.style.margin = "5px 0 10px 15px"; // Give it a clean indentation
-        p.style.color = "#555"; // Slightly distinct text color
+        p.style.display = "none"; // start hidden
+        p.style.margin = "5px 0 10px 15px";
+        p.style.color = "#555";
         p.style.fontSize = "0.9em";
 
-        // Appending the paragraph right underneath the sub-skill text
+        // Stick it under the skill list item
         subSkill.appendChild(p);
 
-        // Toggle the paragraph when the sub-skill is clicked
+        // Click handler to toggle the description text
         subSkill.addEventListener("click", function (event) {
-          event.stopPropagation(); // Prevents closing the main list
+          event.stopPropagation(); // stop main list from closing
 
           if (event.target === subSkill || event.target.tagName !== "P") {
             p.style.display = p.style.display === "none" ? "block" : "none";
@@ -59,47 +59,45 @@ skillItems.forEach((item) => {
     });
   }
 });
+
 //TABLE JAVASCRIPT
-// Selecting the table elements
 const table = document.querySelector(".history-table");
 const tbody = table.querySelector("tbody");
-const yearHeader = table.querySelector("thead th:nth-child(3)"); // Targets the 'Year of Study' header
+const yearHeader = table.querySelector("thead th:nth-child(3)"); // Target the Year column
 
-// Style the header to show it's interactive and add a subtle arrow indicator
+// Add a cursor pointer and an interactive arrow to the header
 yearHeader.style.cursor = "pointer";
 yearHeader.innerHTML += ' <span id="sort-arrow">↕</span>';
 const sortArrow = document.getElementById("sort-arrow");
 
-// Tracking the current sorting direction (true = ascending, false = descending)
+// Sort state tracker
 let isAscending = true;
 
-// Adding the click event listener to the Year column header
+// Sort rows when clicking the Year header
 yearHeader.addEventListener("click", () => {
-  // Convert the HTML rows collection into a true JavaScript array so we can sort it
+  // Convert NodeList to an array so we can sort it
   const rowsArray = Array.from(tbody.querySelectorAll("tr"));
 
-  // Sorting the array based on the text inside the 3rd column (Year of Study)
   rowsArray.sort((rowA, rowB) => {
-    // Get the text content of the 3rd cell (td) in each row
     const cellA = rowA.children[2].textContent.trim();
     const cellB = rowB.children[2].textContent.trim();
 
-    // Extract the starting year (e.g., turns "2025-Present" or "2022-2025" into just 2025 or 2022)
+    // Get just the start year (handles formats like "2022-2025")
     const yearA = parseInt(cellA.split("-")[0]);
     const yearB = parseInt(cellB.split("-")[0]);
 
-    // Compare the years based on the toggle direction
+    // Check which direction to sort
     if (isAscending) {
-      return yearA - yearB; // Smallest year to largest
+      return yearA - yearB;
     } else {
-      return yearB - yearA; // Largest year to smallest
+      return yearB - yearA;
     }
   });
 
-  // Clear out the old rows and append the newly sorted rows
+  // Put sorted rows back into DOM
   rowsArray.forEach((row) => tbody.appendChild(row));
 
-  // Toggle the direction flag and update the arrow visual for the user
+  // Flip directions and update arrow icon
   if (isAscending) {
     sortArrow.textContent = "↑";
     isAscending = false;
@@ -110,7 +108,6 @@ yearHeader.addEventListener("click", () => {
 });
 
 //HOBBIES
-//  Defining long hobby descriptions here
 const hobbyDescriptions = {
   Gaming:
     "Gaming is one of my favorite ways to unwind after intense programming sessions. I love diving into competitive sports simulations, high-stakes tactical first-person shooters, and massive open-world games where strategy and quick reflexes are key to surviving.",
@@ -120,19 +117,17 @@ const hobbyDescriptions = {
     "I am a massive fan of deep storytelling, cinematic universes, and gritty character dramas. I closely follow complex cinematic universes, epic dark fantasy television series, and intense crime dramas that feature complex storytelling and brilliant acting.",
 };
 
-// Selecting the main hobby list items
 const hobbyItems = document.querySelectorAll(".interests-main-list > li");
 
 hobbyItems.forEach((item) => {
-  // Get the main text (e.g., "Gaming") ignoring the sub-list text
   const hobbyName = item.childNodes[0].textContent.trim();
 
   if (hobbyDescriptions[hobbyName]) {
-    // 3. Create the description paragraph dynamically
+    // Generate the snippet text element
     const descPara = document.createElement("p");
     descPara.textContent = hobbyDescriptions[hobbyName];
 
-    // Applying CSS directly via JS to clamp text to exactly 2 lines by default
+    // CSS styling to clamp text to 2 lines max
     descPara.style.margin = "5px 0";
     descPara.style.color = "#666";
     descPara.style.fontSize = "0.9em";
@@ -143,7 +138,7 @@ hobbyItems.forEach((item) => {
     descPara.style.overflow = "hidden";
     descPara.style.transition = "all 0.3s ease";
 
-    // 4. Create a "Read More" visual indicator link
+    // Read More text link
     const toggleBtn = document.createElement("span");
     toggleBtn.textContent = " Read More";
     toggleBtn.style.color = "#007BFF";
@@ -153,31 +148,29 @@ hobbyItems.forEach((item) => {
     toggleBtn.style.display = "block";
     toggleBtn.style.marginBottom = "10px";
 
-    // Find the sub-list (ul) so we can insert our new elements nicely right above it
+    // Drop them into the DOM right before the inner sub-list
     const subList = item.querySelector(".interests-sub-list");
     item.insertBefore(descPara, subList);
     item.insertBefore(toggleBtn, subList);
 
-    // 5. Setup the click logic to expand/collapse
+    // Expand/collapse logic
     function toggleDescription(event) {
-      event.stopPropagation(); // Stops it from interfering with any other click events
+      event.stopPropagation(); // keep it contained
 
       if (descPara.style.webkitLineClamp === "2") {
-        // Expand the text
         descPara.style.webkitLineClamp = "none";
         toggleBtn.textContent = " Read Less";
       } else {
-        // Collapse the text back to 2 lines
         descPara.style.webkitLineClamp = "2";
         toggleBtn.textContent = " Read More";
       }
     }
 
-    // Make both the paragraph and the "Read More" text clickable triggers
+    // Bind event listeners to both paragraph text and toggle label
     descPara.addEventListener("click", toggleDescription);
     toggleBtn.addEventListener("click", toggleDescription);
 
-    // Stop clicks on the sub-list items (like EAFC26) from accidentally triggering a toggle
+    // Stop nested lists from bubbling clicks up
     if (subList) {
       subList.addEventListener("click", (e) => e.stopPropagation());
     }
@@ -185,16 +178,13 @@ hobbyItems.forEach((item) => {
 });
 
 //IMAGE SECTION
-// 1. Select all the images inside your gallery slides
 const galleryImages = document.querySelectorAll(".slide img");
 
 galleryImages.forEach((image) => {
-  // Make the images look clickable
   image.style.cursor = "pointer";
 
-  // 2. Listen for clicks on each gallery image
   image.addEventListener("click", () => {
-    // 3. Create the dark overlay background
+    // Create dark background element
     const lightboxBg = document.createElement("div");
     lightboxBg.style.position = "fixed";
     lightboxBg.style.top = "0";
@@ -205,13 +195,13 @@ galleryImages.forEach((image) => {
     lightboxBg.style.display = "flex";
     lightboxBg.style.justifyContent = "center";
     lightboxBg.style.alignItems = "center";
-    lightboxBg.style.zIndex = "10000"; // Make sure it sits on top of everything
+    lightboxBg.style.zIndex = "10000"; // Keep on top
     lightboxBg.style.opacity = "0";
     lightboxBg.style.transition = "opacity 0.3s ease";
 
-    // 4. Create the large image container
+    // Create the image element inside the overlay
     const lightboxImg = document.createElement("img");
-    lightboxImg.src = image.src; // Copy the clicked image source
+    lightboxImg.src = image.src;
     lightboxImg.alt = image.alt;
     lightboxImg.style.maxWidth = "85%";
     lightboxImg.style.maxHeight = "85%";
@@ -220,9 +210,9 @@ galleryImages.forEach((image) => {
     lightboxImg.style.transform = "scale(0.9)";
     lightboxImg.style.transition = "transform 0.3s ease";
 
-    // 5. Create the Close button (X)
+    // Close button markup
     const closeBtn = document.createElement("span");
-    closeBtn.innerHTML = "&times;"; // HTML entity for a clean multiplication/X sign
+    closeBtn.innerHTML = "&times;";
     closeBtn.style.position = "absolute";
     closeBtn.style.top = "20px";
     closeBtn.style.right = "30px";
@@ -232,47 +222,43 @@ galleryImages.forEach((image) => {
     closeBtn.style.cursor = "pointer";
     closeBtn.style.userSelect = "none";
 
-    // Assemble the lightbox elements
+    // Append everything and mount to body
     lightboxBg.appendChild(lightboxImg);
     lightboxBg.appendChild(closeBtn);
     document.body.appendChild(lightboxBg);
 
-    // Trigger smooth fade-in and scale animation via a slight timeout
+    // Timeout to make sure CSS transitions handle the fade-in cleanly
     setTimeout(() => {
       lightboxBg.style.opacity = "1";
       lightboxImg.style.transform = "scale(1)";
     }, 10);
 
-    // 6. Function to remove the lightbox safely with fade-out animations
+    // Fade out and cleanup layout safely
     function closeLightbox() {
       lightboxBg.style.opacity = "0";
       lightboxImg.style.transform = "scale(0.9)";
       setTimeout(() => {
         lightboxBg.remove();
-      }, 300); // Matches the 0.3s transition time
+      }, 300); // Wait out the CSS transition
     }
 
-    // Close when clicking the 'X' button
     closeBtn.addEventListener("click", closeLightbox);
-
-    // Close when clicking anywhere on the dark background (but not the image itself)
-    lightboxBg.addEventListener("click", (event) => {
-      if (event.target === lightboxBg) {
-        closeLightbox();
-      }
+    lightboxBg.addEventListener("click", (e) => {
+      if (e.target === lightboxBg) closeLightbox();
     });
   });
 });
+
 //SCROLL BUTTON
-// 1. Create the scroll-to-top button element dynamically
+// Create the button element
 const scrollTopBtn = document.createElement("button");
 
-// Style the button using JS
-scrollTopBtn.innerHTML = "↑"; // Arrow text symbol
+// Inject styles directly via script
+scrollTopBtn.innerHTML = "↑";
 scrollTopBtn.style.position = "fixed";
 scrollTopBtn.style.bottom = "30px";
 scrollTopBtn.style.right = "30px";
-scrollTopBtn.style.zIndex = "1000"; // Sits on top of other content
+scrollTopBtn.style.zIndex = "1000";
 scrollTopBtn.style.width = "45px";
 scrollTopBtn.style.height = "45px";
 scrollTopBtn.style.borderRadius = "50%";
@@ -284,49 +270,44 @@ scrollTopBtn.style.fontSize = "20px";
 scrollTopBtn.style.fontWeight = "bold";
 scrollTopBtn.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.15)";
 
-// Initial hidden state styles for a smooth fade-in effect
+// Set hidden visual defaults for standard transition properties
 scrollTopBtn.style.opacity = "0";
-scrollTopBtn.style.pointerEvents = "none"; // Prevents clicking while invisible
+scrollTopBtn.style.pointerEvents = "none";
 scrollTopBtn.style.transition = "opacity 0.3s ease, transform 0.3s ease";
-scrollTopBtn.style.transform = "translateY(10px)"; // Starts slightly lowered
+scrollTopBtn.style.transform = "translateY(10px)";
 
-// Append the button straight into the body layout
 document.body.appendChild(scrollTopBtn);
 
-// 2. Track the user's scrolling activity
+// Show/hide button depending on scroll depth
 window.addEventListener("scroll", () => {
-  // Check if user has scrolled past 200px
   if (window.scrollY > 200) {
-    // Show the button smoothly
     scrollTopBtn.style.opacity = "1";
     scrollTopBtn.style.pointerEvents = "auto";
     scrollTopBtn.style.transform = "translateY(0)";
   } else {
-    // Hide the button smoothly
     scrollTopBtn.style.opacity = "0";
     scrollTopBtn.style.pointerEvents = "none";
     scrollTopBtn.style.transform = "translateY(10px)";
   }
 });
 
-// 3. Smoothly scroll back to the top on click
+// Click action to scroll back smoothly
 scrollTopBtn.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
-    behavior: "smooth", // Native smooth scrolling mechanism
+    behavior: "smooth",
   });
 });
 
 //DARKMODE
-// 1. Find your header element
 const header = document.querySelector("header");
 
 if (header) {
-  // 2. Create the toggle button dynamically
+  // Create toggle button element
   const themeToggle = document.createElement("button");
   themeToggle.innerHTML = "🌙 Dark";
 
-  // Apply visual styling through JS to blend perfectly with your header rules
+  // Match toggle styling to root variables used across theme layout
   themeToggle.style.fontFamily = "var(--logo-font)";
   themeToggle.style.fontSize = "14px";
   themeToggle.style.fontWeight = "bold";
@@ -336,10 +317,10 @@ if (header) {
   themeToggle.style.border = "1px solid var(--normal-color)";
   themeToggle.style.borderRadius = "20px";
   themeToggle.style.color = "var(--logo-color)";
-  themeToggle.style.zIndex = "1001"; // Keeps it sitting above the nav-wrapper container
+  themeToggle.style.zIndex = "1001";
   themeToggle.style.transition = "all 0.2s ease";
 
-  // Hover animations handled natively via JS listeners
+  // Simple script listeners to mirror hover styles
   themeToggle.addEventListener("mouseenter", () => {
     themeToggle.style.backgroundColor = "var(--logo-color)";
     themeToggle.style.color = "var(--main-color)";
@@ -349,14 +330,13 @@ if (header) {
     themeToggle.style.color = "var(--logo-color)";
   });
 
-  // Append the newly formed button into your flex header layout
   header.appendChild(themeToggle);
 
-  // 3. Toggle the dark-mode class on the body when clicked
+  // Toggle utility layout dark-mode class string reference
   themeToggle.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
 
-    // Update button text labels dynamically based on state
+    // Change label copy dynamically on state change
     if (document.body.classList.contains("dark-mode")) {
       themeToggle.innerHTML = "☀️ Light";
     } else {
