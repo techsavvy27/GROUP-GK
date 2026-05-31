@@ -362,6 +362,17 @@ display:flex;
   /*justify-content:space-between;*/
 gap: 30px;
 }
+.gallery-images img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* hand cursor */
+  border-radius: 6px; /* optional: rounded corners */
+}
+
+.gallery-images img:hover {
+  transform: scale(1.05); /* expand slightly */
+  box-shadow: 0 4px 12px #03741f; /* green shadow */
+}
+
 
 /* FOOTER SECTION */
 .footer_text{
@@ -454,14 +465,14 @@ gap: 30px;
 }
 .hobby-details {
   display: -webkit-box;
-  -webkit-line-clamp: 2;   /* show only 2 lines */
+  
   -webkit-box-orient: vertical;
   overflow: hidden;
   transition: all 0.3s ease;
 }
 
 .hobby-details.expanded {
-  -webkit-line-clamp: unset; /* remove clamp */
+  
   max-height: 1000px; /* large enough for full text */
 }
 
@@ -541,6 +552,61 @@ gap: 30px;
   transform: scale(1.1);
 }
 
-/* Toggle Button Styling */
 
 
+
+/* ===============================
+   LIGHT THEME CSS
+================================== */
+
+/* ===============================
+   LIGHT THEME CSS
+================================== */
+
+body.light-mode {
+  background: 
+    linear-gradient(to top, rgba(255,255,255,.9), rgba(255,255,255,.4)),
+    url("../images/hero-background-light.jpg.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #000000; /* text black */
+}
+
+.header.light-mode,
+.logo.light-mode,
+.navlist li a.light-mode,
+.myeducation.light-mode,
+.skills.light-mode,
+.hobbies.light-mode,
+.motivation.light-mode,
+.gallery.light-mode,
+.footer_text.light-mode {
+  color: #000000; /* switch text to black */
+}
+
+.footer_text.light-mode {
+  background: #ffffff; /* footer background white */
+  border-top: 1px solid #000000;
+}
+
+.footer_text.light-mode p,
+.footer_icons.light-mode a {
+  color: #000000; /* footer text/icons black */
+}
+
+#scrollTopBtn.light-mode {
+  background-color: #000000; /* black background */
+  color: #ffffff; /* white arrow/text */
+}
+
+#modeToggle {
+  position: relative;   /* ensure it sits in front */
+  z-index: 2000;        /* higher than header/nav overlays */
+  pointer-events: auto; /* allow clicks */
+}
+
+
+.nav-wrapper {
+  z-index: 500; /* lower than the button */
+}
