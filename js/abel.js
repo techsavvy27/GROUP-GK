@@ -46,3 +46,118 @@ function sortTable() {
 
   ascending = !ascending;
 }
+
+// SKILL DETAILS TOGGLE
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".skill-item");
+  items.forEach((item) => {
+    item.setAttribute("role", "button");
+    item.setAttribute("tabindex", "0");
+    item.addEventListener("click", () => {
+      const details = item.querySelector(".skill-item-details");
+      if (!details) return;
+      details.classList.toggle("visible");
+      item.setAttribute("aria-expanded", details.classList.contains("visible"));
+    });
+    item.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        item.click();
+      }
+    });
+  });
+});
+
+// HOBBY DESCRIPTION READ MORE/READ LESS TOGGLE
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".read-more-btn");
+  buttons.forEach((btn) => {
+    const description = btn.previousElementSibling;
+    if (!description || !description.classList.contains("hobby-description"))
+      return;
+
+    // Initialize as collapsed
+    description.classList.add("collapsed");
+    btn.textContent = "Read More";
+
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const isExpanded = description.classList.contains("expanded");
+
+      if (isExpanded) {
+        description.classList.remove("expanded");
+        description.classList.add("collapsed");
+        btn.textContent = "Read More";
+      } else {
+        description.classList.remove("collapsed");
+        description.classList.add("expanded");
+        btn.textContent = "Read Less";
+      }
+    });
+  });
+});
+
+// GALLERY LIGHTBOX
+document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll(".gallery_image");
+  const overlay = document.getElementById("lightbox-overlay");
+  const lightboxImage = document.querySelector(".lightbox-image");
+  const caption = document.querySelector(".lightbox-caption");
+  const closeBtn = document.querySelector(".lightbox-close");
+
+  function closeLightbox() {
+    overlay.classList.remove("active");
+    overlay.setAttribute("aria-hidden", "true");
+    lightboxImage.src = "";
+    lightboxImage.alt = "";
+    caption.textContent = "";
+  }
+
+  images.forEach((image) => {
+    image.addEventListener("click", () => {
+      lightboxImage.src = image.src;
+      lightboxImage.alt = image.alt;
+      caption.textContent =
+        image.dataset.caption || image.alt || "Image preview";
+      overlay.classList.add("active");
+      overlay.setAttribute("aria-hidden", "false");
+    });
+  });
+
+  closeBtn.addEventListener("click", closeLightbox);
+  overlay.addEventListener("click", (event) => {
+    if (event.target === overlay) closeLightbox();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && overlay.classList.contains("active")) {
+      closeLightbox();
+    }
+  });
+});
+
+// SCROLL TO TOP BUTTON
+document.addEventListener("DOMContentLoaded", () => {
+  const topBtn = document.querySelector(".top");
+  const scrollThreshold = 200;
+
+  // Hide button initially
+  topBtn.style.display = "none";
+
+  // Show/hide button based on scroll position
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > scrollThreshold) {
+      topBtn.style.display = "block";
+    } else {
+      topBtn.style.display = "none";
+    }
+  });
+
+  // Smooth scroll to top on click
+  topBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+});

@@ -159,7 +159,7 @@ header {
   justify-content: center;
   align-items: center;
   top: 2px;
-  right: 40px;
+  right: 2rem;
   position: fixed;
   background-color: transparent;
 }
@@ -226,11 +226,11 @@ header {
   padding: 14px;
   background: var(--accent-color);
   border-radius: 1rem;
-  transition: all 0.35s ease-in-out;
+  transition: 0.2s ease;
 }
 
 .top i:hover {
-  transform: scale(1.13);
+  transform: scale(1.1);
   color: var(--main-color);
   background: var(--accent-color);
 }
@@ -249,6 +249,8 @@ header {
     url(/images/abel-back2.png);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   display: flow-root;
 }
 
@@ -256,6 +258,11 @@ body.darkmode .introduction {
   background:
     linear-gradient(to top, rgb(12, 12, 12) 0%, rgba(0, 0, 0, 0) 90%),
     url(/images/abel-back2-dark.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flow-root;
 }
 
 .introduction h1 {
@@ -365,6 +372,9 @@ body.darkmode .introduction {
     url(/images/abel-card1.jpg);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-y: scroll;
 }
 
 #card2 {
@@ -373,6 +383,9 @@ body.darkmode .introduction {
     url(/images/abel-card2.jpg);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-y: scroll;
 }
 
 #card3 {
@@ -381,6 +394,9 @@ body.darkmode .introduction {
     url(/images/abel-card3.jpg);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-y: scroll;
 }
 
 body.darkmode #card1 {
@@ -389,6 +405,9 @@ body.darkmode #card1 {
     url(/images/abel-card1.jpg);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-y: scroll;
 }
 
 body.darkmode #card2 {
@@ -401,6 +420,9 @@ body.darkmode #card2 {
     url(/images/abel-card2.jpg);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-y: scroll;
 }
 
 body.darkmode #card3 {
@@ -409,6 +431,9 @@ body.darkmode #card3 {
     url(/images/abel-card3.jpg);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-y: scroll;
 }
 
 /*
@@ -518,15 +543,15 @@ tr:hover {
 
 #hobbycard1 {
   background:
-    linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
-    url(/images/abel-hob1.jpg);
+    linear-gradient(to right, rgb(255, 255, 255, 0.7) 0%, rgba(0, 0, 0, 0) 90%),
+    url(/images/abel-hob4.jpg);
   background-size: cover;
   background-position: center;
 }
 
 #hobbycard2 {
   background:
-    linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
+    linear-gradient(to right, rgb(255, 255, 255, 0.7) 0%, rgba(0, 0, 0, 0) 90%),
     url(/images/abel-hob2.webp);
   background-size: cover;
   background-position: center;
@@ -534,8 +559,8 @@ tr:hover {
 
 #hobbycard3 {
   background:
-    linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
-    url(/images/abel-hob3.webp);
+    linear-gradient(to right, rgb(255, 255, 255, 0.7) 0%, rgba(0, 0, 0, 0) 90%),
+    url(/images/abel-hob5.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -543,7 +568,7 @@ tr:hover {
 body.darkmode #hobbycard1 {
   background:
     linear-gradient(to right, rgba(12, 12, 12, 1) 0%, rgba(0, 0, 0, 0) 90%),
-    url(/images/abel-hob1.jpg);
+    url(/images/abel-hob4.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -559,7 +584,7 @@ body.darkmode #hobbycard2 {
 body.darkmode #hobbycard3 {
   background:
     linear-gradient(to right, rgba(12, 12, 12, 1) 0%, rgba(0, 0, 0, 0) 90%),
-    url(/images/abel-hob3.webp);
+    url(/images/abel-hob5.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -572,20 +597,13 @@ body.darkmode #hobbycard3 {
 /
 */
 .gallery_section {
-  min-height: 90vh;
-  background:
-    linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
-    url(/images/abel-galback.png);
+  min-height: 70vh;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   display: flow-root;
   scroll-margin-top: 4.5rem;
-}
-
-body.darkmode .gallery_section {
-  background:
-    linear-gradient(to top, rgb(12, 12, 12) 0%, rgba(0, 0, 0, 0) 90%),
-    url(/images/abel-galback-dark.png);
 }
 
 .gallery_section h2 {
@@ -600,55 +618,95 @@ body.darkmode .gallery_section {
   margin: 40px auto;
   font-size: var(--text-font);
   position: relative;
-  max-width: 60rem;
+  max-width: 82rem;
 }
 
-#gallerycard1 {
-  background:
-    linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 15%),
-    url(/images/abel-gal3.jpeg);
-  background-size: cover;
-  background-position: center;
+.gallery_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
 }
 
-#gallerycard2 {
-  background:
-    linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 15%),
-    url(/images/abel-gal2.jpeg);
-  background-size: cover;
-  background-position: center;
+.gallery_card {
+  overflow: hidden;
+  border-radius: 1.25rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.08);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  min-height: 280px;
 }
 
-#gallerycard3 {
-  background:
-    linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 15%),
-    url(/images/abel-gal1.jpeg);
-  background-size: cover;
-  background-position: center;
+.gallery_card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.2);
 }
 
-body.darkmode #gallerycard1 {
-  background:
-    linear-gradient(to top, rgba(12, 12, 12, 1) 0%, rgba(0, 0, 0, 0) 90%),
-    url(/images/abel-gal1.jpeg);
-  background-size: cover;
-  background-position: center;
+.gallery_image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  cursor: pointer;
 }
 
-body.darkmode #gallerycard2 {
-  background:
-    linear-gradient(to top, rgba(12, 12, 12, 1) 0%, rgba(0, 0, 0, 0) 90%),
-    url(/images/abel-gal2.jpeg);
-  background-size: cover;
-  background-position: center;
+.lightbox-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(12, 12, 12, 0.92);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 1.5rem;
 }
 
-body.darkmode #gallerycard3 {
-  background:
-    linear-gradient(to top, rgba(12, 12, 12, 1) 0%, rgba(0, 0, 0, 0) 90%),
-    url(/images/abel-gal3.jpeg);
-  background-size: cover;
-  background-position: center;
+.lightbox-overlay.active {
+  display: flex;
+}
+
+.lightbox-content {
+  position: relative;
+  width: min(95%, 920px);
+  max-height: 95vh;
+  text-align: center;
+}
+
+.lightbox-image {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 1rem;
+  box-shadow: 0 24px 68px rgba(0, 0, 0, 0.6);
+}
+
+.lightbox-caption {
+  margin-top: 1rem;
+  color: #f3f3f3;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 2px;
+  right: 2rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  background: #e0e0e0;
+  color: #1f1f1f;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transition: 0.2s ease;
+}
+
+.lightbox-close:hover {
+  transform: scale(1.1);
 }
 
 /*
@@ -671,7 +729,6 @@ body.darkmode #gallerycard3 {
   }
   scrollbar-width: none;
   -ms-overflow-style: none;
-  overflow-x: auto;
 }
 
 .card {
@@ -680,6 +737,11 @@ body.darkmode #gallerycard3 {
   scroll-snap-align: start;
   object-fit: cover;
   transition: all ease-in-out 0.3s;
+  overflow: auto;
+}
+
+.card::-webkit-scrollbar {
+  display: none;
 }
 
 .cardtext {
@@ -691,19 +753,123 @@ body.darkmode #gallerycard3 {
   list-style: none;
 }
 
+/* Skill toggle styles */
+.skill-item {
+  cursor: pointer;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  transition: background-color 0.25s ease;
+}
+
+.skill-item:hover,
+.skill-item:focus-visible {
+  background-color: rgba(88, 120, 34, 0.08);
+}
+
+.skill-item span {
+  display: inline-block;
+  font-weight: 600;
+}
+
+.skill-item-details {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.32s ease,
+    opacity 0.28s ease;
+  opacity: 0;
+  margin: 0;
+  color: var(--normal-color);
+  line-height: 1.6;
+}
+
+.skill-item-details.visible {
+  opacity: 1;
+  max-height: 120px;
+  margin-top: 0.5rem;
+}
+
+/* Hobby items with descriptions */
+.hobbies_box .cardtext ul li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  font-weight: 600;
+}
+
+.hobby-meta {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.hobby-description {
+  overflow: hidden;
+  line-height: 1.6;
+  margin: 0;
+  color: var(--normal-color);
+  transition:
+    max-height 0.35s ease,
+    opacity 0.3s ease;
+  opacity: 1;
+  font-weight: 400;
+  font-size: 0.95rem;
+  min-width: 0; /* allow flex children to shrink for ellipsis */
+}
+
+.hobby-description.collapsed {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.hobby-description.expanded {
+  white-space: normal;
+  max-height: 500px;
+}
+
+.read-more-btn {
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: var(--text-font);
+  padding: 0;
+  margin: 0;
+  transition: color 0.25s ease;
+  white-space: nowrap;
+}
+
+.read-more-btn:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
 #cardtext1 p,
 #cardtext2 p,
 #cardtext3 p {
   font-family: var(--logo-font);
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 500;
+  margin: 0;
 }
 
 #cardtext1 li,
 #cardtext2 li,
 #cardtext3 li {
-  font-size: 2rem;
-  line-height: 1.4;
+  font-size: 1.5rem;
+}
+
+#cardtext1 .skill-item-details,
+#cardtext2 .skill-item-details,
+#cardtext3 .skill-item-details {
+  font-size: 1.5rem;
+}
+
+#cardtext1 .hobby-description,
+#cardtext2 .hobby-description,
+#cardtext3 .hobby-description {
+  font-size: 1.5rem;
 }
 
 .slidernav {
@@ -736,14 +902,10 @@ body.darkmode #cardtext1 p,
 #cardtext3 p {
   font-family: var(--logo-font);
   color: var(--normal-color);
-  font-size: 3.5rem;
-  font-weight: 500;
 }
 
 body.darkmode #cardtext1 li,
 #cardtext2 li,
 #cardtext3 li {
   color: var(--normal-color);
-  font-size: 2rem;
-  line-height: 1.4;
 }
