@@ -3,7 +3,6 @@
   <head>
     <title>My Profile</title>
     <link rel="stylesheet" href="/css/alikka.css" />
-   
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -13,14 +12,13 @@
     />
   </head>
   <body>
-    <!-- header and navigation THIS IS GLOBALY APPLIED -->
 
+    <!-- header and navigation -->
     <header>
       <a href="/index.html"><span class="logo">GROUP GK</span></a>
       <div class="nav-wrapper">
         <ul class="navlist">
           <li><a href="/index.html">Home</a></li>
-
           <li class="dropdown">
             <a href="#">Members</a>
             <ul class="dropdown-content">
@@ -34,25 +32,30 @@
               <li><a href="/pages/nyla.html">Nyla</a></li>
             </ul>
           </li>
-
           <li><a href="/pages/contact.html">Contacts</a></li>
         </ul>
       </div>
+
+      <!-- Dark/Light mode toggle button -->
+      <button id="theme-toggle" class="theme-btn" title="Toggle Dark/Light Mode">
+        <i class="fa-solid fa-moon"></i>
+      </button>
     </header>
 
     <section class="intro">
       <h1>Welcome To Alikka's Page</h1>
       <div class="introbox" id="introduction">
-        <img src="/images/ikaa4.jpeg" alt="alikka's photo" width="280" />
+        <!-- Clickable image for lightbox -->
+        <img src="/images/ikaa4.jpeg" alt="alikka's photo" width="280" class="lightbox-trigger" />
         <div class="introtexted">
           <h2>Get to know me !!</h2>
           <p>
-            My name is ALIKKA BLACKSON KANUKISYA .I am 20 years old , UDSM Coict
-            first year computer science student. i have 6 years studying
-            computer i choose it as my carrer path since 2020. I have
-            participated in various ict activities and very competent and
-            determined young girl. technology and how everything most of all
-            computer functionality has always puzzled me and pushed me to want
+            My name is ALIKKA BLACKSON KANUKISYA. I am 20 years old, UDSM Coict
+            first year computer science student. I have 6 years studying
+            computer and I chose it as my career path since 2020. I have
+            participated in various ICT activities and am a very competent and
+            determined young girl. Technology and how everything — most of all
+            computer functionality — has always puzzled me and pushed me to want
             to know more about the force or instructions behind its
             functionality.
           </p>
@@ -60,62 +63,109 @@
       </div>
     </section>
 
-    <!-- Skills -->
+    <!-- Skills — each item is clickable to reveal details -->
     <section class="skills">
       <div class="skillsbox">
         <h2>My Skills</h2>
         <ul>
           <li><b>Programming</b></li>
-          <li>HTML</li>
-          <li>C++ Programming</li>
-          <li>C Programming</li>
-          <li>Javascript</li>
-          <li>Visual Basic Programming</li>
+
+          <li class="skill-item" data-details="Proficient in building web pages using HTML5 semantic elements, forms, and structure.">
+            HTML <span class="skill-arrow">&#9660;</span>
+            <p class="skill-details">Proficient in building web pages using HTML5 semantic elements, forms, and structure.</p>
+          </li>
+
+          <li class="skill-item" data-details="Strong knowledge of object-oriented programming concepts using C++.">
+            C++ Programming <span class="skill-arrow">&#9660;</span>
+            <p class="skill-details">Strong knowledge of object-oriented programming concepts using C++.</p>
+          </li>
+
+          <li class="skill-item" data-details="Familiar with procedural programming, pointers, and memory management in C.">
+            C Programming <span class="skill-arrow">&#9660;</span>
+            <p class="skill-details">Familiar with procedural programming, pointers, and memory management in C.</p>
+          </li>
+
+          <li class="skill-item" data-details="Experienced in DOM manipulation, events, and building interactive web features with JavaScript.">
+            Javascript <span class="skill-arrow">&#9660;</span>
+            <p class="skill-details">Experienced in DOM manipulation, events, and building interactive web features with JavaScript.</p>
+          </li>
+
+          <li class="skill-item" data-details="Experienced with Visual Basic for creating desktop applications and automation tasks.">
+            Visual Basic Programming <span class="skill-arrow">&#9660;</span>
+            <p class="skill-details">Experienced with Visual Basic for creating desktop applications and automation tasks.</p>
+          </li>
+
           <li><b>Other skills</b></li>
-          <li>Cooking</li>
-          <li>life skills</li>
+
+          <li class="skill-item" data-details="Passionate about trying out new recipes and preparing delicious meals for family and friends.">
+            Cooking <span class="skill-arrow">&#9660;</span>
+            <p class="skill-details">Passionate about trying out new recipes and preparing delicious meals for family and friends.</p>
+          </li>
+
+          <li class="skill-item" data-details="Strong interpersonal, communication, and problem-solving skills developed over time.">
+            Life Skills <span class="skill-arrow">&#9660;</span>
+            <p class="skill-details">Strong interpersonal, communication, and problem-solving skills developed over time.</p>
+          </li>
         </ul>
       </div>
     </section>
 
-    <!-- Education -->
+    <!-- Education — sortable by Year -->
     <section class="section-academic">
       <div class="table-container">
         <h2>Academic Background</h2>
-        <table border="1">
-          <tr>
-            <th>LEVEL</th>
-            <th>SCHOOL</th>
-            <th>YEAR</th>
-          </tr>
-          <tr>
-            <td>Primary Level Education</td>
-            <td>Littewood Nursery and Primary School</td>
-            <td>2018</td>
-          </tr>
-          <tr>
-            <td>Secondary Level Education</td>
-            <td>St.Marys Mazinde Juu Secondary School</td>
-            <td>2019-2025</td>
-          </tr>
-          <tr>
-            <td>University Level Education</td>
-            <td>University of Dar es salaam</td>
-            <td>2026-Now</td>
-          </tr>
+        <button id="sort-btn" class="sort-btn">Sort by Year &#8645;</button>
+        <table border="1" id="edu-table">
+          <thead>
+            <tr>
+              <th>LEVEL</th>
+              <th>SCHOOL</th>
+              <th>YEAR</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Primary Level Education</td>
+              <td>Littewood Nursery and Primary School</td>
+              <td>2018</td>
+            </tr>
+            <tr>
+              <td>Secondary Level Education</td>
+              <td>St.Marys Mazinde Juu Secondary School</td>
+              <td>2019</td>
+            </tr>
+            <tr>
+              <td>University Level Education</td>
+              <td>University of Dar es salaam</td>
+              <td>2026</td>
+            </tr>
+          </tbody>
         </table>
       </div>
     </section>
 
-    <!-- Hobbies -->
+    <!-- Hobbies — Read More / Read Less toggle -->
     <section class="personal-interests">
       <h2>My Hobbies</h2>
       <div class="hobbybox">
         <ul>
-          <li><b>Cooking</b>- I like making food for my family.</li>
-          <li><b>Music</b>- I like music for refreshments.</li>
-          <li>
-            <b>Travelling</b>- I love to visit new places learn new things.
+          <li class="hobby-item">
+            <b>Cooking</b> —
+            <span class="hobby-short">I like making food for my family.</span>
+            <span class="hobby-long"> I enjoy experimenting with new recipes from different cultures, learning spices and techniques, and creating meals that bring joy to the people around me. Cooking is my creative outlet and a way I show love.</span>
+            <button class="read-more-btn">Read More</button>
+          </li>
+          <li class="hobby-item">
+            <b>Music</b> —
+            <span class="hobby-short">I like music for refreshments.</span>
+            <span class="hobby-long"> Music helps me relax, focus, and stay motivated. I enjoy a wide range of genres from gospel to afrobeats, and I often listen while studying or unwinding after a long day. It's a constant companion in my life.</span>
+            <button class="read-more-btn">Read More</button>
+          </li>
+          <li class="hobby-item">
+            <b>Travelling</b> —
+            <span class="hobby-short">I love to visit new places and learn new things.</span>
+            <span class="hobby-long"> Exploring new destinations broadens my perspective and introduces me to different people, traditions, and ideas. Whether it's a nearby town or a distant city, every journey teaches me something valuable about the world and myself.</span>
+            <button class="read-more-btn">Read More</button>
           </li>
         </ul>
       </div>
@@ -123,11 +173,18 @@
 
     <h2>My Gallery</h2>
     <div class="gallery-container">
-        <img src="/images/ikaa1.jpeg"  class="shadow-img1" />
-        <img src="/images/ikaa2.jpeg"  class="shadow-img2" />     
+      <!-- Clickable images for lightbox -->
+      <img src="/images/ikaa1.jpeg" class="shadow-img1 lightbox-trigger" alt="Gallery image 1" />
+      <img src="/images/ikaa2.jpeg" class="shadow-img2 lightbox-trigger" alt="Gallery image 2" />
     </div>
 
-    <!--footer-->
+    <!-- Lightbox overlay -->
+    <div id="lightbox" class="lightbox-overlay">
+      <button id="lightbox-close" class="lightbox-close">&times;</button>
+      <img id="lightbox-img" src="" alt="Enlarged view" />
+    </div>
+
+    <!-- footer -->
     <footer class="footer_text">
       <div class="footer_icons">
         <a href="https://www.instagram.com/finerr_rr?igsh=MWlpenE0MWQ2eGM5OQ==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -136,13 +193,14 @@
         <a href="https://github.com/alikkakanukisya-code" target="_blank"><i class="fa-brands fa-github"></i></a>
       </div>
       <p>
-        GROUP-GK &copy; 2026 | All rights reserved | Official website of Group
-        GK &trade;
+        GROUP-GK &copy; 2026 | All rights reserved | Official website of Group GK &trade;
       </p>
     </footer>
 
-    <!--scroll top-->
-    <a href="#" class="top"><i class="fa-solid fa-arrow-up"></i></a>
-     <script src="/js/alikka.js" defer></script>
+    <!-- Scroll to top button -->
+    <a href="#" class="top" id="scroll-top"><i class="fa-solid fa-arrow-up"></i></a>
+
+    <script src="/js/alikka.js" defer></script>
+
   </body>
 </html>
