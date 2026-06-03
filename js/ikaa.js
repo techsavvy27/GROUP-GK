@@ -1,3 +1,11 @@
+/* ============================================================
+   ikaa.js — All interactive features for Alikka's profile page
+============================================================ */
+
+
+/* ============================================================
+   1. SKILLS — Click each skill to expand / collapse details
+============================================================ */
 document.querySelectorAll('.skill-item').forEach(function (item) {
   item.addEventListener('click', function () {
     const details = this.querySelector('.skill-details');
@@ -19,6 +27,11 @@ document.querySelectorAll('.skill-item').forEach(function (item) {
     }
   });
 });
+
+
+/* ============================================================
+   2. EDUCATION TABLE — Sort rows by Year (ascending / descending toggle)
+============================================================ */
 let sortAsc = true;
 
 document.getElementById('sort-btn').addEventListener('click', function () {
@@ -38,6 +51,9 @@ document.getElementById('sort-btn').addEventListener('click', function () {
 });
 
 
+/* ============================================================
+   3. HOBBIES — Read More / Read Less toggle per hobby item
+============================================================ */
 document.querySelectorAll('.hobby-item').forEach(function (item) {
   const longText = item.querySelector('.hobby-long');
   const btn      = item.querySelector('.read-more-btn');
@@ -51,6 +67,9 @@ document.querySelectorAll('.hobby-item').forEach(function (item) {
 });
 
 
+/* ============================================================
+   4. LIGHTBOX — Click any image with .lightbox-trigger to open overlay
+============================================================ */
 const lightbox      = document.getElementById('lightbox');
 const lightboxImg   = document.getElementById('lightbox-img');
 const lightboxClose = document.getElementById('lightbox-close');
@@ -86,6 +105,9 @@ document.addEventListener('keydown', function (e) {
 });
 
 
+/* ============================================================
+   5. SCROLL TO TOP — Button appears after scrolling 200 px down
+============================================================ */
 const scrollTopBtn = document.getElementById('scroll-top');
 
 window.addEventListener('scroll', function () {
@@ -102,6 +124,9 @@ scrollTopBtn.addEventListener('click', function (e) {
 });
 
 
+/* ============================================================
+   6. DARK / LIGHT MODE TOGGLE — saves preference to localStorage
+============================================================ */
 const themeBtn = document.getElementById('theme-toggle');
 const themeIcon = themeBtn.querySelector('i');
 
