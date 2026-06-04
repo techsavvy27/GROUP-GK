@@ -39,7 +39,7 @@ body {
   font-weight: bold;
   color: var(--logo-color);
   font-family: var(--logo-font);
-  margin-right: auto; /* pushes everything else away */
+  margin-right: auto;
   flex: 1;
   z-index: 2;
 }
@@ -372,4 +372,27 @@ tr:nth-child(even) {
   transform: translateY(-5px);
   box-shadow: 2px 2px rgba(0, 0, 0, 0.6);
   transition: ease 250ms;
+}
+
+/* Skills section interactivity - antigravity ai*/
+.hidden {
+  display: none;
+}
+
+.skill-item {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.skill-item:hover {
+  transform: scale(1.05);
+}
+
+.details {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000000;
+  margin-top: 10px;
+  border-radius: 8px;
+  line-height: 1.6;
 }

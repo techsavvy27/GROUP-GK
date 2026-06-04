@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>David's page</title>
     <link rel="stylesheet" href="../css/david.css" />
-    <link rel="stylesheet" href="../css/abel.cs" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -47,7 +46,7 @@
       <div class="hero-container">
         <h1 id="center">David's portifolio</h1>
         <div class="hero">
-          <img src="../images/david.png" alt="my picture" />
+          <img src="../images/david.webp" alt="my picture" />
           <div class="hero-text">
             <h1>Hello there👋🏼</h1>
             <h2>Welcome to my profile</h2>
@@ -68,32 +67,38 @@
 
       <!--table-->
       <h1 id="table-start">My Academic path</h1>
-      <table>
-        <tr>
-          <th>Level</th>
-          <th>school</th>
-          <th>year</th>
-        </tr>
-        <tr>
-          <td>University</td>
-          <td>UDSM</td>
-          <td>2025-2028</td>
-        </tr>
-        <tr>
-          <td>advanced level</td>
-          <td>tambaza high school</td>
-          <td>2023-2025</td>
-        </tr>
-        <tr>
-          <td>secondary level</td>
-          <td>msimbazi secondary school</td>
-          <td>2019-2022</td>
-        </tr>
-        <tr>
-          <td>primary level</td>
-          <td>olympyo</td>
-          <td>2011-2018</td>
-        </tr>
+      <table id="academic-table">
+        <thead>
+          <tr>
+            <th>Level</th>
+            <th>school</th>
+            <th id="sort-year" style="cursor: pointer;">
+              year <i class="fa-solid fa-sort"></i>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>University</td>
+            <td>UDSM</td>
+            <td>2025-2028</td>
+          </tr>
+          <tr>
+            <td>advanced level</td>
+            <td>tambaza high school</td>
+            <td>2023-2025</td>
+          </tr>
+          <tr>
+            <td>secondary level</td>
+            <td>msimbazi secondary school</td>
+            <td>2019-2022</td>
+          </tr>
+          <tr>
+            <td>primary level</td>
+            <td>olympyo</td>
+            <td>2011-2018</td>
+          </tr>
+        </tbody>
       </table>
 
       <div class="container">
@@ -101,25 +106,40 @@
         <div class="card-parent">
           <div class="card">
             <h1>CODING & PROGRAMMING</h1>
-            <ol style="font-size: 50px; font-weight: 1000; color: chocolate">
-              <li>html</li>
-              <li>css</li>
-              <li>Javascript</li>
+            <ol style="font-size: 50px; font-weight: 1000; color: chocolate;">
+              <li class="skill-item">html
+                <p class="details hidden">Structuring web content with the language of the browser</p>
+              </li>
+              <li class="skill-item">css
+                <p class="details hidden">Styling layouts with Flexbox and Grid.</p>
+              </li>
+              <li class="skill-item">Javascript
+                <p class="details hidden">Adding interactivity and logic to web pages.</p>
+              </li>
             </ol>
           </div>
           <div class="card">
             <h1>ANIMATION</h1>
-            <h2 style="font-size: 90px; font-weight: bold; color: chocolate">
+            <h2 class="skill-item" style="font-size: 90px; font-weight: bold; color: chocolate">
               Blender
+              <p class="details hidden">Creating 3D models and character animations.</p>
             </h2>
           </div>
           <div class="card">
             <h1>GRAPHICS DESIGN</h1>
             <ol style="font-size: 40px; font-weight: bold; color: chocolate">
-              <li>Inkscape</li>
-              <li>GIMP</li>
-              <li>Adobe Photoshop</li>
-              <li>Blender</li>
+              <li class="skill-item">Inkscape
+                <p class="details hidden">for Vector graphic designing for beautifull and great logos and icons.</p>
+              </li>
+              <li class="skill-item">GIMP
+                <p class="details hidden">an Open-source image manipulation and retouching application.</p>
+              </li>
+              <li class="skill-item">Adobe Photoshop
+                <p class="details hidden">The proprietory pay walled Professional photo editing and digital art program.</p>
+              </li>
+              <li class="skill-item">Blender
+                <p class="details hidden">Rendering high-quality 3D graphics.</p>
+              </li>
             </ol>
           </div>
         </div>
@@ -189,5 +209,6 @@
       <!--scroll top-->
       <a href="#" class="top"><i class="fa-solid fa-arrow-up"></i></a>
     </footer>
+    <script src="../js/david.js" defer></script>
   </body>
 </html>
