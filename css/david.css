@@ -23,15 +23,68 @@ Copyright, GROUP GK 2026
   --h1-font: 3rem;
   --h2-font: 2rem;
   --text-font: 1.3rem;
+  --bg-color: #ffffff;
+  --links-color: #1f1f1f;
+  --header-bg: rgba(255, 255, 255, 0.75);
+  --dropdown-bg: rgba(255, 255, 255, 0.95);
+  --card-bg: #f1efef;
+  --card-hover-bg: #d2d4d6;
+  --hero-gradient-start: rgb(255, 255, 255);
+  --skill-accent-color: chocolate;
+  --skill-details-color: #000000;
+  --hobby-bg: #ffffff;
+  --hobby-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --hobby-border: rgba(0, 0, 0, 0.08);
+  --hobby-hover-bg: #d2d4d6;
+  --hobby-title-color: #1f1f1f;
+  --hobby-desc-color: #555555;
+  --hobby-item-border: #f0f0f0;
+  --table-text: #333333;
+  --table-even-bg: #d6d7d7;
+  --table-even-text: #333333;
+}
+
+html[data-theme="dark"] {
+  --heading-font: "DM Serif Display", serif;
+  --body-font: "DM Sans", sans-serif;
+  --logo-font: "Montserrat", sans-serif;
+  --logo-color: #ffffff;
+  --main-color: #000000;
+  --normal-color: #ffffff;
+  --accent-color: #838381;
+  --h1-font: 3rem;
+  --h2-font: 2rem;
+  --text-font: 1.3rem;
+  --bg-color: rgb(16, 14, 14);
+  --links-color: #ffffff;
+  --header-bg: rgba(16, 14, 14, 0.75);
+  --dropdown-bg: rgba(30, 30, 30, 0.95);
+  --card-bg: #1e1e1e;
+  --card-hover-bg: #2a2a2a;
+  --hero-gradient-start: rgb(16, 14, 14);
+  --skill-accent-color: #ff9f43;
+  --skill-details-color: #ffffff;
+  --hobby-bg: #1e1e1e;
+  --hobby-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  --hobby-border: rgba(255, 255, 255, 0.1);
+  --hobby-hover-bg: #2a2a2a;
+  --hobby-title-color: #ffffff;
+  --hobby-desc-color: #cccccc;
+  --hobby-item-border: #333333;
+  --table-text: #e0e0e0;
+  --table-even-bg: #222222;
+  --table-even-text: #e0e0e0;
 }
 
 body {
-  font-family: var(--body-font);
+  font-family: var(--body-font), Arial, Helvetica, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--normal-color);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
-  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .logo {
@@ -48,13 +101,14 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: var(--header-bg);
   border-bottom: 1px solid var(--normal-color);
   padding: 0.5rem 2rem;
   position: sticky;
   top: 0;
   z-index: 1000;
   backdrop-filter: blur(10px);
+  transition: background-color 0.3s ease, border-bottom-color 0.3s ease;
 }
 .nav-wrapper {
   position: absolute;
@@ -108,7 +162,7 @@ header {
 .dropdown-content {
   display: block;
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: var(--dropdown-bg);
   backdrop-filter: blur(10px);
   min-width: 150px;
   top: 120%;
@@ -116,7 +170,7 @@ header {
   opacity: 0;
   transform: translateY(10px);
   pointer-events: none;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease, background-color 0.3s ease;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -214,7 +268,7 @@ main {
 .hero-container {
   min-height: 90vh;
   background:
-    linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 90%),
+    linear-gradient(to top, var(--hero-gradient-start) 0%, rgba(0, 0, 0, 0) 90%),
     url(/images/david\ back.avif);
   background-size: cover;
   background-position: center;
@@ -222,6 +276,7 @@ main {
   padding: 50px;
   border-radius: 0 0 10px 10px;
   font-family: "DM Serif Text", "serif";
+  transition: background 0.3s ease;
 }
 
 #center {
@@ -253,14 +308,15 @@ main {
 }
 
 .arrow {
-  padding: 15% 0 0 0;
+  padding: 8% 0 0 0;
   animation: scrolldown 2s infinite linear;
 }
 
 .scroll-arrow {
   font-weight: bolder;
   cursor: pointer;
-  color: #33383e;
+  color: var(--normal-color);
+  transition: color 0.3s ease;
 }
 
 #table-start {
@@ -282,14 +338,16 @@ th {
 }
 
 td {
-  color: #333;
+  color: var(--table-text);
   padding: 10px;
+  transition: color 0.3s ease;
 }
 
 /* apply styles to even numbered rows in the table*/
 tr:nth-child(even) {
-  color: #333;
-  background-color: #d6d7d7;
+  color: var(--table-even-text);
+  background-color: var(--table-even-bg);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .card-parent {
@@ -336,14 +394,15 @@ tr:nth-child(even) {
 }
 
 .card-img {
-  background-color: #f1efef;
+  background-color: var(--card-bg);
   border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 .card-img:hover {
   transform: translateY(-10px);
   box-shadow: 5px 5px rgba(0, 0, 0, 0.6);
   transition: ease 250ms;
-  background-color: #d2d4d6;
+  background-color: var(--card-hover-bg);
   cursor: text;
 }
 .card-img img {
@@ -391,26 +450,26 @@ tr:nth-child(even) {
 .details {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #000000;
+  color: var(--skill-details-color);
   margin-top: 10px;
   border-radius: 8px;
   line-height: 1.6;
+  transition: color 0.3s ease;
 }
 
 /* Hobbies Section */
 .hobby-card {
   text-align: left;
-  background: #ffffff;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background: var(--hobby-bg);
+  box-shadow: var(--hobby-shadow);
+  border: 1px solid var(--hobby-border);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .hobby-card:hover {
   transform: translateY(-10px);
   box-shadow: 5px 5px rgba(0, 0, 0, 0.6);
-  transition: ease 250ms;
-  background-color: #d2d4d6;
+  background-color: var(--hobby-hover-bg);
   cursor: text;
 }
 
@@ -421,10 +480,10 @@ tr:nth-child(even) {
 
 .hobby-item {
   padding: 1.2rem;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid var(--hobby-item-border);
   cursor: pointer;
   border-radius: 8px;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, border-bottom-color 0.3s ease;
 }
 
 
@@ -441,21 +500,22 @@ tr:nth-child(even) {
 .hobby-title {
   font-size: 1.15rem;
   font-weight: 700;
-  color: #1f1f1f;
+  color: var(--hobby-title-color);
   font-family: var(--logo-font);
+  transition: color 0.3s ease;
 }
 
 .hobby-desc {
   font-size: 0.95rem;
   line-height: 1.5;
-  color: #555555;
+  color: var(--hobby-desc-color);
   margin: 0 0 10px 0;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: max-height 0.3s ease;
+  transition: max-height 0.3s ease, color 0.3s ease;
 }
 
 .hobby-desc.expanded {
@@ -480,4 +540,79 @@ tr:nth-child(even) {
 
 .hobby-toggle-btn:hover {
   color: #0b51c5;
+}
+
+/* Header Dark Icon Button Styling */
+#dark-icon button {
+  background: none;
+  border: none;
+  font-family: var(--logo-font);
+  font-size: 18px;
+  color: var(--links-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+#dark-icon button:hover {
+  color: var(--accent-color);
+}
+
+#dark-icon button i {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+
+/* Skill List styles & accent colors matching light/dark mode */
+.skill-list-large {
+  font-size: 50px;
+  font-weight: 1000;
+  color: var(--skill-accent-color);
+  transition: color 0.3s ease;
+}
+
+.skill-item-xlarge {
+  font-size: 90px;
+  font-weight: bold;
+  color: var(--skill-accent-color);
+  transition: color 0.3s ease;
+}
+
+.skill-list-medium {
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--skill-accent-color);
+  transition: color 0.3s ease;
+}
+
+/* Dark theme card background gradient overrides */
+html[data-theme="dark"] .card-parent .card:nth-child(1) {
+  background-image: linear-gradient(
+    135deg,
+    #2b2302 0%,
+    #3b3003 50%,
+    #2b2302 100%
+  );
+}
+
+html[data-theme="dark"] .card-parent .card:nth-child(2) {
+  background-image: linear-gradient(
+    135deg,
+    #0e1e38 0%,
+    #182e54 50%,
+    #0e1e38 100%
+  );
+}
+
+html[data-theme="dark"] .card-parent .card:nth-child(3) {
+  background-image: linear-gradient(
+    135deg,
+    #0d2818 0%,
+    #163e24 50%,
+    #0d2818 100%
+  );
 }

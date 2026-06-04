@@ -1,4 +1,4 @@
-// the skills section- antigravity ai
+// the skills section - by antigravity
 document.addEventListener('DOMContentLoaded', () => {
   const skillItems = document.querySelectorAll('.skill-item');
 
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-// Table sorting functionality
+// Table sorting functionality - by antigravity
   const sortYearBtn = document.getElementById('sort-year');
   const table = document.getElementById('academic-table');
   
@@ -44,13 +44,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const desc = item.querySelector('.hobby-desc');
 
     if (btn && desc) {
-      // Toggle on button click
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
         toggleHobby(desc, btn);
       });
 
-      // Also toggle on description or header click for better usability
       item.addEventListener('click', () => {
         toggleHobby(desc, btn);
       });
@@ -66,3 +64,53 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
+
+// Dark theme toggle functionality - by antigravity
+document.addEventListener('DOMContentLoaded', () => {
+  const darkIconLi = document.getElementById('dark-icon');
+  if (darkIconLi) {
+    const darkBtn = darkIconLi.querySelector('button');
+    if (darkBtn) {
+      const setTheme = (theme) => {
+        if (theme === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          darkBtn.innerHTML = '<i class="fa-solid fa-circle-half-stroke"></i> light';
+          localStorage.setItem('theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+          darkBtn.innerHTML = '<i class="fa-solid fa-circle-half-stroke"></i> dark';
+          localStorage.setItem('theme', 'light');
+        }
+      };
+
+      darkBtn.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        if (currentTheme === 'dark') {
+          setTheme('light');
+        } else {
+          setTheme('dark');
+        }
+      });
+
+      const savedTheme = localStorage.getItem('theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+      if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+        setTheme('dark');
+      } else {
+        setTheme('light');
+      }
+    }
+  }
+});
+
+//dark toggle
+      (function() {
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
