@@ -232,6 +232,17 @@ header {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 999;
+}
+
+.top.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .top i {
@@ -557,9 +568,6 @@ tr:nth-child(even) {
   transition: color 0.3s ease;
 }
 
-#dark-icon button:hover {
-  color: var(--accent-color);
-}
 
 #dark-icon button i {
   font-size: 1.1rem;
@@ -616,3 +624,78 @@ html[data-theme="dark"] .card-parent .card:nth-child(3) {
     #0d2818 100%
   );
 }
+
+/* Image Modal/Lightbox Overlay for Activity Images - antigravity*/
+.image-lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.image-lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.image-lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  transform: scale(0.92);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.image-lightbox.active img {
+  transform: scale(1);
+}
+
+.image-lightbox-close {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 3rem;
+  font-weight: 300;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: 1;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.image-lightbox-close:hover {
+  color: #ff4d4d;
+  transform: scale(1.15) rotate(90deg);
+}
+
+.image-lightbox-caption {
+  margin-top: 20px;
+  color: #ffffff;
+  font-family: var(--logo-font);
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  max-width: 80%;
+}
+
+/* Make card images show pointer cursor */
+.card-img img {
+  cursor: pointer;
+}
+

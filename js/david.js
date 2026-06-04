@@ -104,13 +104,83 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-//dark toggle
-      (function() {
-        const savedTheme = localStorage.getItem('theme');
-        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
-          document.documentElement.setAttribute('data-theme', 'dark');
+// Image popup/lightbox functionality for activities section
+document.addEventListener('DOMContentLoaded', () => {
+  const activityImages = document.querySelectorAll('.card-img img');
+  if (activityImages.length > 0) {
+    // Create lightbox overlay dynamically
+    const lightbox = document.createElement('div');
+    lightbox.className = 'image-lightbox';
+    
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'image-lightbox-close';
+    closeBtn.innerHTML = '&times;';
+    closeBtn.setAttribute('aria-label', 'Close image popup');
+    
+    const lightboxImg = document.createElement('img');
+    
+    const caption = document.createElement('div');
+    caption.className = 'image-lightbox-caption';
+    
+    lightbox.appendChild(closeBtn);
+    lightbox.appendChild(lightboxImg);
+    lightbox.appendChild(caption);
+    document.body.appendChild(lightbox);
+    
+    activityImages.forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        
+        // Find caption description from neighboring sibling element
+        const siblingContent = img.nextElementSibling;
+        if (siblingContent) {
+          const desc = siblingContent.querySelector('p');
+          if (desc) {
+            caption.textContent = desc.textContent;
+          } else {
+            caption.textContent = img.alt || '';
+          }
         } else {
-          document.documentElement.setAttribute('data-theme', 'light');
+          caption.textContent = img.alt || '';
         }
-      })();
+        
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent page background scrolling
+      });
+    });
+    
+    const closeLightbox = () => {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    };
+    
+    closeBtn.addEventListener('click', closeLightbox);
+    
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+    
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        closeLightbox();
+      }
+    });
+  }
+});
+
+// Scroll to Top visibility toggle
+document.addEventListener('DOMContentLoaded', () => {
+  const scrollTopBtn = document.querySelector('.top');
+  if (scrollTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollTopBtn.classList.add('show');
+      } else {
+        scrollTopBtn.classList.remove('show');
+      }
+    });
+  }
+});
