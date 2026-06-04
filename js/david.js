@@ -35,4 +35,34 @@ document.addEventListener('DOMContentLoaded', () => {
       ascending = !ascending;
     });
   }
+
+  // Hobbies Read More / Read Less Toggle
+  const hobbyItems = document.querySelectorAll('.hobby-item');
+
+  hobbyItems.forEach((item) => {
+    const btn = item.querySelector('.hobby-toggle-btn');
+    const desc = item.querySelector('.hobby-desc');
+
+    if (btn && desc) {
+      // Toggle on button click
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleHobby(desc, btn);
+      });
+
+      // Also toggle on description or header click for better usability
+      item.addEventListener('click', () => {
+        toggleHobby(desc, btn);
+      });
+    }
+  });
+
+  function toggleHobby(desc, btn) {
+    const isExpanded = desc.classList.toggle('expanded');
+    if (isExpanded) {
+      btn.innerHTML = 'Read Less <i class="fa-solid fa-chevron-up"></i>';
+    } else {
+      btn.innerHTML = 'Read More <i class="fa-solid fa-chevron-down"></i>';
+    }
+  }
 });
