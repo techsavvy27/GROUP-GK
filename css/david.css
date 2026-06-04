@@ -407,8 +407,11 @@ tr:nth-child(even) {
 }
 
 .hobby-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px);
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.6);
+  transition: ease 250ms;
+  background-color: #d2d4d6;
+  cursor: text;
 }
 
 .hobby-list {
@@ -424,9 +427,7 @@ tr:nth-child(even) {
   transition: background-color 0.2s ease;
 }
 
-.hobby-item:last-child {
-  border-bottom: none;
-}
+
 
 
 .hobby-header {
