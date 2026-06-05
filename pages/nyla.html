@@ -18,24 +18,6 @@
   <!-- header and navigation THIS IS GLOBALY APPLIED -->
 
   <body>
-    <script>
-      (function () {
-        try {
-          const saved = localStorage.getItem("theme");
-          const prefers =
-            window.matchMedia &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches;
-          const theme = saved || (prefers ? "dark" : "light");
-          if (theme === "dark") {
-            document.body.classList.add("dark-mode");
-            document.documentElement.setAttribute("data-theme", "dark");
-          } else {
-            document.body.classList.remove("dark-mode");
-            document.documentElement.setAttribute("data-theme", "light");
-          }
-        } catch (e) {}
-      })();
-    </script>
     <header>
       <a href="/index.html"><span class="logo">GROUP GK</span></a>
       <div class="nav-wrapper">
