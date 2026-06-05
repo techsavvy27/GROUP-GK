@@ -208,4 +208,20 @@
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
+  (function () {
+    try {
+      const saved = localStorage.getItem("theme");
+      const prefers =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const theme = saved || (prefers ? "dark" : "light");
+      if (theme === "dark") {
+        document.body.classList.add("dark-mode");
+        document.documentElement.setAttribute("data-theme", "dark");
+      } else {
+        document.body.classList.remove("dark-mode");
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    } catch (e) {}
+  })();
 });
