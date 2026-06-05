@@ -5,7 +5,10 @@
   if (themeBtn) {
     themeBtn.addEventListener("click", () => {
       const isDark = document.body.classList.toggle("dark-mode");
-      document.documentElement.setAttribute("data-theme", isDark ? "dark" : "light");
+      document.documentElement.setAttribute(
+        "data-theme",
+        isDark ? "dark" : "light",
+      );
       localStorage.setItem("theme", isDark ? "dark" : "light");
     });
   }
@@ -186,6 +189,23 @@
           createOverlay(e.currentTarget.src, e.currentTarget.alt);
         }
       });
+    });
+  }
+
+  // --- Scroll-to-top button ---
+  const scrollTopBtn = document.querySelector(".top");
+  if (scrollTopBtn) {
+    const toggleTopButton = () => {
+      const shouldShow = window.scrollY > 200;
+      scrollTopBtn.classList.toggle("visible", shouldShow);
+      scrollTopBtn.setAttribute("aria-hidden", shouldShow ? "false" : "true");
+    };
+
+    window.addEventListener("scroll", toggleTopButton, { passive: true });
+    toggleTopButton();
+
+    scrollTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
 });
