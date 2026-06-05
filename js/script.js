@@ -16,11 +16,13 @@ const disableDarkmode = () => {
 // Initial check
 if (darkmode === "active") enableDarkmode();
 
-themeSwitch.addEventListener("click", () => {
-  // Re-fetch the latest value
-  darkmode = localStorage.getItem("darkmode");
-  darkmode !== "active" ? enableDarkmode() : disableDarkmode();
-});
+if (themeSwitch) {
+  themeSwitch.addEventListener("click", () => {
+    // Re-fetch the latest value
+    darkmode = localStorage.getItem("darkmode");
+    darkmode !== "active" ? enableDarkmode() : disableDarkmode();
+  });
+}
 
 //This is the clock in the header
 //

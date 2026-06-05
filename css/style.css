@@ -194,11 +194,11 @@ header {
   border-top: 1px solid var(--normal-color);
   text-align: center;
   padding: 20px;
-  background: #121212;
+  background: var(--bg-color);
 }
 
 .footer_text p {
-  color: #e0e0e0;
+  color: var(--normal-color);
   font-family: var(--logo-font);
   font-size: 0.9rem;
   letter-spacing: 1px;
@@ -209,7 +209,7 @@ header {
 }
 
 .footer_icons a {
-  color: #e0e0e0;
+  color: var(--normal-color);
   font-size: 2rem;
   padding: 0.5rem;
   transition: all ease 250ms;
@@ -282,7 +282,7 @@ body.darkmode .group_welcome {
   text-align: center;
   font-family: var(--heading-font);
   font-size: 4rem;
-  color: #1f1f1f;
+  color: var(--normal-color);
   letter-spacing: 0.2rem;
   padding: 1rem;
   align-items: center;
@@ -299,7 +299,7 @@ body.darkmode .group_welcome {
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 4px solid #333;
+  border-right: 4px solid var(--normal-color);
   padding-right: 0.25rem;
   animation: blinkCursor 0.5s step-end infinite;
 }
@@ -444,7 +444,7 @@ body.darkmode .fade-left {
 }
 
 body.darkmode .fade-right {
-  left: 0;
+  right: 0;
   background: linear-gradient(
     to left,
     rgba(18, 18, 18, 0),

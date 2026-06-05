@@ -18,6 +18,24 @@
   <!-- header and navigation THIS IS GLOBALY APPLIED -->
 
   <body>
+    <script>
+      (function () {
+        try {
+          const saved = localStorage.getItem("theme");
+          const prefers =
+            window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches;
+          const theme = saved || (prefers ? "dark" : "light");
+          if (theme === "dark") {
+            document.body.classList.add("dark-mode");
+            document.documentElement.setAttribute("data-theme", "dark");
+          } else {
+            document.body.classList.remove("dark-mode");
+            document.documentElement.setAttribute("data-theme", "light");
+          }
+        } catch (e) {}
+      })();
+    </script>
     <header>
       <a href="/index.html"><span class="logo">GROUP GK</span></a>
       <div class="nav-wrapper">
@@ -41,6 +59,8 @@
           <li><a href="/pages/contact.html">Contacts</a></li>
         </ul>
       </div>
+      <!-- Dark/Light mode toggle button -->
+      <button id="themeBtn" class="theme-toggle">Dark/light Mode</button>
     </header>
 
     <!--This is the start of the main body of the page-->
@@ -70,17 +90,52 @@
             <li>
               Programming
               <ul>
-                <li>Python</li>
-                <li>Javascript</li>
-                <li>C++</li>
+                <li>
+                  Python
+                  <p>
+                    Proficient in Python for web development and data analysis.
+                  </p>
+                </li>
+                <li>
+                  Javascript
+                  <p>
+                    Experienced in JavaScript for building interactive web
+                    applications.
+                  </p>
+                </li>
+                <li>
+                  C++
+                  <p>
+                    Skilled in C++ for performance-critical applications and
+                    game development.
+                  </p>
+                </li>
               </ul>
             </li>
             <li>
               Web Development
               <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>React</li>
+                <li>
+                  HTML
+                  <p>
+                    Proficient in HTML for structuring web content and creating
+                    responsive layouts.
+                  </p>
+                </li>
+                <li>
+                  CSS
+                  <p>
+                    Experienced in CSS for styling web pages and creating
+                    visually appealing designs.
+                  </p>
+                </li>
+                <li>
+                  React
+                  <p>
+                    Skilled in React for building dynamic and responsive user
+                    interfaces.
+                  </p>
+                </li>
               </ul>
             </li>
           </ol>
@@ -88,6 +143,14 @@
       </div>
       <div class="academic-container">
         <h2>My Academic History</h2>
+        <button
+          id="sort-year-btn"
+          class="sort-btn"
+          aria-pressed="false"
+          title="Sort by year"
+        >
+          Sort by Year ↑
+        </button>
         <table>
           <thead>
             <tr>
@@ -119,9 +182,29 @@
         <section class="hobbies">
           <h2>Hobbies</h2>
           <ul>
-            <li>Reading</li>
-            <li>Writing and building websites</li>
-            <li>Coding</li>
+            <li>
+              Reading
+              <p>
+                I love reading books on technology and programming.it is my
+                favorite way to learn new things.I also enjoy reading fiction
+                and non-fiction books to expand my
+              </p>
+            </li>
+            <li>
+              Writing and building websites
+              <p>
+                I enjoy writing and building websites to share my knowledge and
+                ideas with others. It is a great way to express my creativity
+                and connect with
+              </p>
+            </li>
+            <li>
+              Coding
+              <p>
+                I am passionate about coding and always eager to learn new
+                programming languages and frameworks.
+              </p>
+            </li>
           </ul>
         </section>
       </div>
@@ -131,22 +214,22 @@
         <div class="slider">
           <div class="slide-track">
             <div class="slide">
-              <img src="/images/nyla1.jpeg" alt="Gallery 1" />
+              <img src="../images/nyla1.jpeg" alt="Gallery 1" />
             </div>
             <div class="slide">
-              <img src="/images/nyla2.jpeg" alt="Gallery 2" />
+              <img src="../images/nyla2.jpeg" alt="Gallery 2" />
             </div>
             <div class="slide">
-              <img src="/images/nyla3.jpeg" alt="Gallery 3" />
+              <img src="../images/nyla3.jpeg" alt="Gallery 3" />
             </div>
             <div class="slide">
-              <img src="/images/nyla.jpeg" alt="Gallery 4" />
+              <img src="../images/nyla.jpeg" alt="Gallery 4" />
             </div>
             <div class="slide">
-              <img src="/images/nyla1.jpeg" alt="Gallery 5" />
+              <img src="../images/nyla1.jpeg" alt="Gallery 5" />
             </div>
             <div class="slide">
-              <img src="/images/nyla2.jpeg" alt="Gallery 5" />
+              <img src="../images/nyla2.jpeg" alt="Gallery 5" />
             </div>
             <div class="slide">
               <img src="/images/nyla3.jpeg" alt="Gallery 6" />
@@ -189,5 +272,6 @@
 
     <!--scroll top-->
     <a href="#" class="top"><i class="fa-solid fa-arrow-up"></i></a>
+    <script src="../js/nyla.js"></script>
   </body>
 </html>

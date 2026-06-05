@@ -316,6 +316,40 @@ header {
   transform: translateY(-2px);
 }
 
+/* Skill item expandable details */
+.skill-item {
+  cursor: pointer;
+  position: relative;
+  outline: none;
+}
+
+.skill-item:focus-visible {
+  box-shadow: 0 0 0 4px rgba(237, 214, 187, 0.25);
+  border-radius: 8px;
+}
+
+.skill-details {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition:
+    max-height 280ms ease,
+    opacity 220ms ease,
+    margin 220ms ease;
+  margin-top: 0;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  text-align: left;
+  padding-left: 8px;
+}
+
+.skill-item.expanded .skill-details {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 12px;
+}
+
 .academic-container {
   width: 100%;
   text-align: center; /* This centers the H2 and the table */
@@ -341,6 +375,34 @@ header {
   background: var(--accent-color);
   margin: 10px auto;
   border-radius: 2px;
+}
+
+/* Sort button for education table */
+.sort-btn {
+  display: inline-block;
+  margin: 0 0 0 12px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+  background: #ffffff;
+  cursor: pointer;
+  font-family: var(--body-font);
+  font-size: 0.95rem;
+  color: #333;
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.sort-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.sort-btn[aria-pressed="true"] {
+  background: var(--accent-color);
+  color: #fff;
+  border-color: var(--accent-color);
 }
 
 table {
@@ -434,6 +496,43 @@ th {
   border-color: var(--accent-color);
   color: var(--accent-color);
 }
+
+/* Hobbies read-more toggle */
+.hobby-item {
+  position: relative;
+}
+
+.hobby-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  transition:
+    max-height 220ms ease,
+    opacity 180ms ease;
+}
+
+.hobby-text.expanded {
+  display: block;
+  -webkit-line-clamp: unset;
+}
+
+.read-more-btn {
+  margin-top: 8px;
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--normal-color);
+}
+
+.read-more-btn:hover {
+  background: #fff5f7;
+  color: var(--accent-color);
+}
 .gallery-container {
   padding: 60px 0;
   text-align: center;
@@ -496,3 +595,122 @@ th {
   }
 }
 
+/* Lightbox styles */
+.gallery-container img {
+  cursor: zoom-in;
+}
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.lightbox-overlay.visible {
+  opacity: 1;
+}
+
+.lightbox-content {
+  max-width: 92%;
+  max-height: 92%;
+  position: relative;
+}
+
+.lightbox-content img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  width: 42px;
+  height: 42px;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  font-size: 18px;
+}
+
+.lightbox-close:focus {
+  outline: 4px solid rgba(237, 214, 187, 0.3);
+}
+
+/* Dark theme overrides (toggle via html[data-theme="dark"] or body.dark-mode) */
+.dark-mode {
+  background: #050505;
+  color: #f4f4f4;
+}
+
+body.dark-mode header,
+body.dark-mode .container-centring,
+body.dark-mode .academic-container,
+body.dark-mode .hobbies-container,
+body.dark-mode .gallery-container,
+body.dark-mode .introbox,
+body.dark-mode .ujuzi > ol > li,
+body.dark-mode .hobbies ul li,
+body.dark-mode .sort-btn,
+body.dark-mode table,
+body.dark-mode th,
+body.dark-mode td,
+body.dark-mode .footer_text {
+  background: #111;
+  color: #f4f4f4;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .introtext h2,
+body.dark-mode .introtext p,
+body.dark-mode .ujuzi h2,
+body.dark-mode .academic-container h2,
+body.dark-mode .hobbies h2,
+body.dark-mode .gallery-heading,
+body.dark-mode .logo,
+body.dark-mode .navlist li a,
+body.dark-mode .skill-details,
+body.dark-mode .read-more-btn,
+body.dark-mode .sort-btn {
+  color: #f5f5f5;
+}
+
+/* Theme toggle button */
+#themeBtn,
+.theme-toggle {
+  margin-left: 12px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+html[data-theme="dark"] .theme-toggle,
+html[data-theme="dark"] #themeBtn,
+body.dark-mode .theme-toggle,
+body.dark-mode #themeBtn {
+  background: transparent;
+  color: var(--main-color);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.theme-toggle:focus,
+#themeBtn:focus {
+  outline: 4px solid rgba(237, 214, 187, 0.22);
+}
