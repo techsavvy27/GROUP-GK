@@ -76,7 +76,6 @@ topBtn.addEventListener("click", () => {
   });
 });
 
-alert("JavaScript loaded!");
 // DARK MODE
 const themeBtn = document.getElementById("themeBtn");
 
