@@ -265,25 +265,40 @@ header {
 }
 
 /* SCROLL TO TOP */
-.top {
+
+.scroll-top-btn{
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 30px;
+  right: 30px;
+
+  width: 55px;
+  height: 55px;
+
+  border: none;
+  border-radius: 20px;
+
+  background:#1f1f1f;
+  color: white;
+
+  font-size: 24px;
+  cursor: pointer;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: all 0.3s ease;
+
+  z-index: 9999;
+
 }
 
-.top i {
-  font-size: var(--text-font);
-  color: var(--main-color);
-  padding: 14px;
-  background: var(--logo-color);
-  border-radius: 1rem;
-  transition: all 0.35s ease-in-out;
+.scroll-top-btn:hover{
+  transform: translateY(-5px);
 }
 
-.top i:hover {
-  transform: scale(1.13);
-  color: var(--main-color);
-  background: var(--accent-color);
+.scroll-top-btn.show{
+  opacity: 1;
+  visibility: visible;
 }
 
 /* WELCOME / BIO SECTION */
@@ -636,6 +651,42 @@ td {
 
 .hobby-box.active{
   transform:translateY(-10px);
+}
+
+.hobby-details {
+  margin-top: 15px;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+.read-more-btn {
+  display: inline-block;
+  margin-top: 10px;
+
+  color: white;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.extra-text{
+  display:none;
+}
+
+.extra-text.show{
+  display:block;
+  margin-top:10px;
+}
+
+.read-more{
+  display:inline-block;
+  margin-top:10px;
+  cursor:pointer;
+  font-weight:bold;
+  color:white;
 }
 
 

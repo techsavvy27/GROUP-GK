@@ -66,6 +66,11 @@ function sortTable() {
 
   ascending = !ascending;
 }
+
+const sortBtn = document.getElementById("sort-btn");
+
+sortBtn.addEventListener("click", sortTable);
+
 //---TABLE END---
 
 //SKILLS JAVASCRIPT
@@ -107,29 +112,39 @@ document.querySelectorAll(".skillbox ul").forEach(list => {
 
 //HOBBY JAVASCRIPT
 const hobbyInfo = {
-  box1:
-    "I enjoy football and sports because they improve teamwork, discipline, leadership and strategic thinking.",
+  box1: "Sports improve teamwork, discipline, leadership and strategic thinking.",
 
-  box2:
-    "They help me relax and expose me to new ideas, stories and perspectives from around the world.",
+  box2: "Movies inspire creativity, storytelling skills and help me relax after studying.",
 
-  box3:
-    "It improves creativity, problem-solving skills and strategic decision making."
+  box3: "Gaming improves decision-making, problem-solving and strategic planning."
 };
 
 document.querySelectorAll(".hobby-box").forEach(box => {
 
-  const details = document.createElement("div");
+  // Extra text
+  const extra = document.createElement("div");
+  extra.classList.add("extra-text");
+  extra.textContent = hobbyInfo[box.id];
 
-  details.classList.add("hobby-details"); 
+  // Read More button
+  const btn = document.createElement("span");
+  btn.classList.add("read-more");
+  btn.textContent = "Read More";
 
-  details.textContent = hobbyInfo[box.id];
+  box.appendChild(extra);
+  box.appendChild(btn);
 
-  box.appendChild(details);
+  btn.addEventListener("click", (e) => {
 
-  box.addEventListener("click", () => {
+    e.stopPropagation();
 
-    box.classList.toggle("active");
+    extra.classList.toggle("show");
+
+    if(extra.classList.contains("show")){
+      btn.textContent = "Read Less";
+    }else{
+      btn.textContent = "Read More";
+    }
 
   });
 
@@ -184,3 +199,39 @@ images.forEach(img => {
 
 });
 //---GALLERY END---
+
+//SCROLL TO TOP TOGGLE
+// CREATE BUTTON
+const scrollBtn = document.createElement("button");
+
+scrollBtn.innerHTML = "↑";
+
+scrollBtn.classList.add("scroll-top-btn");
+
+// ADD TO PAGE
+document.body.appendChild(scrollBtn);
+
+// SHOW BUTTON AFTER 200PX SCROLL
+window.addEventListener("scroll", () => {
+
+  if(window.scrollY > 200){
+
+    scrollBtn.classList.add("show");
+
+  }else{
+
+    scrollBtn.classList.remove("show");
+
+  }
+
+});
+
+// SCROLL TO TOP
+scrollBtn.addEventListener("click", () => {
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+});
